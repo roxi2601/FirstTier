@@ -1,30 +1,58 @@
 ﻿@using FirstTier.Authentication
+@using FirstTier.Pages
 @inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
-<div class="sidebar">
+@*<div class="sidebar">
     <NavMenu/>
-</div>
+</div>*@
+<ul>
+    <AuthorizeView Policy="LoggedUser">
+        <NotAuthorized>
+            <li><a class="oi oi-home" href="/"> Home</a> </li>
+            <li style="float:right">
+                <a class="active" href="Login"> Log in</a>
+                @*<NavLink class="nav-link" href="Login">
+                    <span class="oi oi-person" aria-hidden="true"></span> Log in
+                </NavLink>*@
+            </li>
 
-<div class="main">
-    <div class="top-row px-4">
-        <Login/>
-      
-        <button class="buttonMenu">
-            <a href="" @onclick="PerformLogout">
-                <span>
-                    Log out
-                </span>
-            </a>
-        </button>
-    </div>
-
-    <div class="content px-4">
-        @Body
-    </div>
-</div>
+        </NotAuthorized>
+        <Authorized>
+            <li><a class="oi oi-home" href="/"> Home</a> </li>
+            <li><a class="oi oi-person" href="/"> My Profile</a> </li>
+            <li><a class="oi oi-plus" href="/"> Add new artwork</a> </li>
+            <li style="float:right">
+                <a class="active" href="/" @onclick="PerformLogout" > Log out</a>
+                
+                @*<NavLink class="nav-link" href="" @onclick="PerformLogout">
+                    <span class="oi oi-person" aria-hidden="true"></span> Log out
+                </NavLink>*@
+            </li>
+            <li id="search"><div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="Type to search">
+                
+                <a class=" search-btn" href="/">
+                    <i class="oi oi-magnifying-glass" style=" background: none;
+                                                                 position: absolute;
+                                                                 top: 50%;
+                                                                 float: right;
+                                                                 width: 40px;
+                                                                 height: 40px;
+                                                                 color: white;
+                                                                 justify-content: center;
+                                                                 align-items: center;
+                                                                 transition: 0.4s;
+                                                             "></i>
+                </a>
+                
+            </div> </li>
+        </Authorized>
+    </AuthorizeView>
+   </ul> 
 @code{
+
 
     public async Task PerformLogout()
     {

@@ -17,7 +17,7 @@ namespace FirstTier.Data.Impl
         public async Task<User> ValidateUserAsync(string username, string password)
         {
             HttpResponseMessage response =
-                await client.GetAsync("https://localhost:5001/users?username=" + username + "&password=" + password);
+                await client.GetAsync("http://localhost:8080/login/" + username + "/" + password);
 
             if (response.StatusCode == HttpStatusCode.OK)
             {

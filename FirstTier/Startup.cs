@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using FirstTier.Authentication;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +38,28 @@ namespace FirstTier
             services.AddScoped<UserService, UserCloud>();
 
             services.AddScoped<AuthenticationStateProvider, UserCustomAuthenticationStateProvider>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("LoggedUser", policy =>
+                    policy.RequireAuthenticatedUser().RequireAssertion(context =>
+                    {
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("ID"));
+                        if (logClaim == null) return false;
+                        return int.Parse(logClaim.Value) > 0;
+                    }));
+                options.AddPolicy("Guest", policy =>
+                                  
+                    policy.RequireAuthenticatedUser().RequireAssertion(context =>
+                    {
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("ID"));
+                        if (logClaim == null)
+                        {
+                            return true;
+                        }
+                        return false;
+                    }));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

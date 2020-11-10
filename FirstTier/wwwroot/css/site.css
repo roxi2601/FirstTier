@@ -11,6 +11,38 @@ html, body {
     background-size: cover;
 
 }
+
+.search-box{
+    position: absolute;
+    top: 46%;
+    left: 85%;
+    display: block;
+    transform: translate(-50%,-50%);
+    background: none;
+    height: 30px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-box:hover > .search-txt{
+    width: 150px;
+    padding: 0 8px;
+}
+.search-box:hover > .search-btn{
+    padding: 0 6px;
+}
+.search-txt{
+    width: 130px;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 17px;
+    transition: 0.4s;
+    line-height: 40px;
+    
+}
 #loginForm{
     padding: 5px;
     border-radius: 5px;
@@ -19,6 +51,65 @@ html, body {
     margin-left: 35%;
     margin-top: 5%;
     background-color: rgba(30, 31, 31, 0.7);
+}
+.buttonMenu {
+
+    border-radius: 4px;
+    background-color: #d3c0dd;
+    border: none;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 15px;
+    padding: 3px;
+
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttonMenu span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li, #search {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+li:last-child {
+    border-right: none;
+}
+li a, #search a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#search a:hover{
+    background: none;
+}
+li a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.active {
+    background-color: #6d87a7;
 }
 .button {
 
@@ -60,7 +151,7 @@ html, body {
     right: 0;
 }
 a, .btn-link {
-    color: #ecf0f5;
+    color: #f7f8fa;
 }
 
 .btn-primary {
@@ -207,7 +298,7 @@ app {
 
 @media (min-width: 768px) {
     app {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .sidebar {
