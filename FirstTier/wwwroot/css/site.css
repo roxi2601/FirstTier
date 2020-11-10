@@ -15,7 +15,7 @@ html, body {
 .search-box{
     position: absolute;
     top: 46%;
-    left: 85%;
+    left: 84%;
     display: block;
     transform: translate(-50%,-50%);
     background: none;
@@ -87,6 +87,7 @@ ul {
 li, #search {
     float: left;
     border-right: 1px solid #bbb;
+    width: max-content;
 }
 li:last-child {
     border-right: none;
