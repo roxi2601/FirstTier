@@ -77,10 +77,7 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
-            <e p="artback1.jpg" t="Include" />
-            <e p="background.png" t="Include" />
             <e p="background2.jpg" t="Include" />
-            <e p="background3.jpg" t="Include" />
           </e>
         </e>
       </e>

@@ -16,8 +16,13 @@ namespace FirstTier.Data.Impl
 
         public async Task<User> ValidateUserAsync(string username, string password)
         {
+            User user =new User();
+            user.Password = password;
+            user.UserName = username;
+            string personSerialized = JsonSerializer.Serialize(user);
+            StringContent content = new StringContent(personSerialized, Encoding.UTF8, "application/json");
             HttpResponseMessage response =
-                await client.GetAsync("http://localhost:8080/login/" + username + "/" + password);
+                await client.PostAsync("http://localhost:8080/login",content);
 
             if (response.StatusCode == HttpStatusCode.OK)
             {

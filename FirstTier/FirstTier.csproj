@@ -4,4 +4,9 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Content Remove="wwwroot\images\artback1.jpg" />
+      <Content Remove="wwwroot\images\background3.jpg" />
+    </ItemGroup>
+
 </Project>

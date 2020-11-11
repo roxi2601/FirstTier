@@ -19,7 +19,7 @@ html, body {
     display: block;
     transform: translate(-50%,-50%);
     background: none;
-    height: 30px;
+    height: 25px;
     border-radius: 40px;
     padding: 10px;
 }
