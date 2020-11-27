@@ -68,6 +68,43 @@ namespace FirstTier.Authentication
             NotifyAuthenticationStateChanged(
                 Task.FromResult(new AuthenticationState(new ClaimsPrincipal(identity))));
         }
+        
+        /*public async Task ValidateSignUp(string UserName, string FirstName, string LastName, string Password, string confirmPassword, string Description)
+        {
+            Console.WriteLine("Validating sign up");
+            if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName)) 
+            {
+                throw new Exception("Specify first and last name");
+            }
+            if (string.IsNullOrEmpty(UserName)) 
+            {
+                throw new Exception("Username cannot be empty");
+            }
+            if (!Password.Equals(confirmPassword))
+            {
+                throw new Exception("Passwords don't match, try to type them again");
+            }
+            if (UserName.Length<3 || UserName.Length<3)
+            {
+                throw  new Exception("Username and password have to contain at least 3 signs");
+            }
+
+            ClaimsIdentity identity = new ClaimsIdentity();
+            try {
+                User user = await userService.ValidateUserAsync(UserName, Password);
+                identity = SetupClaimsForUser(user);
+                string serialisedData = JsonSerializer.Serialize(user);
+                await jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", serialisedData);
+                cachedUser = user;
+            } catch (Exception e) {
+                Console.WriteLine(e);
+                throw e;
+            }
+
+            NotifyAuthenticationStateChanged(
+                Task.FromResult(new AuthenticationState(new ClaimsPrincipal(identity))));
+        }
+        */
 
 
         public void Logout()
@@ -81,8 +118,12 @@ namespace FirstTier.Authentication
         private ClaimsIdentity SetupClaimsForUser(User user)
         {
             List<Claim> claims = new List<Claim>();
-            claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+            claims.Add(new Claim("Username", user.UserName));
             claims.Add(new Claim("Password", user.Password));
+            claims.Add(new Claim("FirstName",user.FirstName));
+            claims.Add(new Claim("LastName",user.LastName));
+            claims.Add(new Claim("Description",user.Description));
+            claims.Add(new Claim("Img",user.Img.ToString()));
             claims.Add(new Claim("ID", user.ID.ToString()));
             claims.Add(new Claim("SecurityLevel", user.SecurityLevel.ToString()));
 

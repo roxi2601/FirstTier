@@ -38,6 +38,7 @@
           <e p="Error.cshtml" t="Include" />
           <e p="Index.razor" t="Include" />
           <e p="Login.razor" t="Include" />
+          <e p="SignUp.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -47,6 +48,7 @@
           <e p="LoginLayout.razor" t="Include" />
           <e p="MainLayout.razor" t="Include" />
           <e p="NavMenu.razor" t="Include" />
+          <e p="SignUpLayout.razor" t="Include" />
           <e p="SurveyPrompt.razor" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
@@ -79,6 +81,7 @@
           <e p="images" t="Include">
             <e p="background2.jpg" t="Include" />
           </e>
+          <e p="inputfile.js" t="Include" />
         </e>
       </e>
       <e p="FirstTier.sln" t="IncludeFlat" />

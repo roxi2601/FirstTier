@@ -1,0 +1,180 @@
+﻿@page "/SignUp"
+@using FirstTier.Models
+@using FirstTier.Data.Impl
+@using FirstTier.Data
+@using FirstTier.Authentication
+@*@attribute [Authorize(Policy ="Guest" )]*@
+@using BlazorInputFile
+@using System.IO
+@layout SignUpLayout
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+@inject UserService UserService
+
+
+<EditForm  Model ="@newUser" OnValidSubmit="@PerformSignUp" xmlns="http://www.w3.org/1999/html">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div id="registerForm">
+        <h3 id="AddUser" xmlns="http://www.w3.org/1999/html" style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center; color: black"> Join us!</h3>
+        <div class="col-12 row">
+            <span class="col-6">
+                <div class="form-group" style="font-family: -webkit-body;  color:black">
+                    Username: <br/>
+                    <InputText @bind-Value="newUser.UserName"/>
+                </div>
+            </span>
+            <span class="col-6">
+                <div class="form-group " style="font-family: -webkit-body;  color:black">
+                    First name: <br/>
+                    <InputText @bind-Value="newUser.FirstName"/>
+                </div>
+            </span>
+        </div>
+        
+        <div class="col-12 row">
+            <span class="col-6">
+                <div class="form-group" style="font-family: -webkit-body;  color:black">
+                    Last name: <br/>
+                    <InputText @bind-Value="newUser.LastName"/>
+                </div>
+            </span>
+            <span class="col-6">
+                <div class="form-group " style="font-family: -webkit-body;  color:black;">
+                    Description: <br/>
+                    <InputText @bind-Value="newUser.Description"/>
+                </div>
+            </span>
+        </div>
+        
+        <div class="col-12 row">
+            <span class="col-6">
+                <div class="form-group" style="font-family: -webkit-body;  color:black">
+                    Password: <br/>
+                    <InputText @bind-Value="newUser.Password"/>
+                </div>
+            </span>
+            <span class="col-6">
+                <div class="form-group " style="font-family: -webkit-body;  color:black">
+                    Confirm password: <br/>
+                    <InputText  @bind-Value="ConfirmPassword"/>
+                </div>
+            </span>
+        </div>
+        
+         <div class="col-12 row">
+             <span class="col-6 ">
+                  <div class="form-group " style="font-family: -webkit-body;  color:black; ">
+                  Choose profile picture: <br/>
+                  <InputFile OnChange="HandleFileSelected" ></InputFile>
+                @if (file != null)
+                {
+                    <p>Name: @file.Name</p>
+                    }
+
+                  </div>
+                  </span>
+                    <span class="col-6">
+                        <p class="actions">
+                            <button class="buttonCreateAccount" type="submit">
+                               
+                                <span>Create account</span>
+                            </button>
+                        </p>
+                        <div style="color:red">@errorMessage</div>
+                    </span>
+                </div>
+    </div>
+</EditForm>
+@code {
+    private User newUser = new User();
+    
+    public string ConfirmPassword ="";
+    
+    private bool isAuthorized;
+    
+    IFileListEntry file;
+    
+    
+    private string errorMessage;
+    
+   
+    /*public async Task PerformSignUp()
+    {
+        await ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateSignUp(UserName, FirstName, LastName, Description, Password, ConfirmPassword);
+        UserName = "";
+        Password = "";
+        ConfirmPassword = "";
+        FirstName = "";
+        LastName = "";
+        Description = "";
+        ImgId = "";
+        isAuthorized = true;
+        NavigationManager.NavigateTo("/main");
+    }*/
+    
+    private async Task PerformSignUp()
+    {
+        errorMessage = "";
+        try
+        {
+            if (string.IsNullOrEmpty(newUser.FirstName) || string.IsNullOrEmpty(newUser.LastName))
+            {
+                throw new Exception("Specify first and last name");
+            }
+            if (string.IsNullOrEmpty(newUser.UserName))
+            {
+                throw new Exception("Username cannot be empty");
+            }
+            if (!newUser.Password.Equals(ConfirmPassword))
+            {
+                throw new Exception("Passwords don't match, try to type them again");
+            }
+    if (newUser.UserName.Length<3 || newUser.Password.Length<6)
+            {
+                throw  new Exception("Username and password have to contain at least 3 signs");
+            }
+    /*if (newUser.Img.Length.Equals(0))
+            {
+                throw new Exception("You must upload the photo");
+            }*/
+    /*await UserService.AddUserAsync(newUser);*/
+            NavigationManager.NavigateTo("/login");
+        }
+        catch (NullReferenceException e)
+        {
+            errorMessage = "you should set every fields";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorMessage = e.Message;
+        }
+        
+    }
+
+
+    async Task HandleFileSelected(IFileListEntry[] files)
+    {
+        file = files.FirstOrDefault();
+        /*if (file != null)
+        {
+            var ms = new MemoryStream();
+            await file.Data.CopyToAsync(ms);
+            Img = ms.ToArray();
+        }*/
+    }
+    
+    /*[CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        var user = (await AuthStat).User;
+        if(!user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo($"/");
+        }
+    }*/
+}

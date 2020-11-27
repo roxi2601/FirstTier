@@ -39,6 +39,7 @@ namespace FirstTier.Data.Impl
         public async Task<IList<User>> GetUsersAsync()
         {
             string message = await client.GetStringAsync("https://localhost:5001/users");
+            Console.WriteLine("cloud message"+message);
             List<User> result = JsonSerializer.Deserialize<List<User>>(message);
             return result;
         }

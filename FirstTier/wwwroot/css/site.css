@@ -1,4 +1,11 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+/* Removes "No File Chosen" in File Input Control */
+
+input[type='file'] {
+    
+    color:transparent;
+    
+}
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -11,7 +18,14 @@ html, body {
     background-size: cover;
 
 }
-
+#registerForm{
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    background-color: rgba(255,255,255,0.7);
+}
 .search-box{
     position: absolute;
     top: 46%;
@@ -52,10 +66,10 @@ html, body {
     margin-top: 5%;
     background-color: rgba(30, 31, 31, 0.7);
 }
-.buttonMenu {
+.buttonCreateAccount {
 
     border-radius: 4px;
-    background-color: #d3c0dd;
+    background-color: black;
     border: none;
     color: whitesmoke;
     text-align: center;
