@@ -139,7 +139,7 @@
             {
                 throw new Exception("You must upload the photo");
             }*/
-    /*await UserService.AddUserAsync(newUser);*/
+    await UserService.AddUserAsync(newUser);
             NavigationManager.NavigateTo("/login");
         }
         catch (NullReferenceException e)

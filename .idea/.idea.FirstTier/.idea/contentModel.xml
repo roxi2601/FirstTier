@@ -80,6 +80,7 @@
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
             <e p="background2.jpg" t="Include" />
+            <e p="painter-161318_640.png" t="Include" />
           </e>
           <e p="inputfile.js" t="Include" />
         </e>
