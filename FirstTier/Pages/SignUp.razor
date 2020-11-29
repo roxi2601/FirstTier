@@ -135,16 +135,13 @@
             {
                 throw  new Exception("Username and password have to contain at least 3 signs");
             }
-    /*if (newUser.Img.Length.Equals(0))
-            {
-                throw new Exception("You must upload the photo");
-            }*/
+  
     await UserService.AddUserAsync(newUser);
             NavigationManager.NavigateTo("/login");
         }
         catch (NullReferenceException e)
         {
-            errorMessage = "you should set every fields";
+            errorMessage = "you should fulfill all the fields";
         }
         catch (Exception e)
         {

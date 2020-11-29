@@ -19,7 +19,7 @@ namespace FirstTier.Models
         [JsonPropertyName("id")]
         public int ID { get; set; }
         
-        [JsonPropertyName("securitylevel")]
+        [JsonPropertyName("securityLevel")]
         public int SecurityLevel { get; set; }
         
         [JsonPropertyName("img")] 

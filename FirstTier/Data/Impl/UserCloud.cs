@@ -38,7 +38,7 @@ namespace FirstTier.Data.Impl
 
         public async Task<IList<User>> GetUsersAsync()
         {
-            string message = await client.GetStringAsync("https://localhost:5001/users");
+            string message = await client.GetStringAsync("http://localhost:5001/users");
             Console.WriteLine("cloud message"+message);
             List<User> result = JsonSerializer.Deserialize<List<User>>(message);
             return result;
@@ -48,10 +48,11 @@ namespace FirstTier.Data.Impl
         {
             string personSerialized = JsonSerializer.Serialize(user);
             StringContent content = new StringContent(personSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PostAsync("https://localhost:5001/users",content);
+            HttpResponseMessage response = await client.PostAsync("http://localhost:5001/signUp",content);
             Console.WriteLine(response.ToString());
             if (response.StatusCode != HttpStatusCode.Created)
             {
+                Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                 throw new Exception(response.Content.ReadAsStringAsync().Result);
             }
         }
