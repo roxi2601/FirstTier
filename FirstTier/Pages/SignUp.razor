@@ -6,14 +6,14 @@
 @*@attribute [Authorize(Policy ="Guest" )]*@
 @using BlazorInputFile
 @using System.IO
-@layout SignUpLayout
+@layout MainLayout
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
 
-@inject UserService UserService
+@inject AccountService AccountService
 
 
-<EditForm  Model ="@newUser" OnValidSubmit="@PerformSignUp" xmlns="http://www.w3.org/1999/html">
+<EditForm  Model ="@newAccount" OnValidSubmit="@PerformSignUp" xmlns="http://www.w3.org/1999/html">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
     <div id="registerForm">
@@ -22,13 +22,13 @@
             <span class="col-6">
                 <div class="form-group" style="font-family: -webkit-body;  color:black">
                     Username: <br/>
-                    <InputText @bind-Value="newUser.UserName"/>
+                    <InputText @bind-Value="newAccount.UserName"/>
                 </div>
             </span>
             <span class="col-6">
                 <div class="form-group " style="font-family: -webkit-body;  color:black">
                     First name: <br/>
-                    <InputText @bind-Value="newUser.FirstName"/>
+                    <InputText @bind-Value="newAccount.FirstName"/>
                 </div>
             </span>
         </div>
@@ -37,13 +37,13 @@
             <span class="col-6">
                 <div class="form-group" style="font-family: -webkit-body;  color:black">
                     Last name: <br/>
-                    <InputText @bind-Value="newUser.LastName"/>
+                    <InputText @bind-Value="newAccount.LastName"/>
                 </div>
             </span>
             <span class="col-6">
                 <div class="form-group " style="font-family: -webkit-body;  color:black;">
                     Description: <br/>
-                    <InputText @bind-Value="newUser.Description"/>
+                    <InputText @bind-Value="newAccount.Description"/>
                 </div>
             </span>
         </div>
@@ -52,7 +52,7 @@
             <span class="col-6">
                 <div class="form-group" style="font-family: -webkit-body;  color:black">
                     Password: <br/>
-                    <InputText @bind-Value="newUser.Password"/>
+                    <InputText @bind-Value="newAccount.Password"/>
                 </div>
             </span>
             <span class="col-6">
@@ -88,7 +88,7 @@
     </div>
 </EditForm>
 @code {
-    private User newUser = new User();
+    private Account newAccount = new Account();
     
     public string ConfirmPassword ="";
     
@@ -98,45 +98,29 @@
     
     
     private string errorMessage;
-    
-   
-    /*public async Task PerformSignUp()
-    {
-        await ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateSignUp(UserName, FirstName, LastName, Description, Password, ConfirmPassword);
-        UserName = "";
-        Password = "";
-        ConfirmPassword = "";
-        FirstName = "";
-        LastName = "";
-        Description = "";
-        ImgId = "";
-        isAuthorized = true;
-        NavigationManager.NavigateTo("/main");
-    }*/
-    
     private async Task PerformSignUp()
     {
         errorMessage = "";
         try
         {
-            if (string.IsNullOrEmpty(newUser.FirstName) || string.IsNullOrEmpty(newUser.LastName))
+            if (string.IsNullOrEmpty(newAccount.FirstName) || string.IsNullOrEmpty(newAccount.LastName))
             {
                 throw new Exception("Specify first and last name");
             }
-            if (string.IsNullOrEmpty(newUser.UserName))
+            if (string.IsNullOrEmpty(newAccount.UserName))
             {
                 throw new Exception("Username cannot be empty");
             }
-            if (!newUser.Password.Equals(ConfirmPassword))
+            if (!newAccount.Password.Equals(ConfirmPassword))
             {
                 throw new Exception("Passwords don't match, try to type them again");
             }
-    if (newUser.UserName.Length<3 || newUser.Password.Length<6)
+    if (newAccount.UserName.Length<3 || newAccount.Password.Length<6)
             {
                 throw  new Exception("Username and password have to contain at least 3 signs");
             }
   
-    await UserService.AddUserAsync(newUser);
+    await AccountService.AddAccountAsync(newAccount);
             NavigationManager.NavigateTo("/login");
         }
         catch (NullReferenceException e)

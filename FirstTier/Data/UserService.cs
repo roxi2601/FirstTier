@@ -8,8 +8,5 @@ namespace FirstTier.Data
     {
         Task<User> ValidateUserAsync(string username, string password);
         Task<IList<User>> GetUsersAsync();
-        Task AddUserAsync(User user);
-        Task UpdateUserAsync(User user);
-        Task RemoveUserAsync(int id);
     }
 }

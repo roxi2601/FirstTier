@@ -11,12 +11,31 @@
     <AuthorizeView Policy="LoggedUser">
         <NotAuthorized>
             <li><a class="oi oi-home" href="/"> Home</a> </li>
+            <li><a class="oi oi-heart" href="/"> Contact us</a> </li>
             <li style="float:right">
-                <a class="active" href="Login"> Log in</a>
+                <a class="active" href="/login"> Log in</a>
                 @*<NavLink class="nav-link" href="Login">
                     <span class="oi oi-person" aria-hidden="true"></span> Log in
                 </NavLink>*@
             </li>
+             <li id="search"><div class="search-box">
+                            <input class="search-txt" type="text" name="" placeholder="Type to search">
+                            
+                            <a class=" search-btn" href="/">
+                                <i class="oi oi-magnifying-glass" style=" background: none;
+                                                                             position: absolute;
+                                                                             top: 50%;
+                                                                             float: right;
+                                                                             width: 40px;
+                                                                             height: 40px;
+                                                                             color: white;
+                                                                             justify-content: center;
+                                                                             align-items: center;
+                                                                             transition: 0.4s;
+                                                                         "></i>
+                            </a>
+                            
+                        </div> </li>
 
         </NotAuthorized>
         <Authorized>
@@ -25,6 +44,7 @@
             <li><a class="oi oi-plus" href="/"> Add new artwork</a> </li>
             <li><a class="oi oi-chat" href="/"> Chat</a> </li>
             <li><a class="oi oi-heart" href="/"> Contact us</a> </li>
+           
             <li style="float:right">
                 <a class="active" href="/" @onclick="PerformLogout" > Log out</a>
                 
@@ -52,7 +72,8 @@
             </div> </li>
         </Authorized>
     </AuthorizeView>
-   </ul> 
+</ul> 
+@Body
 @code{
 
 

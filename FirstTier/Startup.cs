@@ -36,6 +36,8 @@ namespace FirstTier
             services.AddHttpContextAccessor();
             
             services.AddScoped<UserService, UserCloud>();
+            
+            services.AddScoped<AccountService,AccountCloud>();
 
             services.AddScoped<AuthenticationStateProvider, UserCustomAuthenticationStateProvider>();
 
@@ -44,7 +46,7 @@ namespace FirstTier
                 options.AddPolicy("LoggedUser", policy =>
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("ID"));
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userID"));
                         if (logClaim == null) return false;
                         return int.Parse(logClaim.Value) > 0;
                     }));

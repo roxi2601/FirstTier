@@ -3,19 +3,28 @@ using System.Text.Json.Serialization;
 
 namespace FirstTier.Models
 {
-    public class User
+    public class Account
     {
         [JsonPropertyName("username")]
         public string UserName { get; set; }
-        
+        [JsonPropertyName("firstname")] 
+        public string FirstName { get; set; }
+        [JsonPropertyName("lastname")]
+        public string LastName { get; set; }
+        [JsonPropertyName("description")] 
+        public string Description { get; set; }
         [JsonPropertyName("password")]
         public string Password { get; set; }
        
-        [JsonPropertyName("userId")]
+        [JsonPropertyName("accountId")]
         public int ID { get; set; }
         
         [JsonPropertyName("securityLevel")]
         public int SecurityLevel { get; set; }
+        
+        [JsonPropertyName("img")] 
+        public byte[] Img { get; set; }
+        
         public override string ToString() {
             return JsonSerializer.Serialize(this);
         }

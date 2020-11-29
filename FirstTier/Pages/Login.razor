@@ -1,5 +1,5 @@
 ﻿
-@layout LoginLayout
+@layout MainLayout
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
 @page "/login"
@@ -51,7 +51,7 @@
             username = "";
             password = "";
             isAuthorized = true;
-            NavigationManager.NavigateTo("/main");
+            NavigationManager.NavigateTo("/");
         }
         catch (Exception e)
         {

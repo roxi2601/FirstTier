@@ -44,31 +44,6 @@ namespace FirstTier.Data.Impl
             return result;
         }
 
-        public async Task AddUserAsync(User user)
-        {
-            string personSerialized = JsonSerializer.Serialize(user);
-            StringContent content = new StringContent(personSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PostAsync("http://localhost:5001/signUp",content);
-            Console.WriteLine(response.ToString());
-            if (response.StatusCode != HttpStatusCode.Created)
-            {
-                Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-                throw new Exception(response.Content.ReadAsStringAsync().Result);
-            }
-        }
-
-        public async Task UpdateUserAsync(User user)
-        {
-            string userSerialized = JsonSerializer.Serialize(user);
-            StringContent content = new StringContent(userSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PutAsync( "https://localhost:5001/users",content);
-            Console.WriteLine(response.ToString()); 
-        }
-
-        public async Task RemoveUserAsync(int id)
-        {
-            HttpResponseMessage response = await client.DeleteAsync("https://localhost:5001/users?Id="+id);
-            Console.WriteLine(response);
-        }
+       
     }
 }
