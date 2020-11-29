@@ -7,9 +7,9 @@ namespace FirstTier.Models
     {
         [JsonPropertyName("username")]
         public string UserName { get; set; }
-        [JsonPropertyName("firstname")] 
+        [JsonPropertyName("firstName")] 
         public string FirstName { get; set; }
-        [JsonPropertyName("lastname")]
+        [JsonPropertyName("lastName")]
         public string LastName { get; set; }
         [JsonPropertyName("description")] 
         public string Description { get; set; }

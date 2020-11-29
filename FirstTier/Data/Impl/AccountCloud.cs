@@ -15,7 +15,7 @@ namespace FirstTier.Data.Impl
 
         public async Task<IList<Account>> GetAccountsAsync()
         {
-            string message = await client.GetStringAsync("http://localhost:5001/accounts");
+            string message = await client.GetStringAsync("http://localhost:8080/accounts");
             Console.WriteLine("cloud message"+message);
             List<Account> result = JsonSerializer.Deserialize<List<Account>>(message);
             return result;
@@ -25,7 +25,9 @@ namespace FirstTier.Data.Impl
         {
             string personSerialized = JsonSerializer.Serialize(account);
             StringContent content = new StringContent(personSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PostAsync("http://localhost:5001/signUp",content);
+            
+            HttpResponseMessage response = 
+                await client.PostAsync("http://localhost:8080/signUp",content);
             Console.WriteLine(response.ToString());
             if (response.StatusCode != HttpStatusCode.Created)
             {
@@ -38,13 +40,13 @@ namespace FirstTier.Data.Impl
         {
             string accountSerialized = JsonSerializer.Serialize(account);
             StringContent content = new StringContent(accountSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PutAsync( "https://localhost:5001/accounts",content);
+            HttpResponseMessage response = await client.PutAsync( "https://localhost:8080/accounts",content);
             Console.WriteLine(response.ToString()); 
         }
 
         public async Task RemoveAccountAsync(int id)
         {
-            HttpResponseMessage response = await client.DeleteAsync("https://localhost:5001/accounts?Id="+id);
+            HttpResponseMessage response = await client.DeleteAsync("https://localhost:8080/accounts?Id="+id);
             Console.WriteLine(response);
         }
     }
