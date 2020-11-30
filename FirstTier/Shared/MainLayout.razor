@@ -18,11 +18,12 @@
                     <span class="oi oi-person" aria-hidden="true"></span> Log in
                 </NavLink>*@
             </li>
-             <li id="search"><div class="search-box">
-                            <input class="search-txt" type="text" name="" placeholder="Type to search">
-                            
-                            <a class=" search-btn" href="/">
-                                <i class="oi oi-magnifying-glass" style=" background: none;
+            <li id="search">
+                <div class="search-box">
+                    <input class="search-txt" type="text" name="" placeholder="Type to search">
+
+                    <a class=" search-btn" href="/">
+                        <i class="oi oi-magnifying-glass" style=" background: none;
                                                                              position: absolute;
                                                                              top: 50%;
                                                                              float: right;
@@ -33,9 +34,9 @@
                                                                              align-items: center;
                                                                              transition: 0.4s;
                                                                          "></i>
-                            </a>
-                            
-                        </div> </li>
+                    </a>
+
+                </div> </li>
 
         </NotAuthorized>
         <Authorized>
@@ -44,19 +45,20 @@
             <li><a class="oi oi-plus" href="/"> Add new artwork</a> </li>
             <li><a class="oi oi-chat" href="/"> Chat</a> </li>
             <li><a class="oi oi-heart" href="/"> Contact us</a> </li>
-           
+
             <li style="float:right">
-                <a class="active" href="/" @onclick="PerformLogout" > Log out</a>
-                
+                <a class="active" href="/" @onclick="PerformLogout"> Log out</a>
+
                 @*<NavLink class="nav-link" href="" @onclick="PerformLogout">
                     <span class="oi oi-person" aria-hidden="true"></span> Log out
                 </NavLink>*@
             </li>
-            <li id="search"><div class="search-box">
-                <input class="search-txt" type="text" name="" placeholder="Type to search">
-                
-                <a class=" search-btn" href="/">
-                    <i class="oi oi-magnifying-glass" style=" background: none;
+            <li id="search">
+                <div class="search-box">
+                    <input class="search-txt" type="text" name="" placeholder="Type to search">
+
+                    <a class=" search-btn" href="/">
+                        <i class="oi oi-magnifying-glass" style=" background: none;
                                                                  position: absolute;
                                                                  top: 50%;
                                                                  float: right;
@@ -67,11 +69,12 @@
                                                                  align-items: center;
                                                                  transition: 0.4s;
                                                              "></i>
-                </a>
-                
-            </div> </li>
+                    </a>
+
+                </div> </li>
         </Authorized>
     </AuthorizeView>
+   
 </ul> 
 @Body
 @code{

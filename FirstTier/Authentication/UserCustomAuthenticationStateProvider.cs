@@ -83,7 +83,7 @@ namespace FirstTier.Authentication
             List<Claim> claims = new List<Claim>();
             claims.Add(new Claim("Username", user.UserName));
             claims.Add(new Claim("Password", user.Password));
-            claims.Add(new Claim("userID", user.ID.ToString()));
+            claims.Add(new Claim("ID", user.ID.ToString()));
             claims.Add(new Claim("SecurityLevel", user.SecurityLevel.ToString()));
 
             ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth_type");

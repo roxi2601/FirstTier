@@ -107,6 +107,7 @@
             {
                 throw new Exception("Specify first and last name");
             }
+            
             if (string.IsNullOrEmpty(newAccount.UserName))
             {
                 throw new Exception("Username cannot be empty");
@@ -119,6 +120,7 @@
             {
                 throw  new Exception("Username and password have to contain at least 3 signs");
             }
+            newAccount.SecurityLevel = newAccount.UserName.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
   
     await AccountService.AddAccountAsync(newAccount);
             NavigationManager.NavigateTo("/login");
