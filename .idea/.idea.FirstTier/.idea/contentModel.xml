@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\HUAWEI\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\HUAWEI\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_FirstTier.2144813463.00" t="ExcludeRecursive" />
-    <e p="C:\Users\HUAWEI\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\HUAWEI\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\HUAWEI\DNPexercises\FirstTier" t="IncludeFlat">
+    <e p="C:\Users\tanki\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tanki\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_FirstTier.-1301590581.00" t="ExcludeRecursive" />
+    <e p="C:\Users\tanki\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\tanki\DNPexercises\FirstTier" t="IncludeFlat">
       <e p="FirstTier" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
         <e p="App.razor" t="Include" />
@@ -17,8 +16,10 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Data" t="Include">
           <e p="AccountService.cs" t="Include" />
+          <e p="ArtworkService.cs" t="Include" />
           <e p="Impl" t="Include">
             <e p="AccountCloud.cs" t="Include" />
+            <e p="ArtworkCloud.cs" t="Include" />
             <e p="UserCloud.cs" t="Include" />
           </e>
           <e p="UserService.cs" t="Include" />
@@ -26,18 +27,32 @@
         <e p="FirstTier.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Account.cs" t="Include" />
+          <e p="Artwork.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="FirstTier.AssemblyInfo.cs" t="Include" />
+              <e p="FirstTier.csproj.CoreCompileInputs.cache" t="Include" />
+              <e p="FirstTier.csproj.FileListAbsolute.txt" t="Include" />
+              <e p="FirstTier.dll" t="Include" />
+              <e p="FirstTier.exe" t="Include" />
+              <e p="FirstTier.genruntimeconfig.cache" t="Include" />
+              <e p="FirstTier.MvcApplicationPartsAssemblyInfo.cache" t="Include" />
+              <e p="FirstTier.pdb" t="Include" />
               <e p="FirstTier.RazorAssemblyInfo.cs" t="Include" />
+              <e p="FirstTier.RazorCoreGenerate.cache" t="Include" />
+              <e p="FirstTier.RazorTargetAssemblyInfo.cache" t="Include" />
+              <e p="FirstTier.TagHelpers.input.cache" t="Include" />
+              <e p="FirstTier.TagHelpers.output.cache" t="Include" />
+              <e p="FirstTier.Views.dll" t="Include" />
+              <e p="FirstTier.Views.pdb" t="Include" />
             </e>
           </e>
         </e>
         <e p="Pages" t="Include">
           <e p="_Host.cshtml" t="Include" />
+          <e p="AddArtwork.razor" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Index.razor" t="Include" />
           <e p="Login.razor" t="Include" />
@@ -84,6 +99,8 @@
           <e p="images" t="Include">
             <e p="background2.jpg" t="Include" />
             <e p="painter-161318_640.png" t="Include" />
+            <e p="paleta.jpg" t="Include" />
+            <e p="temporary.jpg" t="Include" />
           </e>
           <e p="inputfile.js" t="Include" />
         </e>

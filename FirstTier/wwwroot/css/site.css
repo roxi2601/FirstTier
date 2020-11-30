@@ -63,8 +63,25 @@ html, body {
     width: 30%;
     height: 80%;
     margin-left: 35%;
-    margin-top: 5%;
+    margin-top: 8%;
     background-color: rgba(30, 31, 31, 0.7);
+}
+#addArtworkForm{
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+    height: 100%;
+    margin-left: 8%;
+    margin-top: 8%;
+    background-color: rgba(30, 31, 31, 0.7);
+}
+#artworkImage{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    height: auto;
+    margin-left: 8%;
+    margin-top: 8%;
 }
 .buttonCreateAccount {
 

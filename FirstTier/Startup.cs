@@ -38,6 +38,8 @@ namespace FirstTier
             services.AddScoped<UserService, UserCloud>();
             
             services.AddScoped<AccountService,AccountCloud>();
+            
+            services.AddScoped<ArtworkService,ArtworkCloud>();
 
             services.AddScoped<AuthenticationStateProvider, UserCustomAuthenticationStateProvider>();
 
@@ -46,15 +48,18 @@ namespace FirstTier
                 options.AddPolicy("LoggedUser", policy =>
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userID"));
-                        if (logClaim == null) return false;
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("UserID"));
+                        if (logClaim == null)
+                        {
+                            return false;
+                        }
                         return int.Parse(logClaim.Value) > 0;
                     }));
                 options.AddPolicy("Guest", policy =>
                                   
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userID"));
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("UserID"));
                         if (logClaim == null)
                         {
                             return true;

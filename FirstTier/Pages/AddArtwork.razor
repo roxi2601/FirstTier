@@ -1,0 +1,140 @@
+﻿@page "/AddArtwork"
+@using BlazorInputFile
+@using System.IO
+@using System.Drawing
+@using System.Drawing.Imaging
+@using FirstTier.Authentication
+@using FirstTier.Data
+@using FirstTier.Models
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ArtworkService ArtworkService
+
+<div id="addArtworkForm">
+              
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center; color: white">Add the artwork</p>
+<EditForm  Model ="@newArtwork" OnValidSubmit="@PerformSave" xmlns="http://www.w3.org/1999/html">
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+    
+    <div class="col-12 row">
+        <div class="col-6">
+            <img  src="@imagePath" class="img-thumbnail" alt="picture"/>
+        </div>
+        <div class="col-6">
+            
+            <div style="color:red">@errorMessage</div>
+            <div class="form-group">
+                <label style="color: white">Title:</label><br>
+                <InputText @bind-Value="newArtwork.title"/>
+            </div>
+            <div class="form-group">
+                <label style="color: white">Author:</label><br>
+                <InputText @bind-Value="newArtwork.author"/>
+            </div> 
+            <div class="form-group">
+                <label style="color: white">Price:</label><br>
+                <InputNumber @bind-Value="newArtwork.price"/><label style="color: white"> €</label>
+            </div>
+            <div class="form-group">
+                <label style="color: white">Category:</label><br>
+                <InputSelect @bind-Value="newArtwork.category">
+                    <option value="Paintings">Paintings</option>
+                    <option value="Sculptures">Sculptures</option>
+                    <option value="Prints">Prints</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Drawings">Drawings</option>
+                    <option value="Graphics">Graphics</option>
+                    <option value="Media">Media</option>
+                    <option value="Other">Other</option>
+                </InputSelect>
+            </div>
+            <div class="form-group">
+                <label style="color: white">Description:</label><br>
+                <InputTextArea @bind-Value="newArtwork.description"/>
+            </div>
+            <div class="form-group" >
+                <label style="color: white">Choose picture:</label>
+                <InputFile OnChange="HandleFileSelected"></InputFile>
+            </div>
+            
+        </div>
+         
+    </div>
+     
+<div class="col-12 row">
+    <div class="col-6">
+        <button class="btn button" @onclick="Cancel"  >
+            <span>Cancel</span>
+        </button>
+    </div>
+    <div class="col-6">
+        <button class="btn button" type="submit">
+            <span>Create</span>
+        </button>
+    </div>
+</div>
+</EditForm> 
+</div>
+
+
+@code {
+
+    Artwork newArtwork = new Artwork();
+    IFileListEntry file;
+    byte[] img;
+    string imagePath = "images/paleta.jpg";
+    
+    private string errorMessage;
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    async Task HandleFileSelected(IFileListEntry[] files)
+    {
+        file = files.FirstOrDefault();
+        if (file != null)
+        {
+            var ms = new MemoryStream();
+            await file.Data.CopyToAsync(ms);
+            img = ms.ToArray();
+            newArtwork.pictureBytes = img;
+            Image.FromStream(ms).Save("wwwroot/images/temporary.jpg",ImageFormat.Jpeg);
+            imagePath = "images/temporary.jpg";
+            
+         
+    //to display picture should we save each one we get here separately or
+    //create one file which will be overwritten with bytes we want to display each time system request picture.
+    //one file for every picture entity like "profile picture", "NewArtworkPicture" 
+        }
+    }
+
+    async Task PerformSave()
+    {
+        newArtwork.userId = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser().ID;
+        if (string.IsNullOrEmpty(newArtwork.title))
+        {
+            errorMessage = "Title field cannot be empty";
+        }
+        if (string.IsNullOrEmpty(newArtwork.author))
+        {
+            newArtwork.author = "Author not specified";
+        }
+        if (string.IsNullOrEmpty(newArtwork.description))
+        {
+            newArtwork.description = "";
+        }
+        try
+        {
+            await ArtworkService.AddArtwork(newArtwork);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.StackTrace);
+            errorMessage = e.Message;
+        }
+    }
+
+}
