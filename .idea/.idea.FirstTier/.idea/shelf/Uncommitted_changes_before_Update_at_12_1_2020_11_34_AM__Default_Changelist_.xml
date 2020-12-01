@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]" date="1606818854893" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 12/1/2020 11:34 AM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/wwwroot/images/painter-161318_640.png" />
+    <option name="AFTER_PATH" value="FirstTier/wwwroot/images/pinguin.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/pinguin.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/obj/Debug/netcoreapp3.1/FirstTier.RazorComponent.input.cache" />
+    <option name="AFTER_PATH" value="FirstTier/obj/Debug/netcoreapp3.1/FirstTier.RazorComponent.input.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/FirstTier.RazorComponent.input.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="FirstTier/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" />
+    <option name="AFTER_PATH" value="FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/FirstTier.csprojAssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" />
+    <option name="AFTER_PATH" value="FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/FirstTier.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="FirstTier/wwwroot/images/profilepic.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_11_34_AM_[Default_Changelist]/profilepic.png" />
+  </binary>
+</changelist>
