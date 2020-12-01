@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -25,6 +26,11 @@ namespace FirstTier.Data.Impl
                 return result;
             }
             throw new Exception(response.Content.ReadAsStringAsync().Result);
+        }
+
+        public Task<IList<Artwork>> GetArtworksAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }
