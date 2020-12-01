@@ -2,15 +2,32 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Remove="wwwroot\images\artback1.jpg" />
-      <Content Remove="wwwroot\images\background3.jpg" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.csproj.CoreCompileInputs.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.csproj.FileListAbsolute.txt" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.dll" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.exe" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.genruntimeconfig.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.MvcApplicationPartsAssemblyInfo.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.pdb" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.RazorCoreGenerate.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.RazorTargetAssemblyInfo.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.TagHelpers.input.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.TagHelpers.output.cache" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.Views.dll" />
+      <Content Include="obj\Debug\netcoreapp3.1\FirstTier.Views.pdb" />
     </ItemGroup>
+
+    <!--<ItemGroup>
+      <Compile Include="obj\Debug\netcoreapp3.1\FirstTier.RazorTargetAssemblyInfo.cs" />
+    </ItemGroup>-->
 
     <ItemGroup>
       <PackageReference Include="BlazorInputFile" Version="0.2.0" />
+      <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
     </ItemGroup>
 
 </Project>
