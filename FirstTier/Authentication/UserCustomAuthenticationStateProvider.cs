@@ -75,6 +75,7 @@ namespace FirstTier.Authentication
 
         public void Logout()
         {
+            
             cachedUser = null;
             var user = new ClaimsPrincipal(new ClaimsIdentity());
             jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", "");
