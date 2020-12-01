@@ -22,7 +22,6 @@ namespace FirstTier.Data.Impl
             
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
                 Artwork result = JsonSerializer.Deserialize<Artwork>(response.Content.ReadAsStringAsync().Result);
                 return result;
             }

@@ -38,7 +38,9 @@
             </div>
             <div class="form-group">
                 <label style="color: white">Category:</label><br>
-                <InputSelect @bind-Value="newArtwork.category">
+                <InputSelect ValueExpression="@(()=>newArtwork.category)" 
+                             Value="@newArtwork.category" 
+                             ValueChanged="@((string value) => OnValueChanged(value ))">
                     <option value="Paintings">Paintings</option>
                     <option value="Sculptures">Sculptures</option>
                     <option value="Prints">Prints</option>
@@ -87,6 +89,12 @@
     
     private string errorMessage;
 
+    private Task OnValueChanged(string value)
+    {
+        newArtwork.category = value;
+        return Task.CompletedTask;
+    }
+
     private void Cancel()
     {
         NavigationManager.NavigateTo("/");
@@ -125,6 +133,10 @@
         if (string.IsNullOrEmpty(newArtwork.description))
         {
             newArtwork.description = "";
+        }
+        if (newArtwork.category == null)
+        {
+            newArtwork.category = "Painting";
         }
         try
         {
