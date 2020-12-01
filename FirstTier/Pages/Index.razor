@@ -1,3 +1,188 @@
 ﻿@layout MainLayout
 @page "/"
+@using FirstTier.Models
+@using System.Drawing
+@using System.Drawing.Imaging
+@using System.IO
+@using FirstTier.Data
+@inject ArtworkService ArtworkService
 
+<div class="col-12 row" id="filters">
+    &nbsp;&nbsp;&nbsp;
+    <label style="color: white">Filter by price:&nbsp;</label>
+    <label style="color: white">min </label>
+    @*<InputNumber @bind-Value="minPrice"></InputNumber>*@
+    <input class="form-control" type="number" @bind="minPrice" style="width:150px"/>
+    &nbsp;
+    <label style="color: white">max </label>
+    <input class="form-control" type="number" @bind="maxPrice" style="width:150px"/>
+    &nbsp;&nbsp;&nbsp;
+    @*<InputNumber @bind-Value="maxPrice"></InputNumber>*@
+    <label style="color: white">Filter by category: </label>
+    @*<InputSelect ValueChanged="@((string value) => OnValueChanged(value ))">*@
+    <select @bind="category">
+        <option value="Paintings">Paintings</option>
+        <option value="Sculptures">Sculptures</option>
+        <option value="Prints">Prints</option>
+        <option value="Photography">Photography</option>
+        <option value="Drawings">Drawings</option>
+        <option value="Graphics">Graphics</option>
+        <option value="Media">Media</option>
+        <option value="Other">Other</option>
+        <option value="All">All</option>
+    </select>
+    @*</InputSelect>*@
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button @onclick="ExecuteFilter">
+        <span>Filter</span>
+    </button>
+</div>
+<div id="artworks">
+@if (artworksToShow == null)
+{
+    <p>
+    <em> Loading.. </em>
+    </p>
+}
+else if (!artworksToShow.Any())
+{
+    <p>
+        <em>No offers exist, Please add some.</em>
+    </p>
+}
+else
+{
+    <div class="col-12 row">
+        @foreach (var artwork in artworksToShow)
+        {
+            <div class="col-4">
+                <div id="artworkElement">
+                    <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
+                    <img src="@PrepareSRC(@artwork)" alt="picture" class="img-thumbnail">
+                    <label id="artworkTitleElement">@artwork.title</label>
+                    <div id="artworkPriceElement">
+                    <label>@artwork.price €</label>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+</div>
+@code
+{
+    private int? maxPrice;
+    private int? minPrice;
+    private string? category;
+    private IList<Artwork> artworks;
+    private IList<Artwork> artworksToShow;
+    private string imagePath = "images/paleta.jpg";
+
+    private Task OnValueChanged(string value)
+    {
+       
+        category = value;
+        return Task.CompletedTask;
+    }
+
+    private string PrepareSRC(Artwork artwork)
+    {
+        if (artwork.pictureBytes != null)
+        {
+           return "images/artwork" + artwork.id+".jpg";
+        }
+        return "images/paleta.jpg";
+    }
+
+    private void ExecuteFilter()
+    {
+        if (maxPrice==null && minPrice==null && (category==null || category.Equals("All")))
+        {
+            artworksToShow = artworks;
+        }
+        else if (maxPrice != null && minPrice==null && (category==null || category.Equals("All")))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.price < maxPrice).ToList();
+        } 
+        else if (maxPrice != null && minPrice!=null && (category==null || category.Equals("All")))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.price < maxPrice && artwork.price>minPrice).ToList();
+        }
+        else if (maxPrice == null && minPrice!=null && (category==null || category.Equals("All")))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.price > minPrice).ToList();
+        }
+        else if (maxPrice == null && minPrice==null && category!=null && !category.Equals("All"))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.category.Equals(category)).ToList();
+        }
+        else if (maxPrice != null && minPrice!=null && category!=null && !category.Equals("All"))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.price > minPrice && artwork.price<maxPrice && artwork.category.Equals(category)).ToList();
+        }
+        else if (maxPrice == null && minPrice!=null && category!=null && !category.Equals("All"))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.price > minPrice && artwork.category.Equals(category)).ToList();
+        }
+        else if (maxPrice != null && minPrice==null && category!=null && !category.Equals("All"))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.price<maxPrice && artwork.category.Equals(category)).ToList();
+        }
+        Console.WriteLine(category+"     "+minPrice+"     "+maxPrice);
+    }
+
+    protected  override async Task OnInitializedAsync()
+    {
+
+        /*artworks = await ArtworkService.GetArtworksAsync();*/
+            /*artworksToShow = artworks;*/
+        artworksToShow = new List<Artwork>();
+        Artwork deleteItLater = new Artwork();
+        deleteItLater.price = 30;
+        deleteItLater.title = "Title";
+        deleteItLater.category = "Paintings";
+        Artwork deleteItLater1 = new Artwork();
+        deleteItLater1.price = 30;
+        deleteItLater1.title = "Title";
+        deleteItLater1.category = "Paintings";
+        Artwork deleteItLater2 = new Artwork();
+        deleteItLater2.price = 30;
+        deleteItLater2.title = "Title";
+        deleteItLater2.category = "Paintings";
+        Artwork deleteItLater3 = new Artwork();
+        deleteItLater3.price = 30;
+        deleteItLater3.title = "Title";
+        deleteItLater3.category = "Paintings";
+        Artwork deleteItLater4 = new Artwork();
+        deleteItLater4.price = 30;
+        deleteItLater4.title = "Title";
+        deleteItLater4.category = "Paintings";
+        Artwork deleteItLater5 = new Artwork();
+        deleteItLater5.price = 30;
+        deleteItLater5.title = "Title";
+        deleteItLater5.category = "Paintings";
+        Artwork deleteItLater6 = new Artwork();
+        deleteItLater6.price = 30;
+        deleteItLater6.title = "Title";
+        deleteItLater6.category = "Paintings";
+        artworksToShow.Add(deleteItLater);
+        artworksToShow.Add(deleteItLater1);
+        artworksToShow.Add(deleteItLater2);
+        artworksToShow.Add(deleteItLater3);
+        artworksToShow.Add(deleteItLater4);
+        artworksToShow.Add(deleteItLater5);
+        artworksToShow.Add(deleteItLater6);
+        foreach (var artwork in artworksToShow)
+        {
+            if (artwork.pictureBytes != null)
+            {
+                var ms = new MemoryStream();
+                ms.Write(artwork.pictureBytes);
+                Image.FromStream(ms).Save("wwwroot/images/artwork"+artwork.id+".jpg",ImageFormat.Jpeg);
+            }
+            
+        }
+        
+    }
+}
