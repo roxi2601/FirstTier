@@ -1,6 +1,171 @@
 ﻿@page "/EditProfile"
-<h3>EditProfile</h3>
+@using FirstTier.Models
+@using FirstTier.Data.Impl
+@using FirstTier.Data
+@using FirstTier.Authentication
+@*@attribute [Authorize(Policy ="Guest" )]*@
+@using BlazorInputFile
+@using System.IO
+@using System.Drawing
+@using System.Drawing.Imaging
+@layout MainLayout
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
 
+@inject AccountService AccountService
+
+
+<EditForm  Model ="@updateAccount" OnValidSubmit="@PerformUpdate" xmlns="http://www.w3.org/1999/html">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div id="registerForm">
+        <h3 id="AddUser" xmlns="http://www.w3.org/1999/html" style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center; color: black"> Join us!</h3>
+        <div class="col-12 row">
+            <span class="col-6">
+                <div class="form-group" style="font-family: -webkit-body;  color:black">
+                    Username: <br/>
+                    <InputText @bind-Value="updateAccount.username"/>
+                </div>
+            </span>
+            <span class="col-6">
+                <div class="form-group " style="font-family: -webkit-body;  color:black">
+                    First name: <br/>
+                    <InputText @bind-Value="updateAccount.FirstName"/>
+                </div>
+            </span>
+        </div>
+        
+        <div class="col-12 row">
+            <span class="col-6">
+                <div class="form-group" style="font-family: -webkit-body;  color:black">
+                    Last name: <br/>
+                    <InputText @bind-Value="updateAccount.LastName"/>
+                </div>
+            </span>
+            <span class="col-6">
+                <div class="form-group " style="font-family: -webkit-body;  color:black;">
+                    Description: <br/>
+                    <InputText @bind-Value="updateAccount.Description"/>
+                </div>
+            </span>
+        </div>
+        
+        <div class="col-12 row">
+            <span class="col-6">
+                <div class="form-group" style="font-family: -webkit-body;  color:black">
+                    Password: <br/>
+                    <InputText @bind-Value="updateAccount.Password"/>
+                </div>
+            </span>
+            <span class="col-6">
+                <div class="form-group " style="font-family: -webkit-body;  color:black">
+                    Confirm password: <br/>
+                    <InputText  @bind-Value="ConfirmPassword"/>
+                </div>
+            </span>
+        </div>
+        
+         <div class="col-12 row">
+             <span class="col-6 ">
+                  <div class="form-group " style="font-family: -webkit-body;  color:black; ">
+                  Choose profile picture: <br/>
+                  <InputFile OnChange="HandleFileSelected" ></InputFile>
+                @if (file != null)
+                {
+                    <p>Name: @file.Name</p>
+                    }
+
+                  </div>
+                  </span>
+                    <span class="col-6">
+                        <p class="actions">
+                            <button class="buttonCreateAccount" type="submit">
+                               
+                                <span>Update profile</span>
+                            </button>
+                        </p>
+                        <div style="color:red">@errorMessage</div>
+                    </span>
+                </div>
+    </div>
+</EditForm>
 @code {
+    private Account updateAccount = new Account();
     
+    public string ConfirmPassword ="";
+   
+    
+    private bool isAuthorized;
+    
+    IFileListEntry file;
+    byte[] Img;
+    string imagePath = "images/profilepic.png";
+    
+    
+    private string errorMessage;
+    async Task PerformUpdate()
+    {
+        errorMessage = "";
+        try
+        {
+            if (string.IsNullOrEmpty(updateAccount.FirstName) || string.IsNullOrEmpty(updateAccount.LastName))
+            {
+                throw new Exception("Specify first and last name");
+            }
+            
+            if (string.IsNullOrEmpty(updateAccount.username))
+            {
+                throw new Exception("Username cannot be empty");
+            }
+            if (!updateAccount.Password.Equals(ConfirmPassword))
+            {
+                throw new Exception("Passwords don't match, try to type them again");
+            }
+    if (updateAccount.username.Length<3 || updateAccount.Password.Length<6)
+            {
+                throw  new Exception("Username and password have to contain at least 3 signs");
+            }
+            updateAccount.SecurityLevel = updateAccount.username.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
+  
+    await AccountService.UpdateAccountAsync(updateAccount);
+            NavigationManager.NavigateTo("/Profile");
+        }
+        catch (NullReferenceException e)
+        {
+            errorMessage = "you should fulfill all the fields";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorMessage = e.Message;
+        }
+        
+    }
+
+
+    async Task HandleFileSelected(IFileListEntry[] files)
+    {
+        file = files.FirstOrDefault();
+        if (file != null)
+        {
+            var ms = new MemoryStream();
+            await file.Data.CopyToAsync(ms);
+            Img = ms.ToArray();
+            updateAccount.Img = Img;
+            Image.FromStream(ms).Save("wwwroot/images/temporary.jpg",ImageFormat.Jpeg);
+            imagePath = "images/temporaryProfile.jpg";
+        }
+    }
+    
+    /*[CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        var user = (await AuthStat).User;
+        if(!user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo($"/");
+        }
+    }*/
 }
