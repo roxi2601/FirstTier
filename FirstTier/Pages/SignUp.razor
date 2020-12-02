@@ -6,6 +6,8 @@
 @*@attribute [Authorize(Policy ="Guest" )]*@
 @using BlazorInputFile
 @using System.IO
+@using System.Drawing
+@using System.Drawing.Imaging
 @layout MainLayout
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
@@ -22,7 +24,7 @@
             <span class="col-6">
                 <div class="form-group" style="font-family: -webkit-body;  color:black">
                     Username: <br/>
-                    <InputText @bind-Value="newAccount.UserName"/>
+                    <InputText @bind-Value="newAccount.username"/>
                 </div>
             </span>
             <span class="col-6">
@@ -91,14 +93,17 @@
     private Account newAccount = new Account();
     
     public string ConfirmPassword ="";
+   
     
     private bool isAuthorized;
     
     IFileListEntry file;
+    byte[] Img;
+    string imagePath = "images/profilepic.png";
     
     
     private string errorMessage;
-    private async Task PerformSignUp()
+    async Task PerformSignUp()
     {
         errorMessage = "";
         try
@@ -108,7 +113,7 @@
                 throw new Exception("Specify first and last name");
             }
             
-            if (string.IsNullOrEmpty(newAccount.UserName))
+            if (string.IsNullOrEmpty(newAccount.username))
             {
                 throw new Exception("Username cannot be empty");
             }
@@ -116,11 +121,11 @@
             {
                 throw new Exception("Passwords don't match, try to type them again");
             }
-    if (newAccount.UserName.Length<3 || newAccount.Password.Length<6)
+    if (newAccount.username.Length<3 || newAccount.Password.Length<6)
             {
                 throw  new Exception("Username and password have to contain at least 3 signs");
             }
-            newAccount.SecurityLevel = newAccount.UserName.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
+            newAccount.SecurityLevel = newAccount.username.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
   
     await AccountService.AddAccountAsync(newAccount);
             NavigationManager.NavigateTo("/login");
@@ -141,12 +146,15 @@
     async Task HandleFileSelected(IFileListEntry[] files)
     {
         file = files.FirstOrDefault();
-        /*if (file != null)
+        if (file != null)
         {
             var ms = new MemoryStream();
             await file.Data.CopyToAsync(ms);
             Img = ms.ToArray();
-        }*/
+            newAccount.Img = Img;
+            Image.FromStream(ms).Save("wwwroot/images/temporary.jpg",ImageFormat.Jpeg);
+            imagePath = "images/temporaryProfile.jpg";
+        }
     }
     
     /*[CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }

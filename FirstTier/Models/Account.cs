@@ -6,7 +6,7 @@ namespace FirstTier.Models
     public class Account
     {
         [JsonPropertyName("username")]
-        public string UserName { get; set; }
+        public string username { get; set; }
         [JsonPropertyName("firstName")] 
         public string FirstName { get; set; }
         [JsonPropertyName("lastName")]
@@ -22,7 +22,7 @@ namespace FirstTier.Models
         [JsonPropertyName("securityLevel")]
         public int SecurityLevel { get; set; }
         
-        [JsonPropertyName("img")] 
+        [JsonPropertyName("pictureBytes")] 
         public byte[] Img { get; set; }
         
         public override string ToString() {

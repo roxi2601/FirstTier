@@ -1,102 +1,147 @@
 ﻿@page "/Profile"
 @using FirstTier.Models
+@using System.Drawing
+@using System.Drawing.Imaging
+@using System.IO
 @inject NavigationManager NavigationManager
-<body>
-    <div class="container main-secction">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 image-section">
-                <img src="images/0190.jpg">
-            </div>
-            <div class="row user-left-part">
-                <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
-                    <div class="row ">
-                        <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
-                            <img  style="height: 150px; width: 150px; margin-top: 10px" src="http://nicesnippets.com/demo/1499344631_malecostume.png">
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
-                            <div class="aboutme "><i class="fa fa-user-o" aria-hidden="true"></i> </div>
-                        </div>
-                        <div class="row user-detail-row" style="margin-top: 80px">
-                            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
-                            <div class="border"></div>
-                                <p>About me</p>
-                                <span>description</span>
+
+
+
+    <div class="container col-md-8 main-secction" style="margin-top: 40px">
+            <div class="row">
+            
+                <div class="row user-left-part">
+                    <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                        <div class="row ">
+                            <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
+                                <img  style="height: 150px; width: 150px; margin-top: 10px" src="http://nicesnippets.com/demo/1499344631_malecostume.png">
                             </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-9 profile-right-section">
-                    <div class="row profile-right-section-row">
-                        <div class="col-md-12 profile-header">
-                            <div class="row">
-                                <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
-                                    <h1>first and last name</h1>
-                                    <p>username</p>
+                            <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                                <div class="aboutme "><i class="fa fa-user-o" aria-hidden="true"></i> </div>
+                            </div>
+                            <div class="row user-detail-row" style="margin-top: 80px">
+                                <div class="col-md-3 col-sm-12 user-detail-section2 pull-left">
+                                    <div class="border"></div>
+                                    <p>About me</p>
+                                    <span>descriptionzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzccccc</span>
                                 </div>
-                                <div class="col-md-12 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                                     @*<button class="btn button" type="submit" @onclick="Chat">
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col-md-9 profile-right-section">
+                        <div class="row profile-right-section-row">
+                            <div class="col-md-12 profile-header">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
+                                        <h1>first and last name</h1>
+                                        <p>username</p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                                        @*<button class="btn button" type="submit" @onclick="Chat">
                                                         <span>Chat</span>
                                                         </button>*@
-                                    <button  class="btn btn-info req-btn" type="submit" @onclick="Chat" > Chat with me!</button>                          
-                                    <button class="btn btn-info req-btn" type="submit"> Report me!</button> 
+                                        <button  class="btn btn-info req-btn" type="submit" @onclick="Chat" > Chat with me!</button>                          
+                                        <button class="btn btn-info req-btn" type="submit"> Report me!</button> 
+                                    </div>
                                 </div>
-                            </div>
                             
-                        </div>
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-12  profile-tag-section text-center">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-3 profile-tag">
-                                            <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                                            <p>edit profile</p></a>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 profile-tag">
-                                            <a @onclick="DeleteProfile"><i class="fa fa-address-book" aria-hidden="true"></i>
-                                            <p>delete profile</p></a>
-                                        </div>
-                                    </div>
-                                </div><div class="col-md-4 img-main-rightPart">
-                                    <div class="row">
-                                                                             
-                                        <div  class="col-md-12 image-right">
-                                                                    
-                                        </div>
-                                                                             
-                                    </div>
-                                </div>
-                                
                             </div>
-                        </div>
-                        <div class="row">
-                                                       <table class="table">
-                                                            <thread>
-                                                                <tr>
-                                                                    <th>My artworks</th>
-                                                                </tr>
-                                                            </thread>
-                                                            <tbody>
-                                                            @*@foreach (Artwork artwork in myArtworks)
+                           
+                            <div class="col-md-12">
+                                
+                                <AuthorizeView Policy="LoggedUser">
+                                    <Authorized>
+                                        <div class="row">
+                                            <div class="col-md-12  profile-tag-section text-center">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-3 profile-tag">
+                                                        <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                                            <p>edit profile</p></a>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-3 profile-tag">
+                                                        <a @onclick="DeleteProfile"><i class="fa fa-address-book" aria-hidden="true"></i>
+                                                            <p>delete profile</p></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 img-main-rightPart">
+                                                <div class="row">
+
+                                                    <div class="col-md-12 image-right">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        </Authorized>
+                                </AuthorizeView>
+
+                            </div>
+                            <div class="row">
+                                <table class="table">
+                                    <thread>
+                                        <tr>
+                                            <th>My artworks</th>
+                                        </tr>
+                                        @if (artworksToShow == null)
+                                        {
+                                            <p>
+                                            <em> Loading.. </em>
+                                            </p>
+                                        }
+                                        else if (!artworksToShow.Any())
+                                        {
+                                            <p>
+                                                <em>No offers exist, Please add some.</em>
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-12 row">
+                                                @foreach (var artwork in artworksToShow)
+                                                {
+                                                    <div class="col-4">
+                                                        <div id="artworkElement">
+                                                            <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
+                                                            <img src="@PrepareSRC(@artwork)" alt="picture" class="img-thumbnail">
+                                                            <label id="artworkTitleElement">@artwork.title</label>
+                                                            <div id="artworkPriceElement">
+                                                            <label>@artwork.price €</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        }
+                                    </thread>
+                                    <tbody>
+                                    @*@foreach (Artwork artwork in myArtworks)
                                                             {
                                                                 <tr>
                                                                     <td>artwooooooorrrkkkk</td>
                                                                     
                                                                 </tr>
                                                             }*@
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                    </tbody>
+                                </table>
+                             </div>
+                           
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+
 @code {
     IList<Artwork> myArtworks;
     Account account = new Account();
-
+    private IList<Artwork> artworks;
+    private IList<Artwork> artworksToShow;
+    private string imagePathArtwork = "images/paleta.jpg";
+    
     byte[] img;
     string imagePath = "images/picfile.png";
 
@@ -111,5 +156,68 @@
     private void DeleteProfile()
     {
         NavigationManager.NavigateTo("/EditProfile");
+    }
+    
+    private string PrepareSRC(Artwork artwork)
+    {
+        if (artwork.pictureBytes != null)
+        {
+            return "images/artwork" + artwork.id+".jpg";
+        }
+        return "images/paleta.jpg";
+    }
+    
+    protected  override async Task OnInitializedAsync()
+    {
+
+        /*artworks = await ArtworkService.GetArtworksAsync();*/
+            /*artworksToShow = artworks;*/
+        artworksToShow = new List<Artwork>();
+        Artwork deleteItLater = new Artwork();
+        deleteItLater.price = 30;
+        deleteItLater.title = "Title";
+        deleteItLater.category = "Paintings";
+        Artwork deleteItLater1 = new Artwork();
+        deleteItLater1.price = 30;
+        deleteItLater1.title = "Title";
+        deleteItLater1.category = "Paintings";
+        Artwork deleteItLater2 = new Artwork();
+        deleteItLater2.price = 30;
+        deleteItLater2.title = "Title";
+        deleteItLater2.category = "Paintings";
+        Artwork deleteItLater3 = new Artwork();
+        deleteItLater3.price = 30;
+        deleteItLater3.title = "Title";
+        deleteItLater3.category = "Paintings";
+        Artwork deleteItLater4 = new Artwork();
+        deleteItLater4.price = 30;
+        deleteItLater4.title = "Title";
+        deleteItLater4.category = "Paintings";
+        Artwork deleteItLater5 = new Artwork();
+        deleteItLater5.price = 30;
+        deleteItLater5.title = "Title";
+        deleteItLater5.category = "Paintings";
+        Artwork deleteItLater6 = new Artwork();
+        deleteItLater6.price = 30;
+        deleteItLater6.title = "Title";
+        deleteItLater6.category = "Paintings";
+        artworksToShow.Add(deleteItLater);
+        artworksToShow.Add(deleteItLater1);
+        artworksToShow.Add(deleteItLater2);
+        artworksToShow.Add(deleteItLater3);
+        artworksToShow.Add(deleteItLater4);
+        artworksToShow.Add(deleteItLater5);
+        artworksToShow.Add(deleteItLater6);
+        foreach (var artwork in artworksToShow)
+        {
+            if (artwork.pictureBytes != null)
+            {
+                var ms = new MemoryStream();
+                ms.Write(artwork.pictureBytes);
+                Image.FromStream(ms).Save("wwwroot/images/artwork"+artwork.id+".jpg",ImageFormat.Jpeg);
+            }
+            
+        }
+        
     }
 }
