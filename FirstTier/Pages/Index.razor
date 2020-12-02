@@ -135,10 +135,10 @@ else
     protected  override async Task OnInitializedAsync()
     {
 
-        /*artworks = await ArtworkService.GetArtworksAsync();*/
-            /*artworksToShow = artworks;*/
-        artworksToShow = new List<Artwork>();
-        Artwork deleteItLater = new Artwork();
+        artworks = await ArtworkService.GetArtworksAsync();
+            artworksToShow = artworks;
+        /*artworksToShow = new List<Artwork>();*/
+        /*Artwork deleteItLater = new Artwork();
         deleteItLater.price = 30;
         deleteItLater.title = "Title";
         deleteItLater.category = "Paintings";
@@ -172,7 +172,7 @@ else
         artworksToShow.Add(deleteItLater3);
         artworksToShow.Add(deleteItLater4);
         artworksToShow.Add(deleteItLater5);
-        artworksToShow.Add(deleteItLater6);
+        artworksToShow.Add(deleteItLater6);*/
         foreach (var artwork in artworksToShow)
         {
             if (artwork.pictureBytes != null)

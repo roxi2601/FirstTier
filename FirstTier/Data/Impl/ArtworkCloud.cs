@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using FirstTier.Models;
+using Microsoft.VisualBasic;
 
 namespace FirstTier.Data.Impl
 {
@@ -28,9 +30,13 @@ namespace FirstTier.Data.Impl
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
 
-        public Task<IList<Artwork>> GetArtworksAsync()
+        public async Task<IList<Artwork>> GetArtworksAsync()
         {
-            throw new NotImplementedException();
+            string message = await client.GetStringAsync("http://localhost:8080/artworks");
+            
+            List<Artwork> result = JsonSerializer.Deserialize<List<Artwork>>(message);
+            
+            return result;
         }
     }
 }
