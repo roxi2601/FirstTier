@@ -97,7 +97,7 @@ namespace FirstTier.Authentication
         private ClaimsIdentity SetupClaimsForAccount(Account account)
         {
             List<Claim> claims = new List<Claim>();
-            claims.Add(new Claim("Username", account.UserName));
+            claims.Add(new Claim("username", account.username));
             claims.Add(new Claim("Password", account.Password));
             claims.Add(new Claim("FirstName",account.FirstName));
             claims.Add(new Claim("LastName",account.LastName));

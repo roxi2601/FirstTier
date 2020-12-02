@@ -21,19 +21,20 @@ namespace FirstTier.Data.Impl
             return result;
         }
 
-        public async Task AddAccountAsync(Account account)
+        public async Task<Account> AddAccountAsync(Account account)
         {
             string personSerialized = JsonSerializer.Serialize(account);
             StringContent content = new StringContent(personSerialized,Encoding.UTF8,"application/json");
             
             HttpResponseMessage response = 
                 await client.PostAsync("http://localhost:8080/signUp",content);
-            Console.WriteLine(response.ToString());
-            if (response.StatusCode != HttpStatusCode.Created)
+            
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-                throw new Exception(response.Content.ReadAsStringAsync().Result);
-            }
+                Account result = JsonSerializer.Deserialize<Account>(response.Content.ReadAsStringAsync().Result);
+                return result;
+            } 
+            throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
 
         public async Task UpdateAccountAsync(Account account)

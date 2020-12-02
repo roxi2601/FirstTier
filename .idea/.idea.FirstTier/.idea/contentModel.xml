@@ -101,11 +101,12 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
-            <e p="0190.jpg" t="Include" />
             <e p="background2.jpg" t="Include" />
+            <e p="black.jpg" t="Include" />
             <e p="painter-161318_640.png" t="Include" />
             <e p="paleta.jpg" t="Include" />
             <e p="temporary.jpg" t="Include" />
+            <e p="temporaryProfile.jpg" t="Include" />
           </e>
           <e p="inputfile.js" t="Include" />
         </e>
