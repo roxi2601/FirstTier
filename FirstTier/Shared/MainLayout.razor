@@ -1,7 +1,10 @@
 ﻿@using FirstTier.Authentication
+@using FirstTier.Data
+@using FirstTier.Models
 @using FirstTier.Pages
 @inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
+@inject AccountService AccountService
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
 @*<div class="sidebar">
@@ -11,7 +14,7 @@
     <AuthorizeView Policy="LoggedUser">
         <NotAuthorized>
             <li><a class="oi oi-home" href="/"> Home</a> </li>
-            <li><a class="oi oi-heart" href="/"> Contact us</a> </li>
+            <li><a class="oi oi-heart" href="/ContactUs"> Contact us</a> </li>
             <li style="float:right">
                 <a class="active" href="/login"> Log in</a>
                 @*<NavLink class="nav-link" href="Login">
@@ -41,10 +44,10 @@
         </NotAuthorized>
         <Authorized>
             <li><a class="oi oi-home" href="/"> Home</a> </li>
-            <li><a class="oi oi-person" href="/Profile"> My Profile</a> </li>
+            <li><a class="oi oi-person" @onclick="profileClick" style="color: white"> My Profile</a> </li>
             <li><a class="oi oi-plus" href="/AddArtwork"> Add new artwork</a> </li>
-            <li><a class="oi oi-chat" href="/"> Chat</a> </li>
-            <li><a class="oi oi-heart" href="/"> Contact us</a> </li>
+            <li><a class="oi oi-chat" href="/"Chat> Chat</a> </li>
+            <li><a class="oi oi-heart" href="/ContactUs"> Contact us</a> </li>
 
             <li style="float:right">
                 <a class="active" href="/" @onclick="PerformLogout"> Log out</a>
@@ -78,7 +81,28 @@
 </ul> 
 @Body
 @code{
+    private Account account = new Account();
+    int id;
 
+    private void Contact()
+    {
+        NavigationManager.NavigateTo("/ContactUs");
+    }
+    
+    private async Task profileClick()
+    {
+       User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+           NavigationManager.NavigateTo("/Profile/"+user.ID);
+        }
+        
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        return  Task.CompletedTask;
+    }
 
     public async Task PerformLogout()
     {
@@ -92,6 +116,6 @@
             Console.WriteLine(e);
         }
     }
-
+    
 
 }
