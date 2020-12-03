@@ -31,25 +31,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="profile">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Data/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/AccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Data/Impl/AccountCloud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/Impl/AccountCloud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/MyProfile.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/MyProfile.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" afterDir="false" />
-    </list>
+    <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="profile" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Login.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Data/Confirm.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/MyProfile.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -178,7 +161,7 @@
       <workItem from="1606824083274" duration="9034000" />
       <workItem from="1606834065691" duration="22870000" />
       <workItem from="1606924678930" duration="11292000" />
-      <workItem from="1606937650847" duration="29750000" />
+      <workItem from="1606937650847" duration="30441000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1604687801129</created>
@@ -306,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607007765569</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="profile">
+      <created>1607010268110</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1607010268110</updated>
+    </task>
+    <task id="LOCAL-00020" summary="profile">
+      <created>1607010308750</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1607010308750</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,14 +396,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="380" y="57" key="VCS.ChangeListViewerDialog/0.0.1280.680@0.0.1280.680" timestamp="1606833871014" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1607007774111">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1607010310775">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607007774111" />
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606937701369">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607010310775" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607011033771">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1606937701369" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1607011033771" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606505560241">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
