@@ -50,5 +50,15 @@ namespace FirstTier.Data.Impl
             }
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
+
+        public async Task DeleteArtworkAsync(int id)
+        {
+            HttpResponseMessage response = await client.DeleteAsync("http://localhost:8080/artworks/"+id);
+            if (response.IsSuccessStatusCode)
+            {
+                //do nothing
+            }
+            throw new Exception(response.Content.ReadAsStringAsync().Result);
+        }
     }
 }

@@ -1,0 +1,31 @@
+﻿@page "/EditArtwork/{id}"
+@using FirstTier.Models
+@using FirstTier.Authentication
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+@if (!isOwner)
+{
+    <h3 style="color: red">Acces denied</h3>
+}
+else
+{
+    //IMPLEMENT IT 
+}
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    private int id;
+    private bool isOwner;
+
+    protected override async Task OnInitializedAsync()
+    {
+        id = Int32.Parse(Id);
+        
+        User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            isOwner = user.ID == id;
+        }
+    }
+
+}
