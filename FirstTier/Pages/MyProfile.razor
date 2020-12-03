@@ -1,4 +1,4 @@
-﻿@page "/Profile/{id}"
+﻿@page "/Profile"
 @using FirstTier.Models
 @using System.Drawing
 @using System.Drawing.Imaging
@@ -101,7 +101,7 @@
                                 else if (!artworksToShow.Any())
                                 {
                                     <p>
-                                        <em>No offers exist, Please add some.</em>
+                                        <em>No offers exist.</em>
                                     </p>
                                 }
                                 else
@@ -203,20 +203,23 @@
     {
         User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
         artworks = await ArtworkService.GetArtworksAsync();
-        artworksToShow = artworks;
+       
 
        account = await AccountService.GetAccountAsync(user.UserName);
+        Console.WriteLine(account);
         /*if (account.Img != null)
         {
             imagePath= "images/profile" + account.ID + ".jpg";
         }
         imagePath  =  "images/defaultprofilepic.jpg";*/
-        if (account.Img != null)
         {
             var ms = new MemoryStream();
             ms.Write(account.Img);
             Image.FromStream(ms).Save("wwwroot/images/profile"+account.ID+".jpg",ImageFormat.Jpeg);
         }
+        
+        artworksToShow = artworks.Where(artwork => artwork.userId==user.ID).ToList();
+        
     }
 
 }

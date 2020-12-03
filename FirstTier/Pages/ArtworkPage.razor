@@ -2,8 +2,10 @@
 @using FirstTier.Data
 @using FirstTier.Models
 @using Microsoft.VisualBasic.CompilerServices
+@using FirstTier.Authentication
 @inject ArtworkService ArtworkService
 @inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 
 <div id=artwork>
@@ -23,39 +25,69 @@
         <div class="col-6">
             <div class="container">
                 <div class="col-12 row">
+                    
                     <div class="col-3">
-                        <button @onclick="Edit">
-                            <span>Edit</span>
-                        </button>
+                         <button @onclick="() => ProfileClick(artwork.userId)">
+                             <span>See owner</span>
+                             </button>
                     </div>
                     <div class="col-3">
-                        <button @onclick="Delete">
-                            <span>Delete</span>
-                        </button>
+                        @if (isOwner)
+                        {
+                            <button @onclick="Edit">
+                                <span>Edit</span>
+                            </button>
+                        }
+
                     </div>
                     <div class="col-3">
-                        <button @onclick="Report">
-                            <span>Report</span>
-                        </button>
-                    </div> 
+                        <AuthorizeView Policy="admin">
+                            <button @onclick="Delete">
+                                <span>Delete</span>
+                            </button>
+                        </AuthorizeView>
+                        @if (isOwner)
+                        {
+                            <button @onclick="Delete">
+                                <span>Delete</span>
+                            </button>
+                        }
+                    </div>
                     <div class="col-3">
-                        <button style="background-color: black" @onclick="Chat">
-                            <span style="color: white">Contact</span>
-                        </button>
+                        @if (!isOwner)
+                        {
+                            <AuthorizeView Policy="LoggedButNotAdmin">
+                                <button @onclick="Report">
+                                    <span>Report</span>
+                                </button>
+                            </AuthorizeView>
+                        }
+                    </div>
+                    <div class="col-3">
+                        <AuthorizeView Policy="LoggedUser">
+                            @if (!isOwner)
+                            {
+                                <button style="background-color: black" @onclick="Chat">
+
+                                    <span style="color: white">Contact</span>
+                                </button>
+
+                            }
+                        </AuthorizeView>
                     </div>
                     <div class="col-12">
                         <h3 style="text-align: right">@artwork.price €</h3>
                     </div>
                     @*<div class="col-12">*@
-                        <div id="descriptionElement">
-                            <h5 style="color: white">Description</h5>
-                            <p style="color: white">@artwork.description</p>
-                        </div>
+                    <div id="descriptionElement">
+                        <h5 style="color: white">Description</h5>
+                        <p style="color: white">@artwork.description</p>
+                    </div>
                     @*</div>*@
                 </div>
             </div>
         </div>
-       
+       <label style="color: red">@errorMessage</label>
     </div>
 </div>
 
@@ -63,8 +95,19 @@
     [Parameter]
     public string Id { get; set; }
 
+    bool isOwner;
+    string errorMessage = "";
+
+    int id;
+
     Artwork artwork = new Artwork();
     string imagePath = "images/temporary.jpg";
+
+
+    private void ProfileClick(int id)
+    {
+        NavigationManager.NavigateTo("/Profile/"+id);
+    }
 
     public void Chat()
     {
@@ -73,12 +116,19 @@
 
     public void Delete()
     {
-        //ArtworkService.Delete(Id);
-        NavigationManager.NavigateTo("/");
+        try
+        {
+            ArtworkService.DeleteArtworkAsync(id);
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
     }
     public void Edit()
     {
-        NavigationManager.NavigateTo("/Edit");
+        NavigationManager.NavigateTo("/EditArtwork/"+id);
     }
     public void Report()
     {
@@ -87,10 +137,15 @@
 
     protected override async Task OnInitializedAsync()
     {
-        int id = Int32.Parse(Id); 
+        
+        id = Int32.Parse(Id);
         artwork = await ArtworkService.GetArtworkAsync(id);
         imagePath = "images/artwork" + artwork.id+".jpg";
-        
+         User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            isOwner = user.ID == artwork.userId;
+        }
     }
 
 }

@@ -23,75 +23,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="artworks, working displaing and adding">
-      <change afterPath="$PROJECT_DIR$/FirstTier/Authentication/ArtworkCustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/ArtworkPage.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ArtworkPage.razor.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstTier/Pages/EditArtwork.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Authentication/UserCustomAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Authentication/UserCustomAuthenticationStateProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.StaticWebAssets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.StaticWebAssets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/AddArtwork.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/AddArtwork.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/MyProfile.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/MyProfile.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.runtimeconfig.dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.RazorComponent.input.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.RazorComponent.input.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.RazorCoreGenerate.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.TagHelpers.output.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Data/Confirm.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Data/Confirm.razor.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/AddArtwork.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/AddArtwork.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Chat.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/EditProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/EditProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Login.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Login.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/ArtworkPage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/ArtworkPage.razor.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/SignUp.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/SignUp.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/LoginLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/LoginLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/SignUpLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/SignUpLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Data/Confirm.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Data/Confirm.razor.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/AddArtwork.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/AddArtwork.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ArtworkPage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ArtworkPage.razor.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SignUp.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SignUp.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/LoginLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/LoginLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SignUpLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SignUpLayout.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/staticwebassets/FirstTier.StaticWebAssets.Manifest.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/staticwebassets/FirstTier.StaticWebAssets.Manifest.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/staticwebassets/FirstTier.StaticWebAssets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/staticwebassets/FirstTier.StaticWebAssets.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/temporary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/temporary.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,12 +73,7 @@
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/LoginLayout.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/EditProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Login.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/SignUp.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -126,18 +86,19 @@
         <option value="$PROJECT_DIR$/FirstTier/Pages/SignUp.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/UserCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Shared/MainLayout.razor" />
-        <option value="$PROJECT_DIR$/FirstTier/Startup.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Models/Artwork.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Authentication/UserCustomAuthenticationStateProvider.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Pages/AddArtwork.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Artwork.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Authentication/ArtworkCustomAuthenticationStateProvider.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Index.razor" />
-        <option value="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" />
         <option value="$PROJECT_DIR$/FirstTier/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/MyProfile.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" />
+        <option value="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" />
+        <option value="$PROJECT_DIR$/FirstTier/Authentication/UserCustomAuthenticationStateProvider.cs" />
+        <option value="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/Pages/EditArtwork.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/Startup.cs" />
+        <option value="$PROJECT_DIR$/FirstTier/Pages/AddArtwork.razor" />
       </list>
     </option>
   </component>
@@ -247,7 +208,28 @@
       <option name="project" value="LOCAL" />
       <updated>1606935483328</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="artworks, working displaing and adding">
+      <created>1607010770965</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607010770965</updated>
+    </task>
+    <task id="LOCAL-00008" summary="artworks, working displaing and adding">
+      <created>1607010836604</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607010836604</updated>
+    </task>
+    <task id="LOCAL-00009" summary="artworks, working displaing and adding">
+      <created>1607010962006</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607010962006</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,34 +256,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="artworks, working displaing and adding" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1258" height="146" key="GridCell.Tab.0.bottom" timestamp="1607009978624">
+    <state width="1177" height="147" key="GridCell.Tab.0.bottom" timestamp="1607029230554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607009978624" />
-    <state width="1258" height="146" key="GridCell.Tab.0.center" timestamp="1607009978624">
+    <state width="1177" height="147" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607029230554" />
+    <state width="1177" height="147" key="GridCell.Tab.0.center" timestamp="1607029230554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607009978624" />
-    <state width="1258" height="146" key="GridCell.Tab.0.left" timestamp="1607009978624">
+    <state width="1177" height="147" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607029230554" />
+    <state width="1177" height="147" key="GridCell.Tab.0.left" timestamp="1607029230554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607009978624" />
-    <state width="1258" height="146" key="GridCell.Tab.0.right" timestamp="1607009978624">
+    <state width="1177" height="147" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607029230554" />
+    <state width="1177" height="147" key="GridCell.Tab.0.right" timestamp="1607029230554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607009978624" />
+    <state width="1177" height="147" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607029230554" />
     <state x="71" y="64" width="1413" height="695" key="MergeDialog" timestamp="1607008410723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="71" y="64" width="1413" height="695" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1607008410723" />
-    <state x="585" y="173" key="MultipleFileMergeDialog" timestamp="1606935696406">
+    <state x="585" y="173" key="MultipleFileMergeDialog" timestamp="1607010881995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="585" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1606935696406" />
-    <state x="255" y="153" key="Vcs.Push.Dialog.v2" timestamp="1606935763234">
+    <state x="585" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1607010881995" />
+    <state x="255" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607010964494">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="255" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606935763234" />
+    <state x="255" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607010964494" />
     <state x="682" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607010323358">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

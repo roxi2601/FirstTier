@@ -52,18 +52,28 @@ namespace FirstTier
                 options.AddPolicy("LoggedUser", policy =>
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("UserID"));
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userId"));
                         if (logClaim == null)
                         {
                             return false;
                         }
                         return int.Parse(logClaim.Value) > 0;
                     }));
+                options.AddPolicy("LoggedButNotAdmin", policy =>
+                    policy.RequireAuthenticatedUser().RequireAssertion(context =>
+                    {
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("SecurityLevel"));
+                        if (logClaim == null)
+                        {
+                            return false;
+                        }
+                        return int.Parse(logClaim.Value) == 3;
+                    }));
                 options.AddPolicy("Guest", policy =>
                                   
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("UserID"));
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userId"));
                         if (logClaim == null)
                         {
                             return true;
