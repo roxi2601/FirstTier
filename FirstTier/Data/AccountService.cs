@@ -10,6 +10,6 @@ namespace FirstTier.Data
         Task<Account> GetAccountAsync(string username);
         Task<Account> AddAccountAsync(Account account);
         Task UpdateAccountAsync(Account account);
-        Task RemoveAccountAsync(int id);
+        Task RemoveAccountAsync(string username);
     }
 }

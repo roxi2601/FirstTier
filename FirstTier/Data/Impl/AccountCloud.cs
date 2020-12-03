@@ -53,9 +53,9 @@ namespace FirstTier.Data.Impl
             Console.WriteLine(response.ToString()); 
         }
 
-        public async Task RemoveAccountAsync(int id)
+        public async Task RemoveAccountAsync(string username)
         {
-            HttpResponseMessage response = await client.DeleteAsync("https://localhost:8080/accounts?Id="+id);
+            HttpResponseMessage response = await client.DeleteAsync("https://localhost:8080/accounts/"+username);
             Console.WriteLine(response);
         }
     }

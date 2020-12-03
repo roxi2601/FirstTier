@@ -1,4 +1,4 @@
-﻿@page "/Profile"
+﻿@page "/Profile/{id}"
 @using FirstTier.Models
 @using System.Drawing
 @using System.Drawing.Imaging
@@ -15,7 +15,7 @@
     <div class="row">
             
         <div class="row user-left-part">
-            <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+            <div class="col-md-3 col-sm-3 col-xs-3 user-profil-part pull-left">
                 <div class="row ">
                     <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
                         <img src="@PrepareSRCProfile(account)" style="border-radius: 50%; width: 150px; height: 150px; margin-top: 20px" alt="picture" class="img-thumbnail">
@@ -24,7 +24,7 @@
                         <div class="aboutme "><i class="fa fa-user-o" aria-hidden="true"></i> </div>
                     </div>
                     <div class="row user-detail-row" style="margin-top: 80px">
-                        <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
+                        <div class="col-md-12 col-sm-3 user-detail-section2 pull-left">
                             <div class="border"></div>
                             <p>About me</p>
                             <span>@account.Description</span>
@@ -43,9 +43,7 @@
                                 <p>@account.username</p>
                             </div>
                             <div class="col-md-12 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                                @*<button class="btn button" type="submit" @onclick="Chat">
-                                                        <span>Chat</span>
-                                                        </button>*@
+                             
                                 <button  class="btn btn-info req-btn" type="submit" @onclick="Chat" > Chat with me!</button>                          
                                 <button class="btn btn-info req-btn" type="submit"> Report me!</button> 
                             </div>
@@ -136,7 +134,7 @@
         </div>
     </div>
 </div>
-<Confirm ConfirmationChanged = "ConfirmDelete" @ref=@DeleteConfirmation></Confirm>
+@*<Confirm ConfirmationChanged = "ConfirmDelete" @ref=@DeleteConfirmation></Confirm>*@
 @code {
 
     private Account account = new Account();
@@ -146,7 +144,7 @@
     
     private string imagePathArtwork = "images/paleta.jpg";
 
-    protected ConfirmBase DeleteConfirmation { get; set; }
+    /*protected ConfirmBase DeleteConfirmation { get; set; }*/
     byte[] img;
     string imagePath = "images/painter-161318_640.png";
 
@@ -160,13 +158,15 @@
         NavigationManager.NavigateTo("/EditProfile");
     }
 
-    /*private void DeleteProfile()
+    private void DeleteProfile()
     {
-        Account accountToRemove = allAccounts.First(a => a.ID == account.ID);
-        AccountService.RemoveAccountAsync(account.ID);
+        Account accountToRemove = allAccounts.First(a => a.username == account.username);
+        AccountService.RemoveAccountAsync(account.username);
         allAccounts.Remove(accountToRemove);
-    }*/
+        NavigationManager.NavigateTo("/");
+    }
 
+    /*
     protected void DeleteProfile()
     {
         DeleteConfirmation.Show();
@@ -180,6 +180,7 @@
             allAccounts.Remove(accountToRemove);
         }
     }
+    */
 
     private string PrepareSRC(Artwork artwork)
     {
