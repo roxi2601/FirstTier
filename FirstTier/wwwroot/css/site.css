@@ -196,6 +196,14 @@ body{
     margin-top: 8%;
     background-color: rgba(30, 31, 31, 0.7);
 }
+#descriptionElement{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 31, 31, 0.7);
+}
+
 #artworks{
     padding: 5px;
     border-radius: 5px;
@@ -214,6 +222,7 @@ body{
     background-color: rgba(30, 31, 31, 0.7);
 }
 #artworkElement{
+    position: center;
     padding: 5px;
     border-radius: 5px;
     width: 80%;
@@ -221,6 +230,16 @@ body{
     margin-left: 3%;
     margin-top: 3%;
     background-color: rgba(248, 246, 246, 0.9);
+}
+#artwork{
+    position: center;
+    padding: 5px;
+    border-radius: 5px;
+    width: 95%;
+    height: 95%;
+    margin-left: 3%;
+    margin-top: 3%;
+    background-color: rgba(248, 246, 246, 0.7);
 }
 #artworkPriceElement{
     margin-right: 0;
@@ -230,9 +249,18 @@ body{
     margin-left: 0;
     font-size: large;
 }
+#artworkAuthorElement{
+    margin-right: 0;
+    font-size: large;
+}
 #categoryElement{
     padding: 2px;
     height: 10%;
+    background-color: rgba(22, 22, 22, 0.9);
+}
+#category{
+    padding: 2px;
+    height: 100%;
     background-color: rgba(22, 22, 22, 0.9);
 }
 .buttonCreateAccount {

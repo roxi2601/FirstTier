@@ -1,0 +1,95 @@
+﻿@page "/ArtworkPage/{id}"
+@using FirstTier.Data
+@using FirstTier.Models
+@using Microsoft.VisualBasic.CompilerServices
+@inject ArtworkService ArtworkService
+@inject NavigationManager NavigationManager
+
+
+<div id=artwork>
+    <div class="col-12 row">
+        <div class="col-6">
+            <div id="artworkTitleElement"><h1>@artwork.title</h1></div>
+        </div>
+        <div class="col-6">
+            <div id="artworkAuthorElement">
+                <h1 style="text-align: right">@artwork.author</h1>
+            </div>
+        </div>
+        <div class="col-6">
+            <img  src="@imagePath" class="img-thumbnail" alt="picture"/>
+            <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
+        </div>
+        <div class="col-6">
+            <div class="container">
+                <div class="col-12 row">
+                    <div class="col-3">
+                        <button @onclick="Edit">
+                            <span>Edit</span>
+                        </button>
+                    </div>
+                    <div class="col-3">
+                        <button @onclick="Delete">
+                            <span>Delete</span>
+                        </button>
+                    </div>
+                    <div class="col-3">
+                        <button @onclick="Report">
+                            <span>Report</span>
+                        </button>
+                    </div> 
+                    <div class="col-3">
+                        <button style="background-color: black" @onclick="Chat">
+                            <span style="color: white">Contact</span>
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <h3 style="text-align: right">@artwork.price €</h3>
+                    </div>
+                    @*<div class="col-12">*@
+                        <div id="descriptionElement">
+                            <h5 style="color: white">Description</h5>
+                            <p style="color: white">@artwork.description</p>
+                        </div>
+                    @*</div>*@
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    Artwork artwork = new Artwork();
+    string imagePath = "images/temporary.jpg";
+
+    public void Chat()
+    {
+        NavigationManager.NavigateTo("/Chat");
+    }
+
+    public void Delete()
+    {
+        //ArtworkService.Delete(Id);
+        NavigationManager.NavigateTo("/");
+    }
+    public void Edit()
+    {
+        NavigationManager.NavigateTo("/Edit");
+    }
+    public void Report()
+    {
+        //HERE IS PLACE FOR MELANIA'S IMPLEMENTATION OF REPORTING/NOTIFICATIONS FUNCTIONALITY
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        int id = Int32.Parse(Id); 
+        artwork = await ArtworkService.GetArtworkAsync(id);
+        imagePath = "images/artwork" + artwork.id+".jpg";
+    }
+
+}

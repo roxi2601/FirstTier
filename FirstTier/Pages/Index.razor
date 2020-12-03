@@ -6,20 +6,21 @@
 @using System.IO
 @using FirstTier.Data
 @inject ArtworkService ArtworkService
+@inject NavigationManager NavigationManager
 
 <div class="col-12 row" id="filters">
     &nbsp;&nbsp;&nbsp;
     <label style="color: white">Filter by price:&nbsp;</label>
     <label style="color: white">min </label>
-    @*<InputNumber @bind-Value="minPrice"></InputNumber>*@
+  
     <input class="form-control" type="number" @bind="minPrice" style="width:150px"/>
     &nbsp;
     <label style="color: white">max </label>
     <input class="form-control" type="number" @bind="maxPrice" style="width:150px"/>
     &nbsp;&nbsp;&nbsp;
-    @*<InputNumber @bind-Value="maxPrice"></InputNumber>*@
+    
     <label style="color: white">Filter by category: </label>
-    @*<InputSelect ValueChanged="@((string value) => OnValueChanged(value ))">*@
+   
     <select @bind="category">
         <option value="Paintings">Paintings</option>
         <option value="Sculptures">Sculptures</option>
@@ -31,7 +32,7 @@
         <option value="Other">Other</option>
         <option value="All">All</option>
     </select>
-    @*</InputSelect>*@
+   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button @onclick="ExecuteFilter">
         <span>Filter</span>
@@ -58,7 +59,7 @@ else
             <div class="col-4">
                 <div id="artworkElement">
                     <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
-                    <img src="@PrepareSRC(@artwork)" alt="picture" class="img-thumbnail">
+                    <img src="@PrepareSRC(@artwork)" alt="picture" class="img-thumbnail" @onclick="()=>ImageClick(artwork.id)">
                     <label id="artworkTitleElement">@artwork.title</label>
                     <div id="artworkPriceElement">
                     <label>@artwork.price €</label>
@@ -79,11 +80,9 @@ else
     private IList<Artwork> artworksToShow;
     private string imagePath = "images/paleta.jpg";
 
-    private Task OnValueChanged(string value)
+    private void ImageClick(int id)
     {
-       
-        category = value;
-        return Task.CompletedTask;
+        NavigationManager.NavigateTo("/ArtworkPage/"+id);
     }
 
     private string PrepareSRC(Artwork artwork)
@@ -137,42 +136,7 @@ else
 
         artworks = await ArtworkService.GetArtworksAsync();
             artworksToShow = artworks;
-        /*artworksToShow = new List<Artwork>();*/
-        /*Artwork deleteItLater = new Artwork();
-        deleteItLater.price = 30;
-        deleteItLater.title = "Title";
-        deleteItLater.category = "Paintings";
-        Artwork deleteItLater1 = new Artwork();
-        deleteItLater1.price = 30;
-        deleteItLater1.title = "Title";
-        deleteItLater1.category = "Paintings";
-        Artwork deleteItLater2 = new Artwork();
-        deleteItLater2.price = 30;
-        deleteItLater2.title = "Title";
-        deleteItLater2.category = "Paintings";
-        Artwork deleteItLater3 = new Artwork();
-        deleteItLater3.price = 30;
-        deleteItLater3.title = "Title";
-        deleteItLater3.category = "Paintings";
-        Artwork deleteItLater4 = new Artwork();
-        deleteItLater4.price = 30;
-        deleteItLater4.title = "Title";
-        deleteItLater4.category = "Paintings";
-        Artwork deleteItLater5 = new Artwork();
-        deleteItLater5.price = 30;
-        deleteItLater5.title = "Title";
-        deleteItLater5.category = "Paintings";
-        Artwork deleteItLater6 = new Artwork();
-        deleteItLater6.price = 30;
-        deleteItLater6.title = "Title";
-        deleteItLater6.category = "Paintings";
-        artworksToShow.Add(deleteItLater);
-        artworksToShow.Add(deleteItLater1);
-        artworksToShow.Add(deleteItLater2);
-        artworksToShow.Add(deleteItLater3);
-        artworksToShow.Add(deleteItLater4);
-        artworksToShow.Add(deleteItLater5);
-        artworksToShow.Add(deleteItLater6);*/
+       
         foreach (var artwork in artworksToShow)
         {
             if (artwork.pictureBytes != null)
