@@ -90,6 +90,7 @@
         int id = Int32.Parse(Id); 
         artwork = await ArtworkService.GetArtworkAsync(id);
         imagePath = "images/artwork" + artwork.id+".jpg";
+        
     }
 
 }
