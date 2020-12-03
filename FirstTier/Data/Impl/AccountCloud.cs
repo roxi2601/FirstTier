@@ -49,13 +49,13 @@ namespace FirstTier.Data.Impl
         {
             string accountSerialized = JsonSerializer.Serialize(account);
             StringContent content = new StringContent(accountSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PutAsync( "https://localhost:8080/accounts",content);
+            HttpResponseMessage response = await client.PutAsync( "http://localhost:8080/accounts",content);
             Console.WriteLine(response.ToString()); 
         }
 
-        public async Task RemoveAccountAsync(string username)
+        public async Task RemoveAccountAsync(int userId)
         {
-            HttpResponseMessage response = await client.DeleteAsync("https://localhost:8080/accounts/"+username);
+            HttpResponseMessage response = await client.DeleteAsync("http://localhost:8080/account/"+userId);
             Console.WriteLine(response);
         }
     }

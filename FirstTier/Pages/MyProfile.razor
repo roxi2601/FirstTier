@@ -140,9 +140,11 @@
     [Parameter]
     public string Id { get; set; }
     private Account account = new Account();
+    string errorMessage = "";
     private IList<Account> allAccounts;
     private IList<Artwork> artworks;
     private IList<Artwork> artworksToShow;
+    int userId;
     
     private string imagePathArtwork = "images/paleta.jpg";
 
@@ -162,27 +164,18 @@
 
     private void DeleteProfile()
     {
-        Account accountToRemove = allAccounts.First(a => a.username == account.username);
-        AccountService.RemoveAccountAsync(account.username);
-        allAccounts.Remove(accountToRemove);
-        NavigationManager.NavigateTo("/");
-    }
-
-    /*
-    protected void DeleteProfile()
-    {
-        DeleteConfirmation.Show();
-    }
-    protected void ConfirmDelete(bool confirmed)
-    {
-        if (confirmed)
+        try
         {
-            Account accountToRemove = allAccounts.First(a => a.ID == account.ID);
             AccountService.RemoveAccountAsync(account.ID);
-            allAccounts.Remove(accountToRemove);
+            ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
         }
     }
-    */
+
 
     private string PrepareSRC(Artwork artwork)
     {
