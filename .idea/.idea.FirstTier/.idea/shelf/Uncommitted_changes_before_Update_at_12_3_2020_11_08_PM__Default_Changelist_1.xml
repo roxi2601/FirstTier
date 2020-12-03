@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1" date="1607033330250" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 12/3/2020 11:08 PM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" />
+    <option name="AFTER_PATH" value="FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/FirstTier.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" />
+    <option name="AFTER_PATH" value="FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/FirstTier.Views.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" />
+    <option name="AFTER_PATH" value="FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/FirstTier.pdb" />
+  </binary>
+</changelist>
