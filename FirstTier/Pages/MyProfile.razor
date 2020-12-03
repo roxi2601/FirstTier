@@ -137,6 +137,8 @@
 @*<Confirm ConfirmationChanged = "ConfirmDelete" @ref=@DeleteConfirmation></Confirm>*@
 @code {
 
+    [Parameter]
+    public string Id { get; set; }
     private Account account = new Account();
     private IList<Account> allAccounts;
     private IList<Artwork> artworks;
@@ -201,11 +203,13 @@
 
     protected override async Task OnInitializedAsync()
     {
-        User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        int id = Int32.Parse(Id); 
+        account = await AccountService.GetAccountAsync(id);
+        Console.WriteLine(account.ID);
         artworks = await ArtworkService.GetArtworksAsync();
         artworksToShow = artworks;
 
-       account = await AccountService.GetAccountAsync(user.UserName);
+       
         /*if (account.Img != null)
         {
             imagePath= "images/profile" + account.ID + ".jpg";

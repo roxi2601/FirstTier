@@ -24,6 +24,11 @@
             <div class="container">
                 <div class="col-12 row">
                     <div class="col-3">
+                        <button @onclick="() => profileClick(artwork.userId)">
+                            <span>See owner</span> 
+                        </button> 
+                    </div>
+                    <div class="col-3">
                         <button @onclick="Edit">
                             <span>Edit</span>
                         </button>
@@ -37,7 +42,7 @@
                         <button @onclick="Report">
                             <span>Report</span>
                         </button>
-                    </div> 
+                    </div>
                     <div class="col-3">
                         <button style="background-color: black" @onclick="Chat">
                             <span style="color: white">Contact</span>
@@ -47,10 +52,10 @@
                         <h3 style="text-align: right">@artwork.price €</h3>
                     </div>
                     @*<div class="col-12">*@
-                        <div id="descriptionElement">
-                            <h5 style="color: white">Description</h5>
-                            <p style="color: white">@artwork.description</p>
-                        </div>
+                    <div id="descriptionElement">
+                        <h5 style="color: white">Description</h5>
+                        <p style="color: white">@artwork.description</p>
+                    </div>
                     @*</div>*@
                 </div>
             </div>
@@ -66,6 +71,10 @@
     Artwork artwork = new Artwork();
     string imagePath = "images/temporary.jpg";
 
+    private void profileClick(int id)
+    {
+        NavigationManager.NavigateTo("/Profile/"+id);
+    }
     public void Chat()
     {
         NavigationManager.NavigateTo("/Chat");

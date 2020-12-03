@@ -16,7 +16,7 @@ namespace FirstTier.Models
         [JsonPropertyName("password")]
         public string Password { get; set; }
        
-        [JsonPropertyName("accountId")]
+        [JsonPropertyName("userId")]
         public int ID { get; set; }
         
         [JsonPropertyName("securityLevel")]

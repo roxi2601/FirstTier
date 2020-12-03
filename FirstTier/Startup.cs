@@ -52,7 +52,7 @@ namespace FirstTier
                 options.AddPolicy("LoggedUser", policy =>
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("UserID"));
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userId"));
                         if (logClaim == null)
                         {
                             return false;
@@ -63,7 +63,7 @@ namespace FirstTier
                                   
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {
-                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("UserID"));
+                        Claim logClaim = context.User.FindFirst(claim => claim.Type.Equals("userId"));
                         if (logClaim == null)
                         {
                             return true;

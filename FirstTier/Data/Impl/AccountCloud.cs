@@ -20,9 +20,9 @@ namespace FirstTier.Data.Impl
             List<Account> result = JsonSerializer.Deserialize<List<Account>>(message);
             return result;
         }
-        public async Task<Account> GetAccountAsync(string username)
+        public async Task<Account> GetAccountAsync(int userId)
         {
-            string message = await client.GetStringAsync("http://localhost:8080/account/"+username);
+            string message = await client.GetStringAsync("http://localhost:8080/account/"+userId);
             Console.WriteLine("cloud message"+message);
             Account result = JsonSerializer.Deserialize<Account>(message);
             
