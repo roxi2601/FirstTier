@@ -38,5 +38,17 @@ namespace FirstTier.Data.Impl
             
             return result;
         }
+
+        public async Task<Artwork> GetArtworkAsync(int id)
+        {
+           HttpResponseMessage response = await client.GetAsync("http://localhost:8080/artworks/"+id);
+           
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Artwork result = JsonSerializer.Deserialize<Artwork>(response.Content.ReadAsStringAsync().Result);
+                return result;
+            }
+            throw new Exception(response.Content.ReadAsStringAsync().Result);
+        }
     }
 }
