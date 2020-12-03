@@ -104,7 +104,7 @@ namespace FirstTier.Authentication
             claims.Add(new Claim("Description",account.Description));
             claims.Add(new Claim("Img",account.Img.ToString()));
             claims.Add(new Claim("accountID", account.ID.ToString()));
-            claims.Add(new Claim("SecurityLevel", account.SecurityLevel.ToString()));
+            claims.Add(new Claim("securityLevel", account.SecurityLevel.ToString()));
 
             ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth_type");
             return identity;

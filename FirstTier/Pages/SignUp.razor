@@ -152,7 +152,7 @@
             await file.Data.CopyToAsync(ms);
             Img = ms.ToArray();
             newAccount.Img = Img;
-            Image.FromStream(ms).Save("wwwroot/images/temporary.jpg",ImageFormat.Jpeg);
+            Image.FromStream(ms).Save("wwwroot/images/temporaryProfile.jpg",ImageFormat.Jpeg);
             imagePath = "images/temporaryProfile.jpg";
         }
     }

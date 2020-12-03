@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using FirstTier.Data;
 using FirstTier.Data.Impl;
+using FirstTier.Models;
 using Microsoft.AspNetCore.Components.Authorization;
 
 namespace FirstTier
@@ -45,6 +46,9 @@ namespace FirstTier
 
             services.AddAuthorization(options =>
             {
+                options.AddPolicy("admin",  a => 
+                    a.RequireAuthenticatedUser().RequireClaim("securityLevel", "5"));
+              
                 options.AddPolicy("LoggedUser", policy =>
                     policy.RequireAuthenticatedUser().RequireAssertion(context =>
                     {

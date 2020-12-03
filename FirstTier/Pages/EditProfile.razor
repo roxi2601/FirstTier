@@ -79,10 +79,14 @@
                   </span>
                     <span class="col-6">
                         <p class="actions">
-                            <button class="buttonCreateAccount" type="submit">
+                            <button class="buttonCreateAccount" type="submit" @onclick="PerformUpdate">
                                
                                 <span>Update profile</span>
                             </button>
+                            <button class="buttonCreateAccount" type="submit" @onclick="Cancel">
+                                                           
+                                                            <span>Cancel</span>
+                                                        </button>
                         </p>
                         <div style="color:red">@errorMessage</div>
                     </span>
@@ -103,6 +107,11 @@
     
     
     private string errorMessage;
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/Profile");
+    }
     async Task PerformUpdate()
     {
         errorMessage = "";
