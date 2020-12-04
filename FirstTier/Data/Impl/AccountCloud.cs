@@ -45,11 +45,11 @@ namespace FirstTier.Data.Impl
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
 
-        public async Task UpdateAccountAsync(Account account)
+        public async Task UpdateAccountAsync(Account account, int userId)
         {
             string accountSerialized = JsonSerializer.Serialize(account);
             StringContent content = new StringContent(accountSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PutAsync( "http://localhost:8080/accounts",content);
+            HttpResponseMessage response = await client.PutAsync( "http://localhost:8080/accounts/"+userId,content);
             Console.WriteLine(response.ToString()); 
         }
 

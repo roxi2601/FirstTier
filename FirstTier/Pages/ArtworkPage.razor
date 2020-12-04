@@ -100,7 +100,7 @@
     int id;
 
     Artwork artwork = new Artwork();
-    string imagePath = "images/temporary.jpg";
+    string imagePath = "images/paleta.jpg";
 
 
     private void ProfileClick(int id)
@@ -136,7 +136,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        
+        try
+        {
         id = Int32.Parse(Id);
         artwork = await ArtworkService.GetArtworkAsync(id);
         imagePath = "images/artwork" + artwork.id+".jpg";
@@ -145,6 +146,12 @@
         {
             isOwner = user.ID == artwork.userId;
         }
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
+       
     }
 
 }

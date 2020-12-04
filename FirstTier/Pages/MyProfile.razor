@@ -75,7 +75,7 @@
                                         <div class="col-md-3 col-sm-3 profile-tag">
 
 
-                                            <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                            <a @onclick="editClick"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                                                 <p>edit profile</p></a>
 
                                         </div>
@@ -170,10 +170,7 @@
     private IList<Artwork> artworksToShow;
     int userId;
     bool isOwner;
-    
     private string imagePathArtwork = "images/paleta.jpg";
-
-    /*protected ConfirmBase DeleteConfirmation { get; set; }*/
     byte[] img;
     string imagePath = "images/painter-161318_640.png";
 
@@ -181,12 +178,6 @@
     {
         NavigationManager.NavigateTo("/Chat");
     }
-
-    private void EditProfile()
-    {
-        NavigationManager.NavigateTo("/EditProfile");
-    }
-
     private void DeleteProfile()
     {
         try
@@ -210,6 +201,15 @@
         }
         return "images/paleta.jpg";
     }
+    private async Task editClick()
+    {
+        User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            NavigationManager.NavigateTo("/EditProfile/"+user.ID);
+        }
+        
+    }
     private string PrepareSRCProfile(Account account)
     {
         if (account.Img != null)
@@ -231,13 +231,6 @@
         {
             isOwner = user.ID == account.ID;
         }
-
-       
-        /*if (account.Img != null)
-        {
-            imagePath= "images/profile" + account.ID + ".jpg";
-        }
-        imagePath  =  "images/defaultprofilepic.jpg";*/
         if (account.Img != null)
         {
             var ms = new MemoryStream();
