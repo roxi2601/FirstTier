@@ -134,8 +134,6 @@ C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\staticwe
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\FirstTier.genruntimeconfig.cache
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ArtworkPage.razor.g.cs
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\Razor\Pages\ArtworkPage.razor.g.cs
-C:\Users\HUAWEI\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDeclaration\Data\Confirm.razor.g.cs
-C:\Users\HUAWEI\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\Razor\Data\Confirm.razor.g.cs
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDeclaration\Data\Confirm.razor.g.cs
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\Razor\Data\Confirm.razor.g.cs
 C:\Users\HUAWEI\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ArtworkPage.razor.g.cs

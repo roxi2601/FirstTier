@@ -18,8 +18,6 @@
         <e p="Data" t="Include">
           <e p="AccountService.cs" t="Include" />
           <e p="ArtworkService.cs" t="Include" />
-          <e p="Confirm.razor" t="Include" />
-          <e p="ConfirmBase.cs" t="Include" />
           <e p="Impl" t="Include">
             <e p="AccountCloud.cs" t="Include" />
             <e p="ArtworkCloud.cs" t="Include" />
@@ -119,6 +117,7 @@
             <e p="paleta.jpg" t="Include" />
             <e p="profile0.jpg" t="Include" />
             <e p="profile1.jpg" t="Include" />
+            <e p="profile13.jpg" t="Include" />
             <e p="temporary.jpg" t="Include" />
             <e p="temporaryProfile.jpg" t="Include" />
           </e>

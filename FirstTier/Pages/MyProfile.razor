@@ -44,8 +44,21 @@
                             </div>
                             <div class="col-md-12 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
                              
-                                <button  class="btn btn-info req-btn" type="submit" @onclick="Chat" > Chat with me!</button>                          
-                                <button class="btn btn-info req-btn" type="submit"> Report me!</button> 
+                                <AuthorizeView Policy="LoggedUser">
+                                                            @if (!isOwner)
+                                                            {
+                                <button  class="btn btn-info req-btn" type="submit" @onclick="Chat" > Chat with me!</button> 
+                                                            }
+                                                        </AuthorizeView>
+                                                         
+                                 @if (!isOwner)
+                                                        {
+                                                            <AuthorizeView Policy="LoggedButNotAdmin">
+                                                                <button class="btn btn-info req-btn" type="submit"> Report me!</button> 
+                                                            </AuthorizeView>
+                                                        }
+                                
+                                
                             </div>
                         </div>
                             
@@ -58,16 +71,27 @@
                             <div class="row">
                                 <div class="col-md-12  profile-tag-section text-center">
                                     <div class="row">
-                                        <div class="col-md-3 col-sm-3 profile-tag">
-                                            <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                                                <p>edit profile</p></a>
-                                        </div>
-                                                 
+                                        @if (isOwner) {
                                         <div class="col-md-3 col-sm-3 profile-tag">
 
-                                            <p @onclick="DeleteProfile"><i class="fa fa-address-book" aria-hidden="true"></i>
-                                                <p>delete profile</p>
-                                                </p> 
+
+                                            <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                                <p>edit profile</p></a>
+
+                                        </div>
+                                        }
+                                        <div class="col-md-3 col-sm-3 profile-tag">
+                                            <AuthorizeView Policy="admin">
+                                                <p @onclick="DeleteProfile"><i class="fa fa-address-book" aria-hidden="true"></i>
+                                                    <p>delete profile</p>
+                                                </p>
+                                            </AuthorizeView>
+                                            @if (isOwner)
+                                            {
+                                                <p @onclick="DeleteProfile"><i class="fa fa-address-book" aria-hidden="true"></i>
+                                                    <p>delete profile</p>
+                                                </p>
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +106,7 @@
                                 </div>
 
                             </div>
-                        @*</AuthorizeView>*@
+                       
                            
 
                     </div>
@@ -145,6 +169,7 @@
     private IList<Artwork> artworks;
     private IList<Artwork> artworksToShow;
     int userId;
+    bool isOwner;
     
     private string imagePathArtwork = "images/paleta.jpg";
 
@@ -201,6 +226,11 @@
         Console.WriteLine(account.ID);
         artworks = await ArtworkService.GetArtworksAsync();
         artworksToShow = artworks;
+        User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            isOwner = user.ID == account.ID;
+        }
 
        
         /*if (account.Img != null)
