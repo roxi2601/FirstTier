@@ -10,5 +10,6 @@ namespace FirstTier.Data
         Task<IList<Artwork>> GetArtworksAsync();
         Task<Artwork> GetArtworkAsync(int id);
         Task DeleteArtworkAsync(int id);
+        Task<Artwork> EditArtwork(Artwork artwork);
     }
 }

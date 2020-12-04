@@ -110,6 +110,9 @@
             <e p="artwork4.jpg" t="Include" />
             <e p="artwork5.jpg" t="Include" />
             <e p="artwork6.jpg" t="Include" />
+            <e p="artwork7.jpg" t="Include" />
+            <e p="artwork8.jpg" t="Include" />
+            <e p="artwork9.jpg" t="Include" />
             <e p="background2.jpg" t="Include" />
             <e p="black.jpg" t="Include" />
             <e p="defaultprofilepic.jpg" t="Include" />
@@ -118,6 +121,7 @@
             <e p="profile0.jpg" t="Include" />
             <e p="profile1.jpg" t="Include" />
             <e p="profile13.jpg" t="Include" />
+            <e p="profile3.jpg" t="Include" />
             <e p="temporary.jpg" t="Include" />
             <e p="temporaryProfile.jpg" t="Include" />
           </e>

@@ -136,7 +136,7 @@
                                             <div class="col-12">
                                                 <div id="artworkElement">
                                                     <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
-                                                    <img src="@PrepareSRC(@artwork)" alt="picture" class="img-thumbnail">
+                                                    <img src="@PrepareSRC(artwork)" alt="picture" class="img-thumbnail" @onclick="() => ImageClick(artwork.id)">
                                                     <label id="artworkTitleElement">@artwork.title</label>
                                                     <div id="artworkPriceElement">
                                                         <label>@artwork.price €</label>
@@ -180,6 +180,11 @@
     private void Chat()
     {
         NavigationManager.NavigateTo("/Chat");
+    }
+    
+    private void ImageClick(int id)
+    {
+        NavigationManager.NavigateTo("/ArtworkPage/"+id);
     }
 
     private void EditProfile()
@@ -225,7 +230,8 @@
         account = await AccountService.GetAccountAsync(id);
         Console.WriteLine(account.ID);
         artworks = await ArtworkService.GetArtworksAsync();
-        artworksToShow = artworks;
+        
+        artworksToShow = artworks.Where(artwork => artwork.userId==id).ToList();
         User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
         if (user != null)
         {

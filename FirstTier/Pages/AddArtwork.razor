@@ -13,7 +13,6 @@
 
 
         <div id="addArtworkForm">
-Context="_editContextt"
             <p style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center; color: white">Add the artwork</p>
             <EditForm Model="newArtwork"  OnValidSubmit="@PerformSave" xmlns="http://www.w3.org/1999/html">
                 <DataAnnotationsValidator/>
@@ -82,7 +81,6 @@ Context="_editContextt"
 @code {
      [Parameter]
      public Artwork newArtwork { get; set; }
-    private EditContext _editContextt;
 
     IFileListEntry file;
     byte[] img;
@@ -104,8 +102,6 @@ Context="_editContextt"
     protected override Task OnInitializedAsync()
     {
         newArtwork = new Artwork();
-        
-        _editContextt = new EditContext(newArtwork);
         return Task.CompletedTask;
     }
 
