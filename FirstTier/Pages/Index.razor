@@ -5,6 +5,7 @@
 @using System.Drawing.Imaging
 @using System.IO
 @using FirstTier.Data
+@using System.Collections.ObjectModel
 @inject ArtworkService ArtworkService
 @inject NavigationManager NavigationManager
 
@@ -59,13 +60,13 @@ else
             <div class="col-4">
                 <div id="artworkElement">
                     <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
-                    <img src="@PrepareSRC(@artwork)" alt="picture" class="img-thumbnail" @onclick="()=>ImageClick(artwork.id)">
+                    <img src="@PrepareSRC(artwork)" alt="picture" class="img-thumbnail" style="height: 230px" @onclick="() => ImageClick(artwork.id)"><br>
                     <label id="artworkTitleElement">@artwork.title</label>
                     <div id="artworkPriceElement">
-                    <label>@artwork.price €</label>
+                        <label>@artwork.price €</label>
                     </div>
                 </div>
-            </div>
+            </div> 
         }
     </div>
 }
@@ -80,13 +81,12 @@ else
     private IList<Artwork> artworksToShow;
     private string imagePath = "images/paleta.jpg";
 
+
     private void ImageClick(int id)
     {
         NavigationManager.NavigateTo("/ArtworkPage/"+id);
     }
     
-   
-
     private string PrepareSRC(Artwork artwork)
     {
         if (artwork.pictureBytes != null)
@@ -135,10 +135,9 @@ else
 
     protected  override async Task OnInitializedAsync()
     {
-
         artworks = await ArtworkService.GetArtworksAsync();
+       artworks = artworks.Reverse().ToList();
             artworksToShow = artworks;
-       
         foreach (var artwork in artworksToShow)
         {
             if (artwork.pictureBytes != null)

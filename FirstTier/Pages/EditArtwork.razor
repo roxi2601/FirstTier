@@ -1,7 +1,14 @@
 ﻿@page "/EditArtwork/{id}"
 @using FirstTier.Models
 @using FirstTier.Authentication
+@using FirstTier.Data
+@using BlazorInputFile
+@using System.Drawing
+@using System.Drawing.Imaging
+@using System.IO
 @inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ArtworkService ArtworkService
+@inject NavigationManager NavigationManager
 
 @if (!isOwner)
 {
@@ -9,23 +16,163 @@
 }
 else
 {
-    //IMPLEMENT IT 
+      <div id="addArtworkForm">
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center; color: white">Edit the artwork</p>
+            <EditForm Model="artwork"  OnValidSubmit="@PerformEdit" xmlns="http://www.w3.org/1999/html">
+                <DataAnnotationsValidator/>
+                <ValidationSummary/>
+
+                <div class="col-12 row">
+                    <div class="col-6">
+                        <img src="@imagePath" class="img-thumbnail" alt="picture"/>
+                    </div>
+                    <div class="col-6">
+
+                        <div style="color:red">@errorMessage</div>
+                        <div class="form-group">
+                            <label style="color: white">Title:</label><br>
+                            <InputText @bind-Value="artwork.title"/>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: white">Author:</label><br>
+                            <InputText @bind-Value="artwork.author"/>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: white">Price:</label><br>
+                            <InputNumber @bind-Value="artwork.price"/><label style="color: white"> €</label>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: white">Category:</label><br>
+                            <InputSelect ValueExpression="@(() => artwork.category)"
+                                         Value="@artwork.category"
+                                         ValueChanged="@((string value) => OnValueChanged(value))">
+                                <option value="Paintings">Paintings</option>
+                                <option value="Sculptures">Sculptures</option>
+                                <option value="Prints">Prints</option>
+                                <option value="Photography">Photography</option>
+                                <option value="Drawings">Drawings</option>
+                                <option value="Graphics">Graphics</option>
+                                <option value="Media">Media</option>
+                                <option value="Other">Other</option>
+                            </InputSelect>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: white">Description:</label><br>
+                            <InputTextArea @bind-Value="artwork.description"/>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: white">Choose picture:</label>
+                            <InputFile OnChange="HandleFileSelected"></InputFile>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 row">
+                    <div class="col-6">
+                        <button class="btn button" @onclick="Cancel">
+                            <span>Cancel</span>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn button" type="submit">
+                            <span>Edit</span>
+                        </button>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
 }
 @code {
     [Parameter]
     public string Id { get; set; }
     private int id;
     private bool isOwner;
+    private Artwork artwork = new Artwork();
+    
+    IFileListEntry file;
+    byte[] img;
+    string imagePath = "images/paleta.jpg";
+    string errorMessage = "";
 
+    private Task OnValueChanged(string value)
+    {
+        artwork.category = value;
+        return Task.CompletedTask;
+    }
+    
+    async Task HandleFileSelected(IFileListEntry[] files)
+    {
+        file = files.FirstOrDefault();
+        if (file != null)
+        {
+            var ms = new MemoryStream();
+            await file.Data.CopyToAsync(ms);
+            img = ms.ToArray();
+            artwork.pictureBytes = img;
+            Image.FromStream(ms).Save("wwwroot/images/artwork"+artwork.id+".jpg",ImageFormat.Jpeg);
+            imagePath = "images/artwork"+artwork.id+".jpg";
+            
+        }
+    }
+    
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+    
+    async Task PerformEdit()
+    {
+        if (string.IsNullOrEmpty(artwork.title))
+        {
+            errorMessage = "Title field cannot be empty";
+        }
+        if (string.IsNullOrEmpty(artwork.author))
+        {
+            artwork.author = "Author not specified";
+        }
+        if (string.IsNullOrEmpty(artwork.description))
+        {
+            artwork.description = "";
+        }
+        if (artwork.category == null)
+        {
+            artwork.category = "Painting";
+            //???????????????????????????????
+        }
+        try
+        {
+            await ArtworkService.EditArtwork(artwork);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.StackTrace);
+            errorMessage = e.Message;
+        }
+        NavigationManager.NavigateTo("/");
+    }
+    
     protected override async Task OnInitializedAsync()
     {
         id = Int32.Parse(Id);
-        
+        try
+        {
+            artwork = await ArtworkService.GetArtworkAsync(id);
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
+        if (artwork.pictureBytes != null)
+        {
+            imagePath = "images/artwork" + artwork.id + ".jpg";
+        }
+
         User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
         if (user != null)
         {
             isOwner = user.ID == id;
         }
+        
     }
 
 }

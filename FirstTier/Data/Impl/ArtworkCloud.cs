@@ -29,6 +29,20 @@ namespace FirstTier.Data.Impl
             }
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
+        public async Task<Artwork> EditArtwork(Artwork artwork)
+        {
+            string artworkSerialized = JsonSerializer.Serialize(artwork);
+            StringContent content = new StringContent(artworkSerialized, Encoding.UTF8, "application/json");
+            HttpResponseMessage response =
+                await client.PutAsync("http://localhost:8080/editArtwork",content);
+            
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Artwork result = JsonSerializer.Deserialize<Artwork>(response.Content.ReadAsStringAsync().Result);
+                return result;
+            }
+            throw new Exception(response.Content.ReadAsStringAsync().Result);
+        }
 
         public async Task<IList<Artwork>> GetArtworksAsync()
         {
