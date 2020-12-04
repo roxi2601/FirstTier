@@ -147,7 +147,7 @@
             }
             updateAccount.SecurityLevel = updateAccount.username.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
   
-    await AccountService.UpdateAccountAsync(updateAccount,updateAccount.ID);
+    await AccountService.UpdateAccountAsync(updateAccount);
             User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
             if (user != null)
             {
