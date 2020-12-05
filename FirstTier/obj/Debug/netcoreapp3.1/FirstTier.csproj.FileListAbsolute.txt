@@ -142,3 +142,5 @@ C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDec
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\EditArtwork.razor.g.cs
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\Razor\Pages\ContactUs.razor.g.cs
 C:\Users\tanki\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\Razor\Pages\EditArtwork.razor.g.cs
+C:\Users\HUAWEI\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\EditArtwork.razor.g.cs
+C:\Users\HUAWEI\DNPexercises\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\Razor\Pages\EditArtwork.razor.g.cs

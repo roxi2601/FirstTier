@@ -75,7 +75,7 @@
                                         <div class="col-md-3 col-sm-3 profile-tag">
 
 
-                                            <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                            <a @onclick="profileClick"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                                                 <p>edit profile</p></a>
 
                                         </div>
@@ -187,9 +187,14 @@
         NavigationManager.NavigateTo("/ArtworkPage/"+id);
     }
 
-    private void EditProfile()
+    private async Task profileClick()
     {
-        NavigationManager.NavigateTo("/EditProfile");
+        User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            NavigationManager.NavigateTo("/EditProfile/"+user.ID);
+        }
+        
     }
 
     private void DeleteProfile()

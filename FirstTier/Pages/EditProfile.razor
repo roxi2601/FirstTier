@@ -17,6 +17,8 @@
 {
     <h3 style="color: red">Acces denied</h3>
 }
+else
+{
 <EditForm  Model ="@updateAccount" OnValidSubmit="@PerformUpdate" xmlns="http://www.w3.org/1999/html">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
@@ -67,39 +69,41 @@
             </span>
         </div>
         
-         <div class="col-12 row">
-             <span class="col-6 ">
-                  <div class="form-group " style="font-family: -webkit-body;  color:black; ">
-                  Choose profile picture: <br/>
-                  <InputFile OnChange="HandleFileSelected" ></InputFile>
-                @if (file != null)
-                {
-                    <p>Name: @file.Name</p>
+        <div class="col-12 row">
+            <span class="col-6 ">
+                <div class="form-group " style="font-family: -webkit-body;  color:black; ">
+                    Choose profile picture: <br/>
+                    <InputFile OnChange="HandleFileSelected" ></InputFile>
+                    @if (file != null)
+                    {
+                        <p>Name: @file.Name</p>
                     }
 
-                  </div>
-                  </span>
-                    <span class="col-6">
-                        <p class="actions">
-                            <button class="buttonCreateAccount" type="submit" @onclick="PerformUpdate">
-                               
-                                <span>Update profile</span>
-                            </button>
-                            <button class="buttonCreateAccount" type="submit" @onclick="profileClick">
-                                                           
-                                                            <span>Cancel</span>
-                                                        </button>
-                        </p>
-                        <div style="color:red">@errorMessage</div>
-                    </span>
                 </div>
+            </span>
+            <span class="col-6">
+                <p class="actions">
+                    <button class="buttonCreateAccount" type="submit" @onclick="PerformUpdate">
+                               
+                        <span>Update profile</span>
+                    </button>
+                           <button class="buttonCreateAccount" type="submit" @onclick="profileClick">
+                                                                                                                       
+                               <span>Back to profile</span> </button>
+                </p>
+                <div style="color:red">@errorMessage</div>
+            </span>
+        </div> 
     </div>
 </EditForm>
+   
+
+    }
 @code {
     [Parameter]
     public string Id { get; set; }
     private Account updateAccount = new Account();
-    private int id;
+    private int userId;
     private bool isOwner;
     public string ConfirmPassword ="";
    
@@ -148,16 +152,19 @@
             updateAccount.SecurityLevel = updateAccount.username.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
   
     await AccountService.UpdateAccountAsync(updateAccount);
+            
             User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
             if (user != null)
             {
-                NavigationManager.NavigateTo("/Profile/"+user.ID);
+              //NavigationManager.NavigateTo("/Profile/"+user.ID);
+               // NavigationManager.NavigateTo("/");
+                errorMessage = "Edit done!";
             }
 
         }
         catch (NullReferenceException e)
         {
-            errorMessage = "you should fulfill all the fields";
+            errorMessage = "you should fill in all the fields";
         }
         catch (Exception e)
         {
@@ -185,12 +192,19 @@
 
     protected async override Task OnInitializedAsync()
     {
-        id = Int32.Parse(Id);
-        
+        userId = Int32.Parse(Id);
+        try
+        {
+            updateAccount = await AccountService.GetAccountAsync(userId);
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
         User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
         if (user != null)
         {
-            isOwner = user.ID == id;
+            isOwner = user.ID == userId;
         }
     }
 }

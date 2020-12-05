@@ -47,6 +47,7 @@ namespace FirstTier.Data.Impl
 
         public async Task<Account> UpdateAccountAsync(Account account)
         {
+            Console.WriteLine(account);
             string artworkSerialized = JsonSerializer.Serialize(account);
             StringContent content = new StringContent(artworkSerialized, Encoding.UTF8, "application/json");
             HttpResponseMessage response =
