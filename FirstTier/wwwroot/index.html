@@ -36,11 +36,8 @@
     <!--Add script to update the page and send messages.-->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-
-            const generateRandomName = () =>
-                Math.random().toString(36).substring(2, 10);
-
-            let username = generateRandomName();
+            
+            let username;
             let promptMessage = 'Enter your name:';
             do {
                 username = prompt(promptMessage, username);
@@ -84,17 +81,17 @@
                     messageBox.appendChild(messageEntry);
                     messageBox.scrollTop = messageBox.scrollHeight;
                 };
-                connection.on('broadcastMessage', messageCallback);
+                connection.on('broadcast', messageCallback);
                 connection.on('echo', messageCallback);
                 connection.onclose(onConnectionError);
             }
 
             function onConnected(connection) {
                 console.log('connection started');
-                connection.send('broadcastMessage', '_SYSTEM_', username + ' JOINED');
+                connection.send('broadcast', '_SYSTEM_', username + ' JOINED');
                 document.getElementById('sendmessage').addEventListener('click', function (event) {
                     if (messageInput.value) {
-                        connection.send('broadcastMessage', username, messageInput.value);
+                        connection.send('broadcast', username, messageInput.value);
                     }
 
                     messageInput.value = '';

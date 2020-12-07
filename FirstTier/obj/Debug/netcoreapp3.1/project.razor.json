@@ -151,6 +151,39 @@
         }
       },
       {
+        "HashCode": 2013773788,
+        "Kind": "Components.Component",
+        "Name": "FirstTier.Pages.Chat",
+        "AssemblyName": "FirstTier",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Chat"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FirstTier.Pages.Chat"
+        }
+      },
+      {
+        "HashCode": -1236926745,
+        "Kind": "Components.Component",
+        "Name": "FirstTier.Pages.Chat",
+        "AssemblyName": "FirstTier",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FirstTier.Pages.Chat"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FirstTier.Pages.Chat",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -306216716,
         "Kind": "Components.Component",
         "Name": "FirstTier.Pages.ContactUs",

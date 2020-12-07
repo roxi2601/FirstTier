@@ -1,4 +1,4 @@
-﻿@page "/Chat"
+﻿@page "/chat"
 @inject NavigationManager NavigationManager
 @using Microsoft.AspNetCore.SignalR.Client;
 @using FirstTier.Chat
@@ -86,9 +86,6 @@ else
             // Start chatting and force refresh UI.
             _isChatting = true;
             await Task.Delay(1);
-
-            // remove old messages if any
-            _messages.Clear();
 
             // Create the chat client
             string baseUrl = NavigationManager.BaseUri;

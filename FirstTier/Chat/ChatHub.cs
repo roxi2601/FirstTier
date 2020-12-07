@@ -11,7 +11,7 @@ namespace FirstTier.Chat
         // This method broadcasts a message to all clients.
         public async Task Broadcast(string username, string message)
         {
-            await Clients.All.SendAsync("Broadcast", username, message);
+            await Clients.All.SendAsync("broadcast", username, message);
         }
         // This method sends a message back to the caller.
         public async Task Echo(string username, string message) =>

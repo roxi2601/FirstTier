@@ -236,3 +236,15 @@ D:\dnp1\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\staticwebassets\FirstTier.St
 D:\dnp1\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\FirstTier.dll
 D:\dnp1\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\FirstTier.pdb
 D:\dnp1\FirstTier\FirstTier\obj\Debug\netcoreapp3.1\FirstTier.genruntimeconfig.cache
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.Azure.Services.AppAuthentication.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.Azure.SignalR.Common.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.Azure.SignalR.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.Azure.SignalR.Protocols.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\dnp1\FirstTier\FirstTier\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
