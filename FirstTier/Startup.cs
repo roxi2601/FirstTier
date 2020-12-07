@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using FirstTier.Data;
 using FirstTier.Data.Impl;
 using FirstTier.Models;
+using FirstTier.Chat;
 using Microsoft.AspNetCore.Components.Authorization;
 
 namespace FirstTier
@@ -106,6 +107,7 @@ namespace FirstTier
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapHub<ChatHub>(ChatHub.HubUrl);
             });
         }
     }
