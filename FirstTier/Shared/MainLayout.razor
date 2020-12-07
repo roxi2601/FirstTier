@@ -87,12 +87,13 @@
     
     private async Task profileClick()
     {
-       User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+       
+        User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
         if (user != null)
         {
-           NavigationManager.NavigateTo("/Profile/"+user.ID);
+           NavigationManager.NavigateTo("/Profile/"+user.ID,true);
         }
-        
+      
     }
 
     protected override Task OnInitializedAsync()
