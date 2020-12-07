@@ -44,6 +44,8 @@ namespace FirstTier
             services.AddScoped<ArtworkService,ArtworkCloud>();
 
             services.AddScoped<AuthenticationStateProvider, UserCustomAuthenticationStateProvider>();
+            
+            services.AddSignalR().AddAzureSignalR(); // for chat
 
             services.AddAuthorization(options =>
             {
@@ -102,7 +104,7 @@ namespace FirstTier
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseFileServer();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();

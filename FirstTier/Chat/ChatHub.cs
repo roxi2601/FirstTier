@@ -8,11 +8,16 @@ namespace FirstTier.Chat
     {
         public const string HubUrl = "/chat";
 
+        // This method broadcasts a message to all clients.
         public async Task Broadcast(string username, string message)
         {
             await Clients.All.SendAsync("Broadcast", username, message);
         }
-
+        // This method sends a message back to the caller.
+        public async Task Echo(string username, string message) =>
+            await Clients.Client(Context.ConnectionId)
+                .SendAsync("echo", username, $"{message} (echo from server)");
+        
         public override Task OnConnectedAsync()
         {
             Console.WriteLine($"{Context.ConnectionId} connected");
