@@ -1,19 +1,18 @@
-﻿@page "/chat"
+﻿@page "/Chat"
 @inject NavigationManager NavigationManager
+@inject AccountService AccountService
 @using Microsoft.AspNetCore.SignalR.Client;
 @using FirstTier.Chat
+@using FirstTier.Data
+@using FirstTier.Models
 
 <h3>Chat</h3>
 <hr />
 
 @if (!_isChatting)
 {
-    <p>
-        Enter your name to start chatting:
-    </p>
-
-    <input type="text" maxlength="32" @bind="@_username" />
-    <button type="button" @onclick="@ChatRoom"><span class="oi oi-chat" aria-hidden="true"></span> Chat!</button>
+    <input type="text" maxlength="32" @bind="@account.username" />
+    <button type="button" @onclick="@ChatRoom"><span class="oi oi-chat" aria-hidden="true"></span> Chat</button>
 
     // Error messages
     @if (_message != null)
@@ -27,7 +26,7 @@ else
     // banner to show current user
     <div class="alert alert-secondary mt-4" role="alert">
         <span class="oi oi-person mr-2" aria-hidden="true"></span>
-        <span>You are connected as <b>@_username</b></span>
+        <span>You are connected as <b>@account.username</b></span>
         <button class="btn btn-sm btn-warning ml-md-auto" @onclick="@DisconnectAsync">Disconnect</button>
     </div>
     // display messages
@@ -54,11 +53,13 @@ else
 
 
 @code {
+    [Parameter]
+    // user data
+    public string Id { get; set; }
+    private Account account = new Account();
+    
     // flag to indicate chat status
     private bool _isChatting = false;
-
-    // name of the user who will be chatting
-    private string _username;
 
     // on-screen message
     private string _message;
@@ -74,13 +75,6 @@ else
 
     public async Task ChatRoom()
     {
-        // check username is valid
-        if (string.IsNullOrWhiteSpace(_username))
-        {
-            _message = "Please enter a name";
-            return;
-        };
-
         try
         {
             // Start chatting and force refresh UI.
@@ -100,7 +94,7 @@ else
 
             await _hubConnection.StartAsync();
 
-            await SendAsync($"[Notice] {_username} joined chat room.");
+            await SendAsync($"[Notice] {account.username} joined chat room.");
         }
         catch (Exception e)
         {
@@ -111,7 +105,7 @@ else
 
     private void BroadcastMessage(string name, string message)
     {
-        bool isMine = name.Equals(_username, StringComparison.OrdinalIgnoreCase);
+        bool isMine = name.Equals(account.username, StringComparison.OrdinalIgnoreCase);
 
         _messages.Add(new Message(name, message, isMine));
 
@@ -123,7 +117,7 @@ else
     {
         if (_isChatting)
         {
-            await SendAsync($"[Notice] {_username} left chat room.");
+            await SendAsync($"[Notice] {account.username} left chat room.");
 
             await _hubConnection.StopAsync();
             await _hubConnection.DisposeAsync();
@@ -137,7 +131,7 @@ else
     {
         if (_isChatting && !string.IsNullOrWhiteSpace(message))
         {
-            await _hubConnection.SendAsync("Broadcast", _username, message);
+            await _hubConnection.SendAsync("Broadcast", account.username, message);
 
             _newMessage = string.Empty;
         }

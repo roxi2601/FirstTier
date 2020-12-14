@@ -6,7 +6,7 @@ namespace FirstTier.Chat
 {
     public class ChatHub : Hub
     {
-        public const string HubUrl = "/chat";
+        public const string HubUrl = "/Chat";
 
         // This method broadcasts a message to all clients.
         public async Task Broadcast(string username, string message)

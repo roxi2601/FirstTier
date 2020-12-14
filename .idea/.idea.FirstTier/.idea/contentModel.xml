@@ -135,6 +135,7 @@
             <e p="temporary.jpg" t="Include" />
             <e p="temporaryProfile.jpg" t="Include" />
           </e>
+          <e p="index.html" t="Include" />
           <e p="inputfile.js" t="Include" />
         </e>
       </e>
