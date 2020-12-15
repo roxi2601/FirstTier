@@ -343,7 +343,7 @@
         }
       },
       {
-        "HashCode": -573215758,
+        "HashCode": 1238143601,
         "Kind": "Components.Component",
         "Name": "FirstTier.Pages.Index",
         "AssemblyName": "FirstTier",
@@ -353,13 +353,23 @@
             "TagName": "Index"
           }
         ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "FirstTier.Pages.Index"
         }
       },
       {
-        "HashCode": -115630062,
+        "HashCode": 397427563,
         "Kind": "Components.Component",
         "Name": "FirstTier.Pages.Index",
         "AssemblyName": "FirstTier",
@@ -367,6 +377,16 @@
         "TagMatchingRules": [
           {
             "TagName": "FirstTier.Pages.Index"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
           }
         ],
         "Metadata": {
