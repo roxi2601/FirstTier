@@ -50,7 +50,7 @@
             },
             "Microsoft.Azure.SignalR": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.5.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

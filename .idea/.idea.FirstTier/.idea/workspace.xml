@@ -30,7 +30,63 @@
   <component name="ChangeListManager">
     <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="profile">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/FirstTier.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/FirstTier.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.Services.AppAuthentication.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.SignalR.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.SignalR.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.SignalR.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.SignalR.Protocols.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.SignalR.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Azure.SignalR.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Clients.ActiveDirectory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Microsoft.Rest.ClientRuntime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/ArtworkPage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/ArtworkPage.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/AddArtwork.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/AddArtwork.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ArtworkPage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ArtworkPage.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ContactUs.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ContactUs.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditArtwork.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditArtwork.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditProfile.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SignUp.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SignUp.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/LoginLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/LoginLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SignUpLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SignUpLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,12 +141,16 @@
         <option value="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/DabberService.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/DabberCloud.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Startup.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/DapperCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/DapperService.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/DataAccess/AppContext.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/FirstTier/DataAccess/AppContext.cs" />
+        <option value="$PROJECT_DIR$/FirstTier/Shared/NavMenu.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/FirstTier/appsettings.json" />
+        <option value="$PROJECT_DIR$/FirstTier/Startup.cs" />
       </list>
     </option>
   </component>
@@ -110,6 +170,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.FirstTier">
+    <configuration name="Publish FirstTier to IIS" type="DotNetMsBuildPublish" factoryName="Publish to IIS" temporary="true">
+      <riderPublish uuid_high="-5677706153852385516" uuid_low="-6104807315319079906" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish FirstTier to custom server" type="DotNetPublishAndUpload" factoryName="Publish to custom server" temporary="true">
+      <riderPublish uuid_high="-5677706153852385516" uuid_low="-6104807315319079906" />
+      <method v="2" />
+    </configuration>
     <configuration name="FirstTier" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/FirstTier/FirstTier.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -140,6 +208,12 @@
         <option name="Build" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Publish to custom server.Publish FirstTier to custom server" />
+        <item itemvalue="Publish to IIS.Publish FirstTier to IIS" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -165,7 +239,9 @@
       <workItem from="1607593143750" duration="1011000" />
       <workItem from="1607983537746" duration="3805000" />
       <workItem from="1608061117443" duration="2044000" />
-      <workItem from="1608066581870" duration="810000" />
+      <workItem from="1608066581870" duration="4053000" />
+      <workItem from="1608071869168" duration="388000" />
+      <workItem from="1608072288195" duration="1258000" />
     </task>
     <task id="LOCAL-00001" summary="artworks">
       <created>1606773489714</created>
@@ -330,30 +406,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="938" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608062032127" />
-    <state width="914" height="181" key="GridCell.Tab.0.bottom" timestamp="1607987549277">
+    <state width="795" height="128" key="GridCell.Tab.0.bottom" timestamp="1608073291882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="221" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607328657500" />
     <state width="1177" height="89" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="914" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607987549277" />
-    <state width="914" height="181" key="GridCell.Tab.0.center" timestamp="1607987549277">
+    <state width="795" height="128" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608073291882" />
+    <state width="795" height="128" key="GridCell.Tab.0.center" timestamp="1608073291881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="221" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607328657500" />
     <state width="1177" height="89" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="914" height="181" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607987549277" />
-    <state width="914" height="181" key="GridCell.Tab.0.left" timestamp="1607987549277">
+    <state width="795" height="128" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608073291881" />
+    <state width="795" height="128" key="GridCell.Tab.0.left" timestamp="1608073291881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="221" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607328657500" />
     <state width="1177" height="89" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="914" height="181" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607987549277" />
-    <state width="914" height="181" key="GridCell.Tab.0.right" timestamp="1607987549277">
+    <state width="795" height="128" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608073291881" />
+    <state width="795" height="128" key="GridCell.Tab.0.right" timestamp="1608073291881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="221" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607328657500" />
     <state width="1177" height="89" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="914" height="181" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607987549277" />
+    <state width="795" height="128" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608073291881" />
     <state x="59" y="53" width="1413" height="695" key="MergeDialog" timestamp="1607104746770">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -378,9 +454,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1607183789284" />
-    <state x="638" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606943160872">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="798" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1608070764905">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="638" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606943160872" />
+    <state x="798" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608070764905" />
   </component>
 </project>
