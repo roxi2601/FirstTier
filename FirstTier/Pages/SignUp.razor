@@ -132,7 +132,7 @@
         }
         catch (NullReferenceException e)
         {
-            errorMessage = "you should fulfill all the fields";
+            errorMessage = "you should fill in all the fields";
         }
         catch (Exception e)
         {
@@ -156,16 +156,4 @@
             imagePath = "images/temporaryProfile.jpg";
         }
     }
-    
-    /*[CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
-
-    protected async override Task OnInitializedAsync()
-    {
-        base.OnInitialized();
-        var user = (await AuthStat).User;
-        if(!user.Identity.IsAuthenticated)
-        {
-            NavigationManager.NavigateTo($"/");
-        }
-    }*/
 }

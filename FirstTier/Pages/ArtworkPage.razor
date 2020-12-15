@@ -138,19 +138,20 @@
     {
         try
         {
-            id = Int32.Parse(Id);
-            artwork = await ArtworkService.GetArtworkAsync(id);
-            imagePath = "images/artwork" + artwork.id + ".jpg";
-            User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
-            if (user != null)
-            {
-                isOwner = user.ID == artwork.userId;
-            }
+        id = Int32.Parse(Id);
+        artwork = await ArtworkService.GetArtworkAsync(id);
+        imagePath = "images/artwork" + artwork.id+".jpg";
+         User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            isOwner = user.ID == artwork.userId;
+        }
         }
         catch (Exception e)
         {
             errorMessage = e.Message;
         }
+       
     }
 
 }

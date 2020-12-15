@@ -1,19 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using FirstTier.Authentication;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using FirstTier.Data;
 using FirstTier.Data.Impl;
-using FirstTier.Models;
+using FirstTier.Chat;
 using Microsoft.AspNetCore.Components.Authorization;
 
 namespace FirstTier
@@ -43,6 +37,8 @@ namespace FirstTier
             services.AddScoped<ArtworkService,ArtworkCloud>();
 
             services.AddScoped<AuthenticationStateProvider, UserCustomAuthenticationStateProvider>();
+            
+            services.AddSignalR().AddAzureSignalR(); // for chat
 
             services.AddAuthorization(options =>
             {
@@ -101,11 +97,12 @@ namespace FirstTier
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseFileServer();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapHub<ChatHub>(ChatHub.HubUrl);
             });
         }
     }

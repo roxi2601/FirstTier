@@ -11,11 +11,11 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
  
-<div class="container col-md-8 main-secction" style="margin-top: 40px">
+<div class="container col-md-8 main-section" style="margin-top: 40px">
     <div class="row">
             
         <div class="row user-left-part">
-            <div class="col-md-3 col-sm-3 col-xs-3 user-profil-part pull-left">
+            <div class="col-md-3 col-sm-3 col-xs-3 user-profile-part pull-left">
                 <div class="row ">
                     <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
                         <img src="@PrepareSRCProfile(account)" style="border-radius: 50%; width: 150px; height: 150px; margin-top: 20px" alt="picture" class="img-thumbnail">
@@ -24,7 +24,7 @@
                         <div class="aboutme "><i class="fa fa-user-o" aria-hidden="true"></i> </div>
                     </div>
                     <div class="row user-detail-row" style="margin-top: 80px">
-                        <div class="col-md-12 col-sm-3 user-detail-section2 pull-left">
+                        <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
                             <div class="border"></div>
                             <p>About me</p>
                             <span>@account.Description</span>
@@ -42,7 +42,7 @@
                                 <h1>@account.FirstName @account.LastName</h1>
                                 <p>@account.username</p>
                             </div>
-                            <div class="col-md-12 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                            <div class="col-md-12 col-sm-6 col-xs-6 profile-header-section1 text-right pull-right">
                              
                                 <AuthorizeView Policy="LoggedUser">
                                                             @if (!isOwner)
@@ -75,7 +75,7 @@
                                         <div class="col-md-3 col-sm-3 profile-tag">
 
 
-                                            <a href="\EditProfile"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                            <a @onclick="profileClick"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                                                 <p>edit profile</p></a>
 
                                         </div>
@@ -187,9 +187,14 @@
         NavigationManager.NavigateTo("/ArtworkPage/"+id);
     }
 
-    private void EditProfile()
+    private async Task profileClick()
     {
-        NavigationManager.NavigateTo("/EditProfile");
+        User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            NavigationManager.NavigateTo("/EditProfile/"+user.ID);
+        }
+        
     }
 
     private void DeleteProfile()

@@ -45,12 +45,20 @@ namespace FirstTier.Data.Impl
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
 
-        public async Task UpdateAccountAsync(Account account)
+        public async Task<Account> UpdateAccountAsync(Account account)
         {
-            string accountSerialized = JsonSerializer.Serialize(account);
-            StringContent content = new StringContent(accountSerialized,Encoding.UTF8,"application/json");
-            HttpResponseMessage response = await client.PutAsync( "http://localhost:8080/accounts",content);
-            Console.WriteLine(response.ToString()); 
+            Console.WriteLine(account);
+            string artworkSerialized = JsonSerializer.Serialize(account);
+            StringContent content = new StringContent(artworkSerialized, Encoding.UTF8, "application/json");
+            HttpResponseMessage response =
+                await client.PutAsync("http://localhost:8080/editAccount",content);
+            
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Account result = JsonSerializer.Deserialize<Account>(response.Content.ReadAsStringAsync().Result);
+                return result;
+            }
+            throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
 
         public async Task RemoveAccountAsync(int userId)

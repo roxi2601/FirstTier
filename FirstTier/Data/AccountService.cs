@@ -9,7 +9,7 @@ namespace FirstTier.Data
         Task<IList<Account>> GetAccountsAsync();
         Task<Account> GetAccountAsync(int userId);
         Task<Account> AddAccountAsync(Account account);
-        Task UpdateAccountAsync(Account account);
+        Task<Account> UpdateAccountAsync(Account account);
         Task RemoveAccountAsync(int userId);
     }
 }
