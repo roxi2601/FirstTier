@@ -12,6 +12,38 @@
     <div class="row col-md-3 pull-right">
         <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="SearchTerm" @bind:event="oninput" />
     </div>
+     <table class="table">
+     <thead>
+     <tr>
+         <th>Title</th>
+         <th>Author</th>
+     </tr>
+     </thead>
+     <tbody>
+        @if (artworks == null || artworks.Count == 0)
+                 {
+                     <tr>
+                         <td colspan="3">
+                             No Records to display
+                         </td>
+                     </tr>
+                 }
+                 else
+                 {
+                     foreach (var artwork in artworks)
+                     {
+                         <tr>
+                             <td>@artwork.title</td>
+                             <td>@artwork.author</td>
+                             <td>
+                                 <a class="btn btn-primary" href='/editArtwork/@artwork.title'>Edit</a>  |
+                                 <a class="btn btn-danger" @onclick="() => Delete()">Delete</a>
+                             </td>
+                         </tr>
+                     }
+                 }
+             </tbody>
+         </table>
     <div class="col-12 row">
         <div class="col-6">
             <div id="artworkTitleElement">

@@ -29,68 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="profile">
-      <change afterPath="$PROJECT_DIR$/FirstTier/Data/DapperService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstTier/Data/Impl/DapperCloud.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstTier/DataAccess/AppContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.RazorComponent.input.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.RazorCoreGenerate.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.StaticWebAssets.Manifest.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.TagHelpers.output.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.Views.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.Views.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.Views1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.Views1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/FirstTier2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/artwork5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12_[Default_Changelist]/temporary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_16_12__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/FirstTier.Views.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/FirstTier.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/FirstTier.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM_[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_11_08_PM__Default_Changelist_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/.idea/.idea.FirstTier.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/.idea/.idea.FirstTier.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/.idea/.idea.FirstTier.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/.idea/.idea.FirstTier.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Data/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/AccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/FirstTier.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/FirstTier.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.TagHelpers.output.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Chat.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/FirstTier.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +74,6 @@
         <option value="$PROJECT_DIR$/FirstTier/Authentication/UserCustomAuthenticationStateProvider.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/EditArtwork.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/AddArtwork.razor" />
-        <option value="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/AccountCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/SignUp.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/SuccessPage.razor" />
@@ -151,6 +90,7 @@
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/DapperCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/DapperService.cs" />
         <option value="$PROJECT_DIR$/FirstTier/DataAccess/AppContext.cs" />
+        <option value="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" />
       </list>
     </option>
   </component>
@@ -225,6 +165,7 @@
       <workItem from="1607593143750" duration="1011000" />
       <workItem from="1607983537746" duration="3805000" />
       <workItem from="1608061117443" duration="2044000" />
+      <workItem from="1608066581870" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="artworks">
       <created>1606773489714</created>
