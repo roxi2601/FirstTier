@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Data;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using FirstTier.Models;
-using Microsoft.VisualBasic;
 
 namespace FirstTier.Data.Impl
 {
     public class ArtworkCloud : ArtworkService
     {
         HttpClient client = new HttpClient();
+        private readonly DapperService dapper;
         
         public async Task<Artwork> AddArtwork(Artwork artwork)
         {
@@ -73,6 +73,21 @@ namespace FirstTier.Data.Impl
                 //do nothing
             }
             throw new Exception(response.Content.ReadAsStringAsync().Result);
+        }
+        // searching
+        public async Task<int> CountAsync(string search)
+        {
+            var totalArtwork = await Task.FromResult(dapper.Get<int>($"select COUNT(*) from [Artwork] WHERE title like '%{search}%'", null,
+                commandType: CommandType.Text));
+            return totalArtwork;
+        }
+
+        public async Task<List<Artwork>> ListAllAsync(int skip, int take, string orderBy, string direction,
+            string search)
+        {
+            var artworks = await Task.FromResult(dapper.GetAll<Artwork>
+                ($"SELECT * FROM [Artwork] WHERE title like '%{search}%' ORDER BY {orderBy} {direction} OFFSET {skip} ROWS FETCH NEXT {take} ROWS ONLY; ", null, commandType: CommandType.Text));
+            return artworks;
         }
     }
 }

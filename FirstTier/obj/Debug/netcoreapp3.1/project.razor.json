@@ -151,7 +151,7 @@
         }
       },
       {
-        "HashCode": 2013773788,
+        "HashCode": -223062268,
         "Kind": "Components.Component",
         "Name": "FirstTier.Pages.Chat",
         "AssemblyName": "FirstTier",
@@ -161,13 +161,23 @@
             "TagName": "Chat"
           }
         ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "FirstTier.Pages.Chat"
         }
       },
       {
-        "HashCode": -1236926745,
+        "HashCode": 841457196,
         "Kind": "Components.Component",
         "Name": "FirstTier.Pages.Chat",
         "AssemblyName": "FirstTier",
@@ -175,6 +185,16 @@
         "TagMatchingRules": [
           {
             "TagName": "FirstTier.Pages.Chat"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
           }
         ],
         "Metadata": {
