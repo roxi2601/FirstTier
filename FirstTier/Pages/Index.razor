@@ -84,6 +84,7 @@
 
 @code
 {
+
     [Parameter]
     public string Id { get; set; }
 
@@ -94,12 +95,12 @@
     private string? title;
     private string? description;
     private string? author;
-    
+
     private IList<Artwork> artworks;
     private IList<Artwork> artworksToShow;
-    
+
     private Artwork artwork = new Artwork();
-    
+
     private string imagePath = "images/paleta.jpg";
     string errorMessage = "";
 
@@ -180,7 +181,7 @@
             errorMessage = e.Message;
         }
     }
-
+    
     private void SearchField()
     {
         try
@@ -189,21 +190,12 @@
             {
                 artworksToShow = artworks;
             }
-            else if (searchTerm != null && searchTerm.Equals(artwork.title))
+            else if (searchTerm != null)
             {
-                artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower())).ToList();
-            }
-            else if (searchTerm != null && searchTerm.Equals(artwork.description))
-            {
-                artworksToShow = artworks.Where(artwork => artwork.description.ToLower().Contains(searchTerm.ToLower())).ToList();
-            }
-            else if (searchTerm != null && searchTerm.Equals(artwork.author))
-            {
-                artworksToShow = artworks.Where(artwork => artwork.author.ToLower().Contains(searchTerm.ToLower())).ToList();
-            }
-            else if (searchTerm != null && searchTerm.Equals(artwork.category))
-            {
-                artworksToShow = artworks.Where(artwork => artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
+                artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower()) || 
+                                                            artwork.description.ToLower().Contains(searchTerm.ToLower()) ||
+                                                            artwork.author.ToLower().Contains(searchTerm.ToLower()) || 
+                                                            artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
             }
             Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
         }
