@@ -207,21 +207,25 @@
 
     private void SearchField()
     {
-        if (searchTerm.Contains(title))
+        if (searchTerm == null)
         {
-            artworksToShow = artworks.Where(i => i.title.ToLower().Contains(searchTerm.ToLower())).ToList();
+            artworksToShow = artworks;
         }
-        else if (searchTerm.Contains(description))
+        else if (searchTerm.Contains(artwork.title))
         {
-            artworksToShow = artworks.Where(i => i.description.ToLower().Contains(searchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(author))
+        else if (searchTerm.Contains(artwork.description))
         {
-            artworksToShow = artworks.Where(i => i.author.ToLower().Contains(searchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(artwork => artwork.description.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(category))
+        else if (searchTerm.Contains(artwork.author))
         {
-            artworksToShow = artworks.Where(i => i.category.ToLower().Contains(searchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(artwork => artwork.author.ToLower().Contains(searchTerm.ToLower())).ToList();
+        }
+        else if (searchTerm.Contains(artwork.category))
+        {
+            artworksToShow = artworks.Where(artwork => artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
 
         Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
