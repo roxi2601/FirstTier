@@ -38,46 +38,16 @@
     <button @onclick="ExecuteFilter">
         <span>Filter</span>
     </button>
+    
+    <div class="row col-md-3 pull-right">
+        <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="SearchTerm" @bind:event="oninput"/></div>
+    <button @onclick="SearchField">
+            <span>Search</span>
+        </button>
 </div>
-<div class="row col-md-3 pull-right">
-    <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="SearchTerm" @bind:event="oninput"/>
-</div>
-
-@*<table class="table">
-    <thead>
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-    </tr>
-    </thead>
-    <tbody>
-    @if (artworks == null || artworks.Count == 0)
-    {
-        <tr>
-            <td colspan="3">
-                No Artworks to display
-            </td>
-        </tr>
-    }
-    else
-    {
-        foreach (var artwork in artworks)
-        {
-            <tr>
-                <td>@artwork.title</td>
-                <td>@artwork.author</td>
-                <td>
-                    <a class="btn btn-primary" href='/editArtwork/@artwork.title'>Edit</a> |
-                    <a class="btn btn-danger" @onclick="() => Delete()">Delete</a>
-                </td>
-            </tr>
-        }
-    }
-    </tbody>
-</table>*@
 
 <div id="artworks">
-    @if (artworksToShow == null)
+    @if (artworksToShow == null || artworksToShow.Count == 0)
     {
         <p>
             <em> Loading.. </em>
@@ -88,6 +58,26 @@
         <p>
             <em>No offers exist, Please add some.</em>
         </p>
+    }
+    else if(searchTerm != null)
+    {
+        <div class="col-12 row">
+            @foreach (var artwork in searchedArtworksToShow)
+            {
+                <div class="col-4">
+                    <div id="artworkElement">
+                        <div id="categoryElement">
+                            <label style="color: white">@artwork.category</label>
+                        </div>
+                        <img src="@PrepareSRC(artwork)" alt="picture" class="img-thumbnail" style="height: 230px" @onclick="() => ImageClick(artwork.id)"><br>
+                        <label id="artworkTitleElement">@artwork.title</label>
+                        <div id="artworkPriceElement">
+                            <label>@artwork.price €</label>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     }
     else
     {
@@ -109,17 +99,19 @@
             }
         </div>
     }
- <div class="pagination">
-             <button class="btn btn-custom" @onclick=@(async ()=>await NavigateToPage("previous"))>Prev</button>
-             @for (int i = startPage; i <= endPage; i++)
-             {
-                 var currentPage = i;
-                 <button class="btn btn-custom pagebutton @(currentPage==curPage?"btn-danger":"")" @onclick=@(async () =>await refreshRecords(currentPage))>
-                     @currentPage
-                 </button>
-             }
-             <button class="btn btn-custom" @onclick=@(async ()=>await NavigateToPage("next"))>Next</button>
-         </div>
+</div>
+
+<div class="pagination">
+    <button class="btn btn-custom" @onclick=@(async () => await NavigateToPage("previous"))>Prev</button>
+    @for (int i = startPage; i <= endPage; i++)
+    {
+        var currentPage = i;
+        <button class="btn btn-custom pagebutton @(currentPage == curPage ? "btn-danger" : "")" @onclick=@(async () => await refreshRecords(currentPage))>
+            @currentPage
+        </button>
+    }
+    <button class="btn btn-custom" @onclick=@(async () => await NavigateToPage("next"))>Next</button>
+
 </div>
 
 
@@ -127,7 +119,7 @@
 {
     [Parameter]
     public string Id { get; set; }
-    
+
     private int? maxPrice;
     private int? minPrice;
     private string? category;
@@ -135,15 +127,24 @@
     int id;
     Artwork artwork = new Artwork();
     private IList<Artwork> artworksToShow;
+    private IList<Artwork> searchedArtworksToShow;
     private string imagePath = "images/paleta.jpg";
 
     //for searching
     private string searchTerm;
-    private string SearchTerm {
+
+    private string SearchTerm
+    {
         get { return searchTerm; }
-        set { searchTerm = value; FilterRecords(); }
+        set
+        {
+            searchTerm = value;
+            FilterRecords();
+        }
     }
+
     #region Pagination
+
     int totalPages;
     int totalRecords;
     int curPage;
@@ -151,8 +152,10 @@
     int pageSize;
     int startPage;
     int endPage;
+    string data;
     string sortColumnName = "ID";
     string sortDir = "DESC";
+
     #endregion
 
     private void ImageClick(int id)
@@ -174,6 +177,7 @@
         await ArtworkService.DeleteArtworkAsync(id);
         artworks = await ArtworkService.ListAllAsync((curPage - 1) * pageSize, pageSize, sortColumnName, sortDir, searchTerm);
     }
+
     private void ExecuteFilter()
     {
         if (maxPrice == null && minPrice == null && (category == null || category.Equals("All")))
@@ -226,7 +230,7 @@
             }
             if (searchTerm != null)
             {
-                //display total page buttons
+    //display total page buttons
                 pagerSize = 3;
                 pageSize = 2;
                 curPage = 1;
@@ -237,13 +241,15 @@
             }
         }
     }
-    
-     private bool isSortedAscending;
+
+    private bool isSortedAscending;
     private string activeSortColumn;
+
     private async Task<List<Artwork>> SortRecords(string columnName, string dir)
     {
         return await ArtworkService.ListAllAsync((curPage - 1) * pageSize, pageSize, columnName, dir, searchTerm);
     }
+
     private async Task SortTable(string columnName)
     {
         if (columnName != activeSortColumn)
@@ -267,6 +273,7 @@
         sortColumnName = columnName;
         sortDir = isSortedAscending ? "ASC" : "DESC";
     }
+
     private string SetSortIcon(string columnName)
     {
         if (activeSortColumn != columnName)
@@ -282,6 +289,26 @@
             return "fa-sort-down";
         }
     }
+
+    private void SearchField()
+    {
+        if (searchTerm.Contains(artwork.title))
+        {
+            searchedArtworksToShow = artworksToShow.Where(i => i.title.ToLower().Contains(SearchTerm.ToLower())).ToList();
+        }
+        else if (searchTerm.Contains(artwork.description))
+        {
+            searchedArtworksToShow = artworksToShow.Where(i => i.description.ToLower().Contains(SearchTerm.ToLower())).ToList();
+        }
+        else if (searchTerm.Contains(artwork.author))
+        {
+            searchedArtworksToShow = artworksToShow.Where(i => i.author.ToLower().Contains(SearchTerm.ToLower())).ToList();
+        }
+        else if (searchTerm.Contains(artwork.category))
+        {
+            searchedArtworksToShow = artworksToShow.Where(i => i.category.ToLower().Contains(SearchTerm.ToLower())).ToList();
+        }
+    }
     
     public async Task refreshRecords(int currentPage)
     {
@@ -289,7 +316,7 @@
         curPage = currentPage;
         this.StateHasChanged();
     }
-    
+
     public void SetPagerSize(string direction)
     {
         if (direction == "forward" && endPage < totalPages)
@@ -316,12 +343,13 @@
             endPage = totalPages;
         }
     }
-    
+
     public void FilterRecords()
     {
         endPage = 0;
         this.OnInitializedAsync().Wait();
     }
+
     public async Task NavigateToPage(string direction)
     {
         if (direction == "next")
