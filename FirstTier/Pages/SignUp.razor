@@ -122,13 +122,9 @@
             {
                 throw new Exception("Passwords don't match, try to type them again");
             }
-    if (newAccount.username.Length<3)
+    if (newAccount.username.Length<3 || newAccount.Password.Length<6)
             {
-                throw  new Exception("Username has to contain at least 3 signs");
-            }
-            if (newAccount.Password.Length < 6)
-            {
-                throw  new Exception("Password has to contain at least 6 signs");
+                throw  new Exception("Username and password have to contain at least 3 signs");
             }
             newAccount.SecurityLevel = newAccount.username.Equals("admin") ? 5 : 3; //if admin securitylevel=5, else security=3
   

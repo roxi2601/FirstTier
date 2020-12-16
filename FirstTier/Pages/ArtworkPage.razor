@@ -118,12 +118,12 @@
         try
         {
             await ArtworkService.DeleteArtworkAsync(id);
-            NavigationManager.NavigateTo("/");
         }
         catch (Exception e)
         {
             errorMessage = e.Message;
         }
+        NavigationManager.NavigateTo("/");
     }
     public void Edit()
     {

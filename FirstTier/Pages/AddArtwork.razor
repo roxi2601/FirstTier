@@ -117,11 +117,6 @@
             newArtwork.pictureBytes = img;
             Image.FromStream(ms).Save("wwwroot/images/temporary.jpg",ImageFormat.Jpeg);
             imagePath = "images/temporary.jpg";
-            
-         
-    //to display picture should we save each one we get here separately or
-    //create one file which will be overwritten with bytes we want to display each time system request picture.
-    //one file for every picture entity like "profile picture", "NewArtworkPicture" 
         }
     }
 
