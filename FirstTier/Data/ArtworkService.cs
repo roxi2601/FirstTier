@@ -11,10 +11,5 @@ namespace FirstTier.Data
         Task DeleteArtworkAsync(int id);
         Task<Artwork> EditArtwork(Artwork artwork);
         Task<Artwork> GetArtworkAsync(int Id);
-        /*for searching
-        
-        Task<int> CountAsync(string search);
-        Task<List<Artwork>> ListAllAsync(int skip, int take, string orderBy, string direction, string search);
-*/
     }
 }

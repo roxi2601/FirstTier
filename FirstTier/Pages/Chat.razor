@@ -1,17 +1,26 @@
 ﻿@page "/Chat"
 @inject NavigationManager NavigationManager
 @inject AccountService AccountService
+@inject ChatService ChatService
 @using Microsoft.AspNetCore.SignalR.Client;
 @using FirstTier.Chat
 @using FirstTier.Data
 @using FirstTier.Models
+@using FirstTier.Authentication
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <h3>Chat</h3>
 <hr />
 
 @if (!_isChatting)
 {
-    <input type="text" maxlength="32" @bind="@account.username" />
+    <div class="form-group">
+        <div id="categoryElement">
+            <label class="user">User:</label><br>
+            <input style="color: black" type="text" @bind="@account.username" />
+        </div>
+    </div>
+    
     <button type="button" @onclick="@ChatRoom"><span class="oi oi-chat" aria-hidden="true"></span> Chat</button>
 
     // Error messages
@@ -24,39 +33,43 @@
 else
 {
     // banner to show current user
-    <div class="alert alert-secondary mt-4" role="alert">
+    <div class="alert alert-secondary mt-4" role="alert" style="color: red">
         <span class="oi oi-person mr-2" aria-hidden="true"></span>
         <span>You are connected as <b>@account.username</b></span>
         <button class="btn btn-sm btn-warning ml-md-auto" @onclick="@DisconnectAsync">Disconnect</button>
     </div>
+    
     // display messages
-    <div id="scrollbox">
+    <div id="scrollbox" style="color: white">
         @foreach (var item in _messages)
         {
             @if (item.IsNotice)
             {
-                <div class="alert alert-info">@item.Body</div>
+                <div class="alert alert-info">@item.messageBody</div>
             }
             else
             {
                 <div class="@item.CSS">
-                    <div class="user">@item.Username</div>
-                    <div class="msg">@item.Body</div>
+                    <div class="user">@item.username</div>
+                    <div class="msg">@item.messageBody</div>
                 </div>
             }
         }
         <hr />
-        <textarea class="input-lg" placeholder="enter your comment" @bind="@_newMessage"></textarea>
-        <button class="btn btn-default" @onclick="@(() => SendAsync(_newMessage))">Send</button>
+        <textarea style="color: white" class="input-lg" placeholder="Enter your comment" @bind="@_newMessage"></textarea>
+        <button style="color: white" class="btn btn-default" @onclick="@(() => SendAsync(_newMessage))">Send</button>
     </div>
 }
-
 
 @code {
     [Parameter]
     // user data
     public string Id { get; set; }
     private Account account = new Account();
+    private bool isUser;
+    
+    //message data
+    private Message message = new Message();
     
     // flag to indicate chat status
     private bool _isChatting = false;
@@ -75,6 +88,13 @@ else
 
     public async Task ChatRoom()
     {
+        // check if user is valid
+        User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+        if (user != null)
+        {
+            isUser = user.ID == account.ID;
+        }
+
         try
         {
             // Start chatting and force refresh UI.
@@ -107,7 +127,7 @@ else
     {
         bool isMine = name.Equals(account.username, StringComparison.OrdinalIgnoreCase);
 
-        _messages.Add(new Message(name, message, isMine));
+        _messages.Add(new Message());
 
         // Inform blazor the UI needs updating
         StateHasChanged();
@@ -135,23 +155,5 @@ else
 
             _newMessage = string.Empty;
         }
-    }
-
-    private class Message
-    {
-        public Message(string username, string body, bool mine)
-        {
-            Username = username;
-            Body = body;
-            Mine = mine;
-        }
-
-        public string Username { get; set; }
-        public string Body { get; set; }
-        public bool Mine { get; set; }
-
-        public bool IsNotice => Body.StartsWith("[Notice]");
-
-        public string CSS => Mine ? "sent" : "received";
     }
 }

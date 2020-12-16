@@ -638,7 +638,7 @@ textarea {
 
 .sent {
     background: #03a9f4;
-    color: #fff;
+    color: #000000;
     margin-left: 10%;
     top: 50%;
     text-align: right;
@@ -646,7 +646,7 @@ textarea {
 
 .received {
     background: #4CAF50;
-    color: #fff;
+    color: #000000;
     margin-left: 10px;
     margin-right: 10%;
 }

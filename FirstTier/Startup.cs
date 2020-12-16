@@ -46,6 +46,8 @@ namespace FirstTier
             
             
             //services.AddSignalR().AddAzureSignalR(); // for chat
+            
+            services.AddScoped<ChatService,ChatCloud>();
 
             services.AddAuthorization(options =>
             {

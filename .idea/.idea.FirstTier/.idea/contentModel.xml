@@ -22,9 +22,11 @@
         <e p="Data" t="Include">
           <e p="AccountService.cs" t="Include" />
           <e p="ArtworkService.cs" t="Include" />
+          <e p="ChatService.cs" t="Include" />
           <e p="Impl" t="Include">
             <e p="AccountCloud.cs" t="Include" />
             <e p="ArtworkCloud.cs" t="Include" />
+            <e p="ChatCloud.cs" t="Include" />
             <e p="UserCloud.cs" t="Include" />
           </e>
           <e p="UserService.cs" t="Include" />
@@ -36,6 +38,7 @@
         <e p="Models" t="Include">
           <e p="Account.cs" t="Include" />
           <e p="Artwork.cs" t="Include" />
+          <e p="Message.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
