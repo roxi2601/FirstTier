@@ -44,8 +44,6 @@ namespace FirstTier
                 options.UseSqlServer(
                     Configuration.GetConnectionString("sep3db")));
             
-            //Register dapper in scope  
-            services.AddScoped<DapperService, DapperCloud>();
             
             //services.AddSignalR().AddAzureSignalR(); // for chat
 
