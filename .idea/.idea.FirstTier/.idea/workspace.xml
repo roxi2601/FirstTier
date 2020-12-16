@@ -29,8 +29,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="profile">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_16_2020_4_53_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_16_2020_4_53_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_16_2020_5_07_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_16_2020_5_07_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_16_2020_5_07_PM__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/shelf/Uncommitted_changes_before_Update_at_12_16_2020_5_07_PM__Default_Changelist_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/Index.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
@@ -39,10 +41,14 @@
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/profile3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/profile3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/temporary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/temporary.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/temporaryProfile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/temporaryProfile.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +104,6 @@
         <option value="$PROJECT_DIR$/FirstTier/Pages/ArtworkPage.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/SuccessPage.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Success.razor" />
-        <option value="$PROJECT_DIR$/FirstTier/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/EditProfile.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/ContactUs.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Login.razor" />
@@ -110,6 +115,7 @@
         <option value="$PROJECT_DIR$/FirstTier/Data/AccountService.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/AccountCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Index.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/Shared/MainLayout.razor" />
       </list>
     </option>
   </component>
@@ -408,30 +414,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1608136966595" />
-    <state width="1448" height="84" key="GridCell.Tab.0.bottom" timestamp="1608152061056">
+    <state width="1448" height="389" key="GridCell.Tab.0.bottom" timestamp="1608152597245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="366" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608136932319" />
     <state width="1177" height="89" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1448" height="84" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608152061056" />
-    <state width="1448" height="84" key="GridCell.Tab.0.center" timestamp="1608152061056">
+    <state width="1448" height="389" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608152597245" />
+    <state width="1448" height="389" key="GridCell.Tab.0.center" timestamp="1608152597245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="366" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608136932318" />
     <state width="1177" height="89" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1448" height="84" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608152061056" />
-    <state width="1448" height="84" key="GridCell.Tab.0.left" timestamp="1608152061056">
+    <state width="1448" height="389" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608152597245" />
+    <state width="1448" height="389" key="GridCell.Tab.0.left" timestamp="1608152597245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="366" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608136932318" />
     <state width="1177" height="89" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1448" height="84" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608152061056" />
-    <state width="1448" height="84" key="GridCell.Tab.0.right" timestamp="1608152061056">
+    <state width="1448" height="389" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608152597245" />
+    <state width="1448" height="389" key="GridCell.Tab.0.right" timestamp="1608152597245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="366" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608136932318" />
     <state width="1177" height="89" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1448" height="84" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608152061056" />
+    <state width="1448" height="389" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608152597245" />
     <state x="59" y="53" width="1413" height="695" key="MergeDialog" timestamp="1608128373546">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

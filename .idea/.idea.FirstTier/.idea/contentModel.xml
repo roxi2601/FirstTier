@@ -22,11 +22,9 @@
         <e p="Data" t="Include">
           <e p="AccountService.cs" t="Include" />
           <e p="ArtworkService.cs" t="Include" />
-          <e p="DapperService.cs" t="Include" />
           <e p="Impl" t="Include">
             <e p="AccountCloud.cs" t="Include" />
             <e p="ArtworkCloud.cs" t="Include" />
-            <e p="DapperCloud.cs" t="Include" />
             <e p="UserCloud.cs" t="Include" />
           </e>
           <e p="UserService.cs" t="Include" />

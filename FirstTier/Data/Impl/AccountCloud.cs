@@ -13,7 +13,6 @@ namespace FirstTier.Data.Impl
     public class AccountCloud: AccountService
     {
         HttpClient client = new HttpClient();
-        private readonly DapperService dapper;
 
         public async Task<IList<Account>> GetAccountsAsync()
         {
@@ -68,21 +67,5 @@ namespace FirstTier.Data.Impl
             HttpResponseMessage response = await client.DeleteAsync("http://localhost:8080/accounts/"+userId);
             Console.WriteLine(response);
         }
-        
-        /* searching
-        public async Task<int> CountAsync(string search)
-        {
-            var totalAccount = await Task.FromResult(dapper.Get<int>($"select COUNT(*) from [Account] WHERE username like '%{search}%'", null,
-                commandType: CommandType.Text));
-            return totalAccount;
-        }
-
-        public async Task<List<Account>> ListAllAsync(int skip, int take, string orderBy, string direction,
-            string search)
-        {
-            var accounts = await Task.FromResult(dapper.GetAll<Account>
-                ($"SELECT * FROM [Account] WHERE username like '%{search}%' ORDER BY {orderBy} {direction} OFFSET {skip} ROWS FETCH NEXT {take} ROWS ONLY; ", null, commandType: CommandType.Text));
-            return accounts;
-        }*/
     }
 }
