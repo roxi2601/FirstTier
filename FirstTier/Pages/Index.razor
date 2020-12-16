@@ -80,19 +80,6 @@
         </div>
     }
 </div>
-@*
-<div class="pagination">
-    <button class="btn btn-custom" @onclick=@(async () => await NavigateToPage("previous"))>Prev</button>
-    @for (int i = startPage; i <= endPage; i++)
-    {
-        var currentPage = i;
-        <button class="btn btn-custom pagebutton @(currentPage == curPage ? "btn-danger" : "")" @onclick=@(async () => await refreshRecords(currentPage))>
-            @currentPage
-        </button>
-    }
-    <button class="btn btn-custom" @onclick=@(async () => await NavigateToPage("next"))>Next</button>
-
-</div>*@
 
 
 @code
@@ -117,18 +104,7 @@
     string errorMessage = "";
 
     //for searching
-    private string searchTerm;
-
-    /*private string SearchTerm
-    {
-        get { return searchTerm; }
-        set
-        {
-            searchTerm = value;
-            FilterRecords();
-        }
-    }
-*/
+    private string? searchTerm;
 
     private void ImageClick(int id)
     {
@@ -211,19 +187,19 @@
         {
             artworksToShow = artworks;
         }
-        else if (searchTerm.Contains(artwork.title))
+        else if (searchTerm != null && searchTerm.Contains(artwork.title))
         {
             artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(artwork.description))
+        else if (searchTerm != null && searchTerm.Contains(artwork.description))
         {
             artworksToShow = artworks.Where(artwork => artwork.description.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(artwork.author))
+        else if (searchTerm != null && searchTerm.Contains(artwork.author))
         {
             artworksToShow = artworks.Where(artwork => artwork.author.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(artwork.category))
+        else if (searchTerm != null && searchTerm.Contains(artwork.category))
         {
             artworksToShow = artworks.Where(artwork => artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
