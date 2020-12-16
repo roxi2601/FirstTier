@@ -40,7 +40,7 @@
     </button>
     
     <div class="row col-md-3 pull-right">
-        <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="SearchTerm" @bind:event="oninput"/></div>
+        <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="searchTerm" @bind:event="oninput"/></div>
     <button @onclick="SearchField">
             <span>Search</span>
         </button>
@@ -80,7 +80,7 @@
         </div>
     }
 </div>
-
+@*
 <div class="pagination">
     <button class="btn btn-custom" @onclick=@(async () => await NavigateToPage("previous"))>Prev</button>
     @for (int i = startPage; i <= endPage; i++)
@@ -92,7 +92,7 @@
     }
     <button class="btn btn-custom" @onclick=@(async () => await NavigateToPage("next"))>Next</button>
 
-</div>
+</div>*@
 
 
 @code
@@ -100,23 +100,26 @@
     [Parameter]
     public string Id { get; set; }
 
+    private int id;
     private int? maxPrice;
     private int? minPrice;
     private string? category;
     private string? title;
     private string? description;
     private string? author;
+    
     private IList<Artwork> artworks;
-    int id;
-    Artwork artwork = new Artwork();
     private IList<Artwork> artworksToShow;
-    //private IList<Artwork> searchedArtworksToShow;
+    
+    private Artwork artwork = new Artwork();
+    
     private string imagePath = "images/paleta.jpg";
+    string errorMessage = "";
 
     //for searching
     private string searchTerm;
 
-    private string SearchTerm
+    /*private string SearchTerm
     {
         get { return searchTerm; }
         set
@@ -125,21 +128,7 @@
             FilterRecords();
         }
     }
-
-    #region Pagination
-
-    int totalPages;
-    int totalRecords;
-    int curPage;
-    int pagerSize;
-    int pageSize;
-    int startPage;
-    int endPage;
-    string data;
-    string sortColumnName = "ID";
-    string sortDir = "DESC";
-
-    #endregion
+*/
 
     private void ImageClick(int id)
     {
@@ -154,13 +143,7 @@
         }
         return "images/paleta.jpg";
     }
-
-    protected async Task Delete()
-    {
-        await ArtworkService.DeleteArtworkAsync(id);
-        artworks = await ArtworkService.ListAllAsync((curPage - 1) * pageSize, pageSize, sortColumnName, sortDir, searchTerm);
-    }
-
+    
     private void ExecuteFilter()
     {
         if (maxPrice == null && minPrice == null && (category == null || category.Equals("All")))
@@ -200,165 +183,47 @@
 
     protected override async Task OnInitializedAsync()
     {
-        artworks = await ArtworkService.GetArtworksAsync();
-        artworks = artworks.Reverse().ToList();
-        artworksToShow = artworks;
-        foreach (var artwork in artworksToShow)
+        try
         {
-            if (artwork.pictureBytes != null)
+            artworks = await ArtworkService.GetArtworksAsync();
+            artworks = artworks.Reverse().ToList();
+            artworksToShow = artworks;
+            
+            foreach (var artwork in artworksToShow)
             {
-                var ms = new MemoryStream();
-                ms.Write(artwork.pictureBytes);
-                Image.FromStream(ms).Save("wwwroot/images/artwork" + artwork.id + ".jpg", ImageFormat.Jpeg);
-            }
-            if (searchTerm != null)
-            {
-    //display total page buttons
-                pagerSize = 3;
-                pageSize = 2;
-                curPage = 1;
-                artworks = await ArtworkService.ListAllAsync((curPage - 1) * pageSize, pageSize, sortColumnName, sortDir, searchTerm);
-                totalRecords = await ArtworkService.CountAsync(searchTerm);
-                totalPages = (int) Math.Ceiling(totalRecords / (decimal) pageSize);
-                SetPagerSize("forward");
+                if (artwork.pictureBytes != null)
+                {
+                    var ms = new MemoryStream();
+                    ms.Write(artwork.pictureBytes);
+                    Image.FromStream(ms).Save("wwwroot/images/artwork" + artwork.id + ".jpg", ImageFormat.Jpeg);
+                }
             }
         }
-    }
-
-    private bool isSortedAscending;
-    private string activeSortColumn;
-
-    private async Task<List<Artwork>> SortRecords(string columnName, string dir)
-    {
-        return await ArtworkService.ListAllAsync((curPage - 1) * pageSize, pageSize, columnName, dir, searchTerm);
-    }
-
-    private async Task SortTable(string columnName)
-    {
-        if (columnName != activeSortColumn)
+        catch (Exception e)
         {
-            artworks = await SortRecords(columnName, "ASC");
-            isSortedAscending = true;
-            activeSortColumn = columnName;
-        }
-        else
-        {
-            if (isSortedAscending)
-            {
-                artworks = await SortRecords(columnName, "DESC");
-            }
-            else
-            {
-                artworks = await SortRecords(columnName, "ASC");
-            }
-            isSortedAscending = !isSortedAscending;
-        }
-        sortColumnName = columnName;
-        sortDir = isSortedAscending ? "ASC" : "DESC";
-    }
-
-    private string SetSortIcon(string columnName)
-    {
-        if (activeSortColumn != columnName)
-        {
-            return string.Empty;
-        }
-        if (isSortedAscending)
-        {
-            return "fa-sort-up";
-        }
-        else
-        {
-            return "fa-sort-down";
+            errorMessage = e.Message;
         }
     }
 
     private void SearchField()
     {
-        if (searchTerm != null && searchTerm.Contains(artwork.title))
+        if (searchTerm.Contains(title))
         {
-            artworksToShow = artworks.Where(i => i.title.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.title.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm != null && searchTerm.Contains(artwork.description))
+        else if (searchTerm.Contains(description))
         {
-            artworksToShow = artworks.Where(i => i.description.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.description.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm != null && searchTerm.Contains(artwork.author))
+        else if (searchTerm.Contains(author))
         {
-            artworksToShow = artworks.Where(i => i.author.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.author.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
-        else if (searchTerm != null && searchTerm.Contains(artwork.category))
+        else if (searchTerm.Contains(category))
         {
-            artworksToShow = artworks.Where(i => i.category.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.category.ToLower().Contains(searchTerm.ToLower())).ToList();
         }
 
         Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
-    }
-
-    public async Task refreshRecords(int currentPage)
-    {
-        artworks = await ArtworkService.ListAllAsync((currentPage - 1) * pageSize, pageSize, sortColumnName, sortDir, searchTerm);
-        curPage = currentPage;
-        this.StateHasChanged();
-    }
-
-    public void SetPagerSize(string direction)
-    {
-        if (direction == "forward" && endPage < totalPages)
-        {
-            startPage = endPage + 1;
-            if (endPage + pagerSize < totalPages)
-            {
-                endPage = startPage + pagerSize - 1;
-            }
-            else
-            {
-                endPage = totalPages;
-            }
-            this.StateHasChanged();
-        }
-        else if (direction == "back" && startPage > 1)
-        {
-            endPage = startPage - 1;
-            startPage = startPage - pagerSize;
-        }
-        else
-        {
-            startPage = 1;
-            endPage = totalPages;
-        }
-    }
-
-    public void FilterRecords()
-    {
-        endPage = 0;
-        this.OnInitializedAsync().Wait();
-    }
-
-    public async Task NavigateToPage(string direction)
-    {
-        if (direction == "next")
-        {
-            if (curPage < totalPages)
-            {
-                if (curPage == endPage)
-                {
-                    SetPagerSize("forward");
-                }
-                curPage += 1;
-            }
-        }
-        else if (direction == "previous")
-        {
-            if (curPage > 1)
-            {
-                if (curPage == startPage)
-                {
-                    SetPagerSize("back");
-                }
-                curPage -= 1;
-            }
-        }
-        await refreshRecords(curPage);
     }
 }
