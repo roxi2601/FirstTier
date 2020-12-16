@@ -69,7 +69,7 @@ namespace FirstTier.Data.Impl
             Console.WriteLine(response);
         }
         
-        // searching
+        /* searching
         public async Task<int> CountAsync(string search)
         {
             var totalAccount = await Task.FromResult(dapper.Get<int>($"select COUNT(*) from [Account] WHERE username like '%{search}%'", null,
@@ -83,6 +83,6 @@ namespace FirstTier.Data.Impl
             var accounts = await Task.FromResult(dapper.GetAll<Account>
                 ($"SELECT * FROM [Account] WHERE username like '%{search}%' ORDER BY {orderBy} {direction} OFFSET {skip} ROWS FETCH NEXT {take} ROWS ONLY; ", null, commandType: CommandType.Text));
             return accounts;
-        }
+        }*/
     }
 }

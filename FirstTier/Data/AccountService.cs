@@ -11,9 +11,9 @@ namespace FirstTier.Data
         Task<Account> UpdateAccountAsync(Account account);
         Task RemoveAccountAsync(int userId);
         
-        //for searching
-        Task<Account> GetAccountAsync(int userId);
+        Task<Account> GetAccountAsync(int userId); 
+        /*for searching
         Task<int> CountAsync(string search);
-        Task<List<Account>> ListAllAsync(int skip, int take, string orderBy, string direction, string search);
+        Task<List<Account>> ListAllAsync(int skip, int take, string orderBy, string direction, string search);*/
     }
 }

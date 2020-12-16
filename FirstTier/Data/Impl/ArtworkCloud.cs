@@ -74,7 +74,7 @@ namespace FirstTier.Data.Impl
             }
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
-        // searching
+        /* searching
         public async Task<int> CountAsync(string search)
         {
             var totalArtwork = await Task.FromResult(dapper.Get<int>($"select COUNT(*) from [Artwork] WHERE title like '%{search}%'", null,
@@ -88,6 +88,6 @@ namespace FirstTier.Data.Impl
             var artworks = await Task.FromResult(dapper.GetAll<Artwork>
                 ($"SELECT * FROM [Artwork] WHERE title like '%{search}%' ORDER BY {orderBy} {direction} OFFSET {skip} ROWS FETCH NEXT {take} ROWS ONLY; ", null, commandType: CommandType.Text));
             return artworks;
-        }
+        }*/
     }
 }
