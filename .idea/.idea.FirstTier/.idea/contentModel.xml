@@ -4,6 +4,7 @@
     <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_FirstTier.1948987985.00" t="ExcludeRecursive" />
     <e p="C:\Users\user\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\user\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="D:\dnp1\FirstTier" t="IncludeFlat">
       <e p="FirstTier" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
@@ -21,12 +22,17 @@
         <e p="Data" t="Include">
           <e p="AccountService.cs" t="Include" />
           <e p="ArtworkService.cs" t="Include" />
+          <e p="DapperService.cs" t="Include" />
           <e p="Impl" t="Include">
             <e p="AccountCloud.cs" t="Include" />
             <e p="ArtworkCloud.cs" t="Include" />
+            <e p="DapperCloud.cs" t="Include" />
             <e p="UserCloud.cs" t="Include" />
           </e>
           <e p="UserService.cs" t="Include" />
+        </e>
+        <e p="DataAccess" t="Include">
+          <e p="AppContext.cs" t="Include" />
         </e>
         <e p="FirstTier.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
@@ -130,12 +136,12 @@
             <e p="profile17.jpg" t="Include" />
             <e p="profile18.jpg" t="Include" />
             <e p="profile19.jpg" t="Include" />
+            <e p="profile2.jpg" t="Include" />
             <e p="profile20.jpg" t="Include" />
             <e p="profile3.jpg" t="Include" />
             <e p="temporary.jpg" t="Include" />
             <e p="temporaryProfile.jpg" t="Include" />
           </e>
-          <e p="index.html" t="Include" />
           <e p="inputfile.js" t="Include" />
         </e>
       </e>

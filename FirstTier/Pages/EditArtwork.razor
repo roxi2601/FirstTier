@@ -174,5 +174,11 @@ else
         }
         
     }
+    // for searching
+    protected async Task UpdateArtworks()
+    {
+        await ArtworkService.GetArtworksAsync();
+        NavigationManager.NavigateTo("/artworkPage");
+    }
 
 }

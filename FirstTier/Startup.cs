@@ -9,6 +9,7 @@ using FirstTier.Data;
 using FirstTier.Data.Impl;
 using FirstTier.Chat;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstTier
 {
@@ -38,7 +39,15 @@ namespace FirstTier
 
             services.AddScoped<AuthenticationStateProvider, UserCustomAuthenticationStateProvider>();
             
-            services.AddSignalR().AddAzureSignalR(); // for chat
+            //Provide database for chat
+            services.AddDbContext<DataAccess.AppContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("sep3db")));
+            
+            //Register dapper in scope  
+            services.AddScoped<DapperService, DapperCloud>();
+            
+            //services.AddSignalR().AddAzureSignalR(); // for chat
 
             services.AddAuthorization(options =>
             {
@@ -97,7 +106,7 @@ namespace FirstTier
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseFileServer();
+   
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();

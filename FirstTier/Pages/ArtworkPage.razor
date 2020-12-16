@@ -11,7 +11,8 @@
 <div id=artwork>
     <div class="col-12 row">
         <div class="col-6">
-            <div id="artworkTitleElement"><h1>@artwork.title</h1></div>
+            <div id="artworkTitleElement">
+                <h1>@artwork.title</h1></div>
         </div>
         <div class="col-6">
             <div id="artworkAuthorElement">
@@ -19,17 +20,17 @@
             </div>
         </div>
         <div class="col-6">
-            <img  src="@imagePath" class="img-thumbnail" alt="picture"/>
+            <img src="@imagePath" class="img-thumbnail" alt="picture"/>
             <div id="categoryElement"><label style="color: white">@artwork.category</label></div>
         </div>
         <div class="col-6">
             <div class="container">
                 <div class="col-12 row">
-                    
+
                     <div class="col-3">
-                         <button @onclick="() => ProfileClick(artwork.userId)">
-                             <span>See owner</span>
-                             </button>
+                        <button @onclick="() => ProfileClick(artwork.userId)">
+                            <span>See owner</span>
+                        </button>
                     </div>
                     <div class="col-3">
                         @if (isOwner)
@@ -86,7 +87,7 @@
                 </div>
             </div>
         </div>
-       <label style="color: red">@errorMessage</label>
+        <label style="color: red">@errorMessage</label>
     </div>
 </div>
 
@@ -98,10 +99,9 @@
     string errorMessage = "";
 
     int id;
-
+    
     Artwork artwork = new Artwork();
     string imagePath = "images/paleta.jpg";
-
 
     private void ProfileClick(int id)
     {
@@ -112,12 +112,12 @@
     {
         NavigationManager.NavigateTo("/Chat");
     }
-
-    public void Delete()
+    
+    protected async Task Delete()
     {
         try
         {
-            ArtworkService.DeleteArtworkAsync(id);
+            await ArtworkService.DeleteArtworkAsync(id);
             NavigationManager.NavigateTo("/");
         }
         catch (Exception e)
@@ -138,20 +138,18 @@
     {
         try
         {
-        id = Int32.Parse(Id);
-        artwork = await ArtworkService.GetArtworkAsync(id);
-        imagePath = "images/artwork" + artwork.id+".jpg";
-         User user  = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
-        if (user != null)
-        {
-            isOwner = user.ID == artwork.userId;
-        }
+            id = Int32.Parse(Id);
+            artwork = await ArtworkService.GetArtworkAsync(id);
+            imagePath = "images/artwork" + artwork.id + ".jpg";
+            User user = ((UserCustomAuthenticationStateProvider) AuthenticationStateProvider).GetCurrentUser();
+            if (user != null)
+            {
+                isOwner = user.ID == artwork.userId;
+            }
         }
         catch (Exception e)
         {
             errorMessage = e.Message;
         }
-       
     }
-
 }
