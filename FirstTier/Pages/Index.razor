@@ -40,7 +40,7 @@
     </button>
     
     <div class="row col-md-3 pull-right">
-        <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="searchTerm" @bind:event="oninput"/></div>
+        <input type="text" id="txtSearch" placeholder="Search..." class="form-control" @bind="searchTerm"/></div>
     <button @onclick="SearchField">
             <span>Search</span>
         </button>
@@ -50,10 +50,10 @@
     @if (artworksToShow == null || artworksToShow.Count == 0)
     {
         <p>
-            <em> Loading.. </em>
+            <em> Loading...</em>
         </p>
     }
-    else if (!artworksToShow.Any())
+    else if (!artworks.Any())
     {
         <p>
             <em>No offers exist, Please add some.</em>
@@ -70,7 +70,7 @@
                             <label style="color: white">@artwork.category</label>
                         </div>
                         <img src="@PrepareSRC(artwork)" alt="picture" class="img-thumbnail" style="height: 230px" @onclick="() => ImageClick(artwork.id)"><br>
-                        <label id="artworkTitleElement">@artwork.title</label>
+                        <label id="artworkTitleElement">@artwork.title</label> <label id="artworkAuthorElement"> - @artwork.author</label>
                         <div id="artworkPriceElement">
                             <label>@artwork.price €</label>
                         </div>
@@ -98,9 +98,13 @@
 
     private IList<Artwork> artworks;
     private IList<Artwork> artworksToShow;
+    
+    private IList<Account> accounts;
+    private IList<Account> accountsToShow;
 
     private Artwork artwork = new Artwork();
-
+    private Account account = new Account();
+    
     private string imagePath = "images/paleta.jpg";
     string errorMessage = "";
 
