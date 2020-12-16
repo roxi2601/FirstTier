@@ -29,21 +29,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="i fixed accounts functionality">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/Index.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/profile120.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/profile120.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/wwwroot/images/artwork5.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +58,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/EditProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/Index.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SignUp.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/Index.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/Index.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Login.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,6 +73,7 @@
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/ArtworkPage.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ArtworkPage.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/EditProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/Index.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/EditProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/EditProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
@@ -75,6 +81,8 @@
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SignUp.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/Index.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/HUAWEI/DNPexercises/FirstTier/FirstTier/Pages/Index.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/LoginLayout.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/MyProfile.razor.g.cs" root0="SKIP_HIGHLIGHTING" />
@@ -90,7 +98,6 @@
         <option value="$PROJECT_DIR$/FirstTier/Models/Artwork.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Artwork.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Authentication/ArtworkCustomAuthenticationStateProvider.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Pages/Index.razor" />
         <option value="$PROJECT_DIR$/FirstTier/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/FirstTier/Data/Impl/ArtworkCloud.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Data/ArtworkService.cs" />
@@ -109,6 +116,7 @@
         <option value="$PROJECT_DIR$/FirstTier/Pages/ContactUs.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Login.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/SignUp.razor" />
+        <option value="$PROJECT_DIR$/FirstTier/Pages/Index.razor" />
       </list>
     </option>
   </component>
@@ -177,7 +185,7 @@
       <workItem from="1606924460814" duration="25515000" />
       <workItem from="1607108418932" duration="20859000" />
       <workItem from="1607184239566" duration="7800000" />
-      <workItem from="1607199726359" duration="26651000" />
+      <workItem from="1607199726359" duration="27945000" />
     </task>
     <task id="LOCAL-00001" summary="artworks">
       <created>1606773489714</created>
@@ -354,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608134921027</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="i fixed accounts functionality">
+      <created>1608136258799</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1608136258829</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,25 +411,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="i fixed accounts functionality" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="273" key="GridCell.Tab.0.bottom" timestamp="1608134972285">
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1608136966595">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="273" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608134972285" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1608136966595" />
+    <state width="1237" height="366" key="GridCell.Tab.0.bottom" timestamp="1608136932319">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="366" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608136932319" />
     <state width="1177" height="89" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1237" height="273" key="GridCell.Tab.0.center" timestamp="1608134972285">
+    <state width="1237" height="366" key="GridCell.Tab.0.center" timestamp="1608136932318">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="273" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608134972285" />
+    <state width="1237" height="366" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608136932318" />
     <state width="1177" height="89" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1237" height="273" key="GridCell.Tab.0.left" timestamp="1608134972284">
+    <state width="1237" height="366" key="GridCell.Tab.0.left" timestamp="1608136932318">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="273" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608134972284" />
+    <state width="1237" height="366" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608136932318" />
     <state width="1177" height="89" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
-    <state width="1237" height="273" key="GridCell.Tab.0.right" timestamp="1608134972285">
+    <state width="1237" height="366" key="GridCell.Tab.0.right" timestamp="1608136932318">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="273" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608134972285" />
+    <state width="1237" height="366" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608136932318" />
     <state width="1177" height="89" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607030246586" />
     <state x="59" y="53" width="1413" height="695" key="MergeDialog" timestamp="1608128373546">
       <screen x="0" y="0" width="1280" height="680" />
@@ -426,10 +445,10 @@
     </state>
     <state x="488" y="143" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1608134132285" />
     <state x="585" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1607010881995" />
-    <state x="213" y="126" key="Vcs.Push.Dialog.v2" timestamp="1608134925679">
+    <state x="213" y="126" key="Vcs.Push.Dialog.v2" timestamp="1608136265415">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="213" y="126" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608134925679" />
+    <state x="213" y="126" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608136265415" />
     <state x="255" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607029616642" />
     <state x="568" y="269" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608134874463">
       <screen x="0" y="0" width="1280" height="680" />

@@ -277,11 +277,11 @@
     {
         if (searchTerm != null && searchTerm.Contains(artwork.title))
         {
-           artworksToShow = artworks.Where(i => i.title.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.title.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
         else if (searchTerm != null && searchTerm.Contains(artwork.description))
         {
-            artworksToShow= artworks.Where(i => i.description.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.description.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
         else if (searchTerm != null && searchTerm.Contains(artwork.author))
         {
@@ -291,12 +291,12 @@
         {
             artworksToShow = artworks.Where(i => i.category.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
-        
+
         Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
 
         refreshRecords(curPage);
     }
-    
+
     public async Task refreshRecords(int currentPage)
     {
         artworks = await ArtworkService.ListAllAsync((currentPage - 1) * pageSize, pageSize, sortColumnName, sortDir, searchTerm);
