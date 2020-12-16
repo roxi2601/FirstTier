@@ -59,26 +59,6 @@
             <em>No offers exist, Please add some.</em>
         </p>
     }
-    else if(searchTerm != null)
-    {
-        <div class="col-12 row">
-            @foreach (var artwork in searchedArtworksToShow)
-            {
-                <div class="col-4">
-                    <div id="artworkElement">
-                        <div id="categoryElement">
-                            <label style="color: white">@artwork.category</label>
-                        </div>
-                        <img src="@PrepareSRC(artwork)" alt="picture" class="img-thumbnail" style="height: 230px" @onclick="() => ImageClick(artwork.id)"><br>
-                        <label id="artworkTitleElement">@artwork.title</label>
-                        <div id="artworkPriceElement">
-                            <label>@artwork.price €</label>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    }
     else
     {
         <div class="col-12 row">
@@ -123,11 +103,14 @@
     private int? maxPrice;
     private int? minPrice;
     private string? category;
+    private string? title;
+    private string? description;
+    private string? author;
     private IList<Artwork> artworks;
     int id;
     Artwork artwork = new Artwork();
     private IList<Artwork> artworksToShow;
-    private IList<Artwork> searchedArtworksToShow;
+    //private IList<Artwork> searchedArtworksToShow;
     private string imagePath = "images/paleta.jpg";
 
     //for searching
@@ -292,22 +275,26 @@
 
     private void SearchField()
     {
-        if (searchTerm.Contains(artwork.title))
+        if (searchTerm != null && searchTerm.Contains(artwork.title))
         {
-            searchedArtworksToShow = artworksToShow.Where(i => i.title.ToLower().Contains(SearchTerm.ToLower())).ToList();
+           artworksToShow = artworks.Where(i => i.title.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(artwork.description))
+        else if (searchTerm != null && searchTerm.Contains(artwork.description))
         {
-            searchedArtworksToShow = artworksToShow.Where(i => i.description.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow= artworks.Where(i => i.description.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(artwork.author))
+        else if (searchTerm != null && searchTerm.Contains(artwork.author))
         {
-            searchedArtworksToShow = artworksToShow.Where(i => i.author.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.author.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
-        else if (searchTerm.Contains(artwork.category))
+        else if (searchTerm != null && searchTerm.Contains(artwork.category))
         {
-            searchedArtworksToShow = artworksToShow.Where(i => i.category.ToLower().Contains(SearchTerm.ToLower())).ToList();
+            artworksToShow = artworks.Where(i => i.category.ToLower().Contains(SearchTerm.ToLower())).ToList();
         }
+        
+        Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
+
+        refreshRecords(curPage);
     }
     
     public async Task refreshRecords(int currentPage)
