@@ -104,7 +104,7 @@
     string errorMessage = "";
 
     //for searching
-    private string? searchTerm;
+    private string? searchTerm { get; set; } = ""; // to prevent from nulls
 
     private void ImageClick(int id)
     {
@@ -183,27 +183,33 @@
 
     private void SearchField()
     {
-        if (searchTerm == null)
+        try
         {
-            artworksToShow = artworks;
+            if (searchTerm == null)
+            {
+                artworksToShow = artworks;
+            }
+            else if (searchTerm != null && searchTerm.Equals(artwork.title))
+            {
+                artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower())).ToList();
+            }
+            else if (searchTerm != null && searchTerm.Equals(artwork.description))
+            {
+                artworksToShow = artworks.Where(artwork => artwork.description.ToLower().Contains(searchTerm.ToLower())).ToList();
+            }
+            else if (searchTerm != null && searchTerm.Equals(artwork.author))
+            {
+                artworksToShow = artworks.Where(artwork => artwork.author.ToLower().Contains(searchTerm.ToLower())).ToList();
+            }
+            else if (searchTerm != null && searchTerm.Equals(artwork.category))
+            {
+                artworksToShow = artworks.Where(artwork => artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
+            }
+            Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
         }
-        else if (searchTerm != null && searchTerm.Contains(artwork.title))
+        catch (Exception e)
         {
-            artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower())).ToList();
+            errorMessage = e.Message;
         }
-        else if (searchTerm != null && searchTerm.Contains(artwork.description))
-        {
-            artworksToShow = artworks.Where(artwork => artwork.description.ToLower().Contains(searchTerm.ToLower())).ToList();
-        }
-        else if (searchTerm != null && searchTerm.Contains(artwork.author))
-        {
-            artworksToShow = artworks.Where(artwork => artwork.author.ToLower().Contains(searchTerm.ToLower())).ToList();
-        }
-        else if (searchTerm != null && searchTerm.Contains(artwork.category))
-        {
-            artworksToShow = artworks.Where(artwork => artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
-        }
-
-        Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
     }
 }
