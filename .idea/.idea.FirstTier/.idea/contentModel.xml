@@ -114,6 +114,9 @@
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
             <e p="artwork1.jpg" t="Include" />
+            <e p="artwork10.jpg" t="Include" />
+            <e p="artwork11.jpg" t="Include" />
+            <e p="artwork12.jpg" t="Include" />
             <e p="artwork2.jpg" t="Include" />
             <e p="artwork3.jpg" t="Include" />
             <e p="artwork4.jpg" t="Include" />
@@ -131,8 +134,10 @@
             <e p="profile1.jpg" t="Include" />
             <e p="profile114.jpg" t="Include" />
             <e p="profile115.jpg" t="Include" />
+            <e p="profile116.jpg" t="Include" />
             <e p="profile118.jpg" t="Include" />
             <e p="profile12.jpg" t="Include" />
+            <e p="profile120.jpg" t="Include" />
             <e p="profile13.jpg" t="Include" />
             <e p="profile15.jpg" t="Include" />
             <e p="profile16.jpg" t="Include" />
