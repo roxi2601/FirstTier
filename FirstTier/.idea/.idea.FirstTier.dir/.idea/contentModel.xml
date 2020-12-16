@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\user\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\user\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="D:\dnp1\FirstTier\FirstTier" t="IncludeRecursive">
+      <e p="_Imports.razor" t="Include" />
+      <e p="App.razor" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="Authentication" t="Include">
+        <e p="ArtworkCustomAuthenticationStateProvider.cs" t="Include" />
+        <e p="UserCustomAuthenticationStateProvider.cs" t="Include" />
+      </e>
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Chat" t="Include">
+        <e p="ChatHub.cs" t="Include" />
+      </e>
+      <e p="Data" t="Include">
+        <e p="AccountService.cs" t="Include" />
+        <e p="ArtworkService.cs" t="Include" />
+        <e p="DapperService.cs" t="Include" />
+        <e p="Impl" t="Include">
+          <e p="AccountCloud.cs" t="Include" />
+          <e p="ArtworkCloud.cs" t="Include" />
+          <e p="DapperCloud.cs" t="Include" />
+          <e p="UserCloud.cs" t="Include" />
+        </e>
+        <e p="UserService.cs" t="Include" />
+      </e>
+      <e p="DataAccess" t="Include">
+        <e p="AppContext.cs" t="Include" />
+      </e>
+      <e p="FirstTier.csproj" t="IncludeRecursive" />
+      <e p="Models" t="Include">
+        <e p="Account.cs" t="Include" />
+        <e p="Artwork.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="FirstTier.csproj.CoreCompileInputs.cache" t="Include" />
+            <e p="FirstTier.csproj.FileListAbsolute.txt" t="Include" />
+            <e p="FirstTier.dll" t="Include" />
+            <e p="FirstTier.exe" t="Include" />
+            <e p="FirstTier.genruntimeconfig.cache" t="Include" />
+            <e p="FirstTier.MvcApplicationPartsAssemblyInfo.cache" t="Include" />
+            <e p="FirstTier.pdb" t="Include" />
+            <e p="FirstTier.RazorAssemblyInfo.cs" t="Include" />
+            <e p="FirstTier.RazorCoreGenerate.cache" t="Include" />
+            <e p="FirstTier.RazorTargetAssemblyInfo.cache" t="Include" />
+            <e p="FirstTier.TagHelpers.input.cache" t="Include" />
+            <e p="FirstTier.TagHelpers.output.cache" t="Include" />
+            <e p="FirstTier.Views.dll" t="Include" />
+            <e p="FirstTier.Views.pdb" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Pages" t="Include">
+        <e p="_Host.cshtml" t="Include" />
+        <e p="AddArtwork.razor" t="Include" />
+        <e p="ArtworkPage.razor" t="Include" />
+        <e p="Chat.razor" t="Include" />
+        <e p="ContactUs.razor" t="Include" />
+        <e p="EditArtwork.razor" t="Include" />
+        <e p="EditProfile.razor" t="Include" />
+        <e p="Error.cshtml" t="Include" />
+        <e p="Index.razor" t="Include" />
+        <e p="Login.razor" t="Include" />
+        <e p="MyProfile.razor" t="Include" />
+        <e p="SignUp.razor" t="Include" />
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Shared" t="Include">
+        <e p="LoginLayout.razor" t="Include" />
+        <e p="MainLayout.razor" t="Include" />
+        <e p="NavMenu.razor" t="Include" />
+        <e p="SignUpLayout.razor" t="Include" />
+        <e p="SurveyPrompt.razor" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="wwwroot" t="Include">
+        <e p="css" t="Include">
+          <e p="bootstrap" t="Include">
+            <e p="bootstrap.min.css" t="Include" />
+            <e p="bootstrap.min.css.map" t="Include" />
+          </e>
+          <e p="open-iconic" t="Include">
+            <e p="font" t="Include">
+              <e p="css" t="Include">
+                <e p="open-iconic-bootstrap.min.css" t="Include" />
+              </e>
+              <e p="fonts" t="Include">
+                <e p="open-iconic.eot" t="Include" />
+                <e p="open-iconic.otf" t="Include" />
+                <e p="open-iconic.svg" t="Include" />
+                <e p="open-iconic.ttf" t="Include" />
+                <e p="open-iconic.woff" t="Include" />
+              </e>
+            </e>
+            <e p="FONT-LICENSE" t="Include" />
+            <e p="ICON-LICENSE" t="Include" />
+            <e p="README.md" t="Include" />
+          </e>
+          <e p="site.css" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+        <e p="images" t="Include">
+          <e p="artwork1.jpg" t="Include" />
+          <e p="artwork2.jpg" t="Include" />
+          <e p="artwork3.jpg" t="Include" />
+          <e p="artwork4.jpg" t="Include" />
+          <e p="artwork5.jpg" t="Include" />
+          <e p="artwork6.jpg" t="Include" />
+          <e p="artwork7.jpg" t="Include" />
+          <e p="artwork8.jpg" t="Include" />
+          <e p="artwork9.jpg" t="Include" />
+          <e p="background2.jpg" t="Include" />
+          <e p="black.jpg" t="Include" />
+          <e p="defaultprofilepic.jpg" t="Include" />
+          <e p="painter-161318_640.png" t="Include" />
+          <e p="paleta.jpg" t="Include" />
+          <e p="profile0.jpg" t="Include" />
+          <e p="profile1.jpg" t="Include" />
+          <e p="profile12.jpg" t="Include" />
+          <e p="profile13.jpg" t="Include" />
+          <e p="profile15.jpg" t="Include" />
+          <e p="profile16.jpg" t="Include" />
+          <e p="profile17.jpg" t="Include" />
+          <e p="profile18.jpg" t="Include" />
+          <e p="profile19.jpg" t="Include" />
+          <e p="profile20.jpg" t="Include" />
+          <e p="profile3.jpg" t="Include" />
+          <e p="temporary.jpg" t="Include" />
+          <e p="temporaryProfile.jpg" t="Include" />
+        </e>
+        <e p="inputfile.js" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
