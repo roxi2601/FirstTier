@@ -17,9 +17,8 @@
 
     @if (!_isChatting)
     {
-        <label class="user">User:</label><br>
-        <input style="color: white" type="text" @bind="@account.username"/>
-                                                                         
+        <label class="user">User: @account.username</label><br>
+
         <button type="button" @onclick="@ChatRoom"><span class="oi oi-chat" aria-hidden="true"></span>Start Chat</button>
 
         // Error messages
@@ -67,8 +66,8 @@
     private Account account = new Account();
     private bool isUser;
     
-    /*message data
-    private Message message = new Message();*/
+    //message data
+    private Message message;
     
     // flag to indicate chat status
     private bool _isChatting = false;
