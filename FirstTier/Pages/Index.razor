@@ -196,12 +196,13 @@
             }
             else if (searchTerm != null)
             {
-                artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower()) || 
-                                                            artwork.description.ToLower().Contains(searchTerm.ToLower()) ||
-                                                            artwork.author.ToLower().Contains(searchTerm.ToLower()) || 
-                                                            artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
+                artworksToShow = artworks.Where(artwork => artwork.title.ToLower().Contains(searchTerm.ToLower()) ||
+                                                           artwork.id.ToString().Contains(searchTerm) ||
+                                                           artwork.description.ToLower().Contains(searchTerm.ToLower()) ||
+                                                           artwork.author.ToLower().Contains(searchTerm.ToLower()) || 
+                                                           artwork.category.ToLower().Contains(searchTerm.ToLower())).ToList();
             }
-            Console.WriteLine(title + "     " + description + "     " + author + "     " + category);
+            Console.WriteLine(title + "     " + id + "     " + description + "     " + author + "     " + category);
         }
         catch (Exception e)
         {
