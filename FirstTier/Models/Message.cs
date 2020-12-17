@@ -20,6 +20,13 @@ namespace FirstTier.Models
         [JsonPropertyName("CSS")]
         public string CSS => mine ? "sent" : "received";
         
+        public Message(string username, string body, bool mine)
+        {
+            this.username = username;
+            this.messageBody = body;
+            this.mine = mine;
+        }
+        
         public override string ToString() {
             return JsonSerializer.Serialize(this);
         }
