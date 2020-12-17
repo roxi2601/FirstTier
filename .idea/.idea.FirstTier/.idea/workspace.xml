@@ -30,23 +30,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9d56a417-f0ed-4391-a429-b7988c5c2a87" name="Default Changelist" comment="profile">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FirstTier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstTier/Chat/ChatHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Chat/ChatHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstTier/Pages/Chat.razor" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/Pages/Chat.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Chat.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/FirstTier.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Chat.razor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstTier/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,10 +101,10 @@
         <option value="$PROJECT_DIR$/FirstTier/Data/ChatService.cs" />
         <option value="$PROJECT_DIR$/FirstTier/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/FirstTier/Models/Message.cs" />
-        <option value="$PROJECT_DIR$/FirstTier/Chat/ChatHub.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Index.razor" />
         <option value="$PROJECT_DIR$/FirstTier/Startup.cs" />
         <option value="$PROJECT_DIR$/FirstTier/appsettings.json" />
+        <option value="$PROJECT_DIR$/FirstTier/Chat/ChatHub.cs" />
         <option value="$PROJECT_DIR$/FirstTier/Pages/Chat.razor" />
       </list>
     </option>
@@ -193,7 +178,7 @@
       <workItem from="1607199726359" duration="27945000" />
       <workItem from="1608166394266" duration="270000" />
       <workItem from="1608168573797" duration="1467000" />
-      <workItem from="1608192209259" duration="5486000" />
+      <workItem from="1608192209259" duration="8937000" />
     </task>
     <task id="LOCAL-00001" summary="artworks">
       <created>1606773489714</created>
@@ -461,10 +446,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1142" y="213" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608156182180" />
-    <state x="686" y="165" key="SettingsEditor" timestamp="1608206756452">
+    <state x="686" y="165" key="SettingsEditor" timestamp="1608209302111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608206756452" />
+    <state x="686" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608209302111" />
     <state x="213" y="126" key="Vcs.Push.Dialog.v2" timestamp="1608136265415">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
